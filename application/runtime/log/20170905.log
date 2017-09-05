@@ -1,0 +1,131 @@
+[2017-09-05 12:27:32] [ log ] localhost/easy-framework/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : a:5:{i:0;i:8;i:1;s:35:"Undefined variable: APP_PUBLIC_PATH";i:2;s:93:"C:\web\php\www\easy-framework\application\runtime\compile\index\index.action.compilecache.php";i:3;i:8;i:4;a:6:{s:8:"fileName";s:11:"index/index";s:8:"viewFile";s:63:"C:\web\php\www\easy-framework/application/view/index/index.html";s:11:"compileFile";s:93:"C:\web\php\www\easy-framework/application/runtime/compile/index/index.action.compilecache.php";s:15:"templateContent";s:200:"<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="<?php echo $APP_PUBLIC_PATH; ?>">
+<?php echo $content; ?>
+</body>
+</html>";s:5:"cache";b:0;s:7:"content";s:13:"12121212fdgfd";}} 
+ file : C:\web\php\www\easy-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 200 
+ trace : #0 C:\web\php\www\easy-framework\framework\web\Application.php(42): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework\framework\framework.php(18): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-05 13:13:29] [ log ] localhost/easy-framework/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : a:5:{i:0;i:8;i:1;s:33:"Undefined index: applicationindex";i:2;s:58:"C:\web\php\www\easy-framework\framework\base\Container.php";i:3;i:124;i:4;a:1:{s:3:"key";s:16:"applicationindex";}} 
+ file : C:\web\php\www\easy-framework\framework\components\error\Error.php 
+ line : 10 
+ code : 200 
+ trace : #0 C:\web\php\www\easy-framework\framework\base\Container.php(124): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 124, Array)
+#1 C:\web\php\www\easy-framework\framework\base\Container.php(70): framework\base\Container->getClassPathByKey('applicationinde...')
+#2 C:\web\php\www\easy-framework\framework\base\Component.php(18): framework\base\Container->getComponent('applicationinde...')
+#3 C:\web\php\www\easy-framework\framework\components\dispatcher\Dispatcher.php(29): framework\base\Component->getComponent('applicationinde...')
+#4 C:\web\php\www\easy-framework\framework\web\Application.php(42): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework\framework\framework.php(18): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework\index.php(8): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-09-05 13:14:39] [ log ] localhost/easy-framework/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\model\User' not found 
+ file : C:\web\php\www\easy-framework\framework\base\Container.php 
+ line : 84 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework\framework\base\Component.php(18): framework\base\Container->getComponent('6a160a17e50d51e...')
+#1 C:\web\php\www\easy-framework\framework\base\Controller.php(138): framework\base\Component->getComponent('6a160a17e50d51e...')
+#2 C:\web\php\www\easy-framework\application\controller\Index.php(17): framework\base\Controller->model('User')
+#3 C:\web\php\www\easy-framework\framework\base\Component.php(29): application\controller\Index->init()
+#4 C:\web\php\www\easy-framework\framework\base\Container.php(89): framework\base\Component->setUniqueId('c4e9dd57cd1f832...')
+#5 C:\web\php\www\easy-framework\framework\base\Component.php(18): framework\base\Container->getComponent('c4e9dd57cd1f832...')
+#6 C:\web\php\www\easy-framework\framework\components\dispatcher\Dispatcher.php(30): framework\base\Component->getComponent('c4e9dd57cd1f832...')
+#7 C:\web\php\www\easy-framework\framework\web\Application.php(42): framework\components\dispatcher\Dispatcher->run(Array)
+#8 C:\web\php\www\easy-framework\framework\framework.php(18): framework\web\Application::run(Array)
+#9 C:\web\php\www\easy-framework\index.php(8): require('C:\\web\\php\\www\\...')
+#10 {main}
+
+[2017-09-05 13:15:34] [ log ] localhost/easy-framework/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : a:5:{i:0;i:2;i:1;s:39:"Invalid argument supplied for foreach()";i:2;s:61:"C:\web\php\www\easy-framework\framework\components\db\Pdo.php";i:3;i:190;i:4;a:0:{}} 
+ file : C:\web\php\www\easy-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 45 
+ code : 200 
+ trace : #0 C:\web\php\www\easy-framework\framework\web\Application.php(42): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework\framework\framework.php(18): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-05 13:15:35] [ log ] localhost/easy-framework/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : a:5:{i:0;i:2;i:1;s:39:"Invalid argument supplied for foreach()";i:2;s:61:"C:\web\php\www\easy-framework\framework\components\db\Pdo.php";i:3;i:190;i:4;a:0:{}} 
+ file : C:\web\php\www\easy-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 45 
+ code : 200 
+ trace : #0 C:\web\php\www\easy-framework\framework\web\Application.php(42): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework\framework\framework.php(18): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-05 13:16:47] [ log ] localhost/easy-framework/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : a:5:{i:0;i:2;i:1;s:39:"Invalid argument supplied for foreach()";i:2;s:61:"C:\web\php\www\easy-framework\framework\components\db\Pdo.php";i:3;i:191;i:4;a:0:{}} 
+ file : C:\web\php\www\easy-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 45 
+ code : 200 
+ trace : #0 C:\web\php\www\easy-framework\framework\web\Application.php(42): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework\framework\framework.php(18): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-05 13:17:26] [ log ] localhost/easy-framework/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : a:5:{i:0;i:2;i:1;s:39:"Invalid argument supplied for foreach()";i:2;s:61:"C:\web\php\www\easy-framework\framework\components\db\Pdo.php";i:3;i:190;i:4;a:0:{}} 
+ file : C:\web\php\www\easy-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 45 
+ code : 200 
+ trace : #0 C:\web\php\www\easy-framework\framework\web\Application.php(42): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework\framework\framework.php(18): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-05 13:46:44] [ log ] localhost/easy-framework/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : a:5:{i:0;i:2;i:1;s:58:"session_destroy(): Trying to destroy uninitialized session";i:2;s:70:"C:\web\php\www\easy-framework\framework\components\session\Session.php";i:3;i:214;i:4;a:0:{}} 
+ file : C:\web\php\www\easy-framework\framework\components\error\Error.php 
+ line : 10 
+ code : 200 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'session_destroy...', 'C:\\web\\php\\www\\...', 214, Array)
+#1 C:\web\php\www\easy-framework\framework\components\session\Session.php(214): session_destroy()
+#2 C:\web\php\www\easy-framework\framework\components\session\Session.php(247): framework\components\session\Session->destroy()
+#3 C:\web\php\www\easy-framework\framework\base\Container.php(141): framework\components\session\Session->__destruct()
+#4 C:\web\php\www\easy-framework\framework\base\Container.php(148): framework\base\Container->destroyComponentsInstance('session')
+#5 C:\web\php\www\easy-framework\framework\base\Application.php(95): framework\base\Container->finish(Array)
+#6 C:\web\php\www\easy-framework\framework\web\Application.php(49): framework\base\Application->finish()
+#7 C:\web\php\www\easy-framework\framework\framework.php(18): framework\web\Application::run(Array)
+#8 C:\web\php\www\easy-framework\index.php(8): require('C:\\web\\php\\www\\...')
+#9 {main}
+
