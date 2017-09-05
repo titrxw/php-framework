@@ -37,14 +37,12 @@ class Application extends \framework\base\Application
         $url = $instance->getUrl()->run($server);
 
         ob_start();
-        var_dump(memory_get_usage());
         $result = $instance->getDispatcher()->run($url);
         $content = ob_get_clean();
 
         $instance->getResponse()->send($result.$content);
         unset($result,$content);
         $instance->finish();
-        var_dump(memory_get_usage());
         unset($default, $conf, $instance);
     }
 }
