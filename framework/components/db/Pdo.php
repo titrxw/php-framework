@@ -66,10 +66,14 @@ class Pdo extends Component implements DbInterface
 
     protected function reConnect()
     {
-        try{
+        try
+        {
             $this->_instances[$this->_currentDb]->getAttribute(\PDO::ATTR_SERVER_INFO);
-        } catch (\PDOException $e) {
-            if(strpos($e->getMessage(), 'MySQL server has gone away')!==false){
+        } 
+        catch (\PDOException $e) 
+        {
+            if(strpos($e->getMessage(), 'MySQL server has gone away')!==false)
+            {
                 return false;
             }
         }
