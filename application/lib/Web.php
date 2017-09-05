@@ -13,6 +13,7 @@ abstract class Web extends Controller
     public function beforeAction()
     {
         $this->getComponent('session')->start();
+        //在这里进行数据校验  数据校验模块正在开发
         $this->assign('publicPath','public/assets/application/');
         return true;
     }
