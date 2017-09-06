@@ -79,7 +79,7 @@ class Request extends Component
         $this->checkGet();
         if(empty($key))
             return $_GET;
-        if(empty($_GET[$key]))
+        if(!isset($_GET[$key]))
             return $default;
         else
             return $_GET[$key];
@@ -90,7 +90,7 @@ class Request extends Component
         $this->checkPost();
         if(empty($key))
             return $_POST;
-        if(empty($_POST[$key]))
+        if(!isset($_POST[$key]))
             return $default;
         else
             return $_POST[$key];
@@ -101,7 +101,7 @@ class Request extends Component
         $this->checkRequest();
         if(empty($key))
             return $_REQUEST;
-        if(empty($_REQUEST[$key]))
+        if(!isset($_REQUEST[$key]))
             return $default;
         else
             return $_REQUEST[$key];

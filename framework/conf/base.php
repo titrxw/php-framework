@@ -8,14 +8,9 @@
 return array(
     'components' => array(
         'log' => array(
-            'floder' => '',
-            'floderBy' => 'year', //month  //day
-            'filePrefix' => 'log',
-            'fileSuffix' => 'sys',
-            'fileSize' => '2'   //K
-        ),
-        'view' => array(
-            'driver' => 'html'
+            'path' => '',
+            'debug' => true,
+            'maxSize' => 2097152
         ),
         'url' => array(
             'type' => '/',
@@ -45,6 +40,7 @@ return array(
             'cachePath' => 'runtime/viewCache',
             'compilePath' => 'runtime/compile',
             'viewExt' => '.html',
+            'isCache' => true,
             'cacheExpire' => 3600,
             'leftDelimiter' => '{',
             'rightDelimiter' => '}'

@@ -55,9 +55,8 @@ class Url extends Component
             $_GET = array();
             for($i=2;$i < $count; $i+=2)
             {
-                $_GET[$tmpQuery[$i]] = empty($tmpQuery[$i+1]) ?  '' : $tmpQuery[$i+1];
+                $_GET[$tmpQuery[$i]] = !isset($tmpQuery[$i+1]) ?  '' : $tmpQuery[$i+1];
             }
-
             unset($tmpQuery);
             return $urlInfo;
         }

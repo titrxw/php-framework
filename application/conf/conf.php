@@ -11,14 +11,16 @@ namespace application\conf;
 return array(
     'addComponentsMap' => array(
         'Redis' => 'framework\\components\\cache\\Redis',
-        'Pdo' => 'framework\\components\\db\\Pdo'
+        'Pdo' => 'framework\\components\\db\\Pdo',
+        'validate' => 'framework\\components\\validate\\Validate'
     ),
     'unInstallComponents' => array(
         'Pdo',
         'url',
         'dispatcher',
         'log',
-        'Redis'
+        'Redis',
+        'validate'
     ),
     'components' => array(
         'log' => array(

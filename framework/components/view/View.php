@@ -17,6 +17,7 @@ class View extends Component
     protected $_action;
     protected $_viewExt;
     protected $_cacheExpire;
+    protected $_isCache;
 
     protected function init()
     {
@@ -24,7 +25,9 @@ class View extends Component
         $this->_cachePath = APP_ROOT.'/'.APP_NAME.'/'.$this->getValueFromConf('cachePath','runtime/viewCache');
         $this->_compilePath = APP_ROOT.'/'.APP_NAME.'/'.$this->getValueFromConf('compilePath','runtime/compile');
         $this->_viewExt = $this->getValueFromConf('viewExt','.html');
-        $this->_cacheExpire = $this->getValueFromConf('cacheExpire',31536000);
+        $this->_isCache = $this->getValueFromConf('isCache',true);
+        if ($this->_isCache)
+            $this->_cacheExpire = $this->getValueFromConf('cacheExpire',31536000);
         $this->_leftDelimiter = $this->getValueFromConf('leftDelimiter','{');
         $this->_rightDelimiter = $this->getValueFromConf('rightDelimiter','}');
         $this->unInstall(false);
@@ -60,6 +63,10 @@ class View extends Component
      */
     public function cache($cacheId = null, $expire = null)
     {
+        if (!$this->_isCache)
+        {
+            return false;
+        }
         //参数分析
         if (!$cacheId) {
             $cacheId = $this->_action;
@@ -137,24 +144,24 @@ class View extends Component
         $this->_action = $currentModule['action'];
         unset($currentModule);
 
-        //分析视图文件名
-        $fileName    = $this->parseViewName($fileName);
-
-        //获取视图模板文件及编译文件的路径
-        $viewFile    = $this->getViewFile($fileName);
-        $compileFile = $this->getCompileFile($fileName);
-
-        //分析视图编译文件是否需要重新生成
-        if ($this->isCompile($viewFile, $compileFile)) {
-            $templateContent = $this->loadViewFile($viewFile);
-            //重新生成编译缓存文件
-            $this->createCompileFile($compileFile, $templateContent);
-        }
         //加载编译缓存文件
         ob_start();
         $cache = $this->cache($this->_controller.'/'.$this->_action);
         if (!$cache)
         {
+            //分析视图文件名
+            $fileName    = $this->parseViewName($fileName);
+
+            //获取视图模板文件及编译文件的路径
+            $viewFile    = $this->getViewFile($fileName);
+            $compileFile = $this->getCompileFile($fileName);
+
+            //分析视图编译文件是否需要重新生成
+            if ($this->isCompile($viewFile, $compileFile)) {
+                $templateContent = $this->loadViewFile($viewFile);
+                //重新生成编译缓存文件
+                $this->createCompileFile($compileFile, $templateContent);
+            }
             echo require_once $compileFile;
         }
         else

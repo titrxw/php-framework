@@ -12,6 +12,20 @@ class Index extends Web
 {
     private $_userM;
 
+    protected function rule()
+    {
+        return array(
+            'indexAction' => array(
+                'id|get|请求编号'=>'require|integer',
+                'mobile|get|电话号码' => 'regex|/^1[34578]\d{9}$/'
+            ),
+            'testAction' => array(
+                'id|post|请求编号'=>'url',
+                'name|post|请求姓名' => 'require',
+            )
+        );
+    }
+
     protected function init()
     {
         $this->_userM = $this->model('User');

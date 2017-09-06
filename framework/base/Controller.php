@@ -22,6 +22,11 @@ abstract class Controller extends Component
         return true;
     }
 
+    protected function rule()
+    {
+        return array();
+    }
+
     public function setController($currentController)
     {
         $this->_controller = $currentController;
@@ -136,5 +141,18 @@ abstract class Controller extends Component
             throw new \Exception($e->getMessage(), 404);
         }
         return $this->getComponent($componentModel);
+    }
+
+    protected function validate()
+    {
+        $rule = $this->rule();
+        if (empty($rule[$this->_action]))
+        {
+            return true;
+        }
+        $data = array('get' => $this->get(),'post' => $this->post());
+        $result = $this->getComponent('validate')->run($data, $rule[$this->_action]);
+        unset($rule, $data);
+        return $result;
     }
 }

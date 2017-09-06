@@ -29,8 +29,8 @@ abstract class Base
         $tmpKey = explode('.',$key);
         if (count($tmpKey) > 1)
         {
-            $_confValue = empty($this->_conf[$tmpKey[0]]) ? '' : $this->_conf[$tmpKey[0]] ;
-            $_appConfValue = empty($this->_appConf[$tmpKey[0]]) ? '' : $this->_appConf[$tmpKey[0]];
+            $_confValue = empty($this->_conf[$tmpKey[0]]) ? null : $this->_conf[$tmpKey[0]] ;
+            $_appConfValue = empty($this->_appConf[$tmpKey[0]]) ? null : $this->_appConf[$tmpKey[0]];
             unset($tmpKey[0]);
             foreach ($tmpKey as $item)
             {
@@ -46,13 +46,13 @@ abstract class Base
         }
         else
         {
-            $_confValue = empty($this->_conf[$key]) ? '' : $this->_conf[$key];
-            $_appConfValue = empty($this->_appConf[$key]) ? '' : $this->_appConf[$key];
+            $_confValue = !isset($this->_conf[$key]) ? null : $this->_conf[$key];
+            $_appConfValue = !isset($this->_appConf[$key]) ? null : $this->_appConf[$key];
         }
         unset($tmpKey);
 
-        return empty($_appConfValue) ?
-            (empty($_confValue) ? $default : $_confValue)
+        return !isset($_appConfValue) ?
+            (!isset($_confValue) ? $default : $_confValue)
             : $_appConfValue;
     }
 

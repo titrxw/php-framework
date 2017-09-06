@@ -69,7 +69,7 @@ class Pdo extends Component implements DbInterface
         try
         {
             $this->_instances[$this->_currentDb]->getAttribute(\PDO::ATTR_SERVER_INFO);
-        } 
+        }
         catch (\PDOException $e) 
         {
             if(strpos($e->getMessage(), 'MySQL server has gone away')!==false)

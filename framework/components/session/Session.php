@@ -209,11 +209,14 @@ class Session extends Component
      */
     public function destroy()
     {
-        unset($_SESSION);
-        session_unset();
-        session_destroy();
-        $this->finish();
-        $this->_isStart = false;
+        if($this->_isStart)
+        {
+            unset($_SESSION);
+            session_unset();
+            session_destroy();
+            $this->finish();
+            $this->_isStart = false;
+        }
     }
 
     /**
@@ -244,7 +247,6 @@ class Session extends Component
 
     public function __destruct()
     {
-        if($this->_isStart)
-            $this->destroy();
+        $this->destroy();
     }
 }

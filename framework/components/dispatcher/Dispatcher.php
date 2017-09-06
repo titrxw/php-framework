@@ -32,7 +32,11 @@ class Dispatcher extends Component
         $controllerInstance->setAction($actionName);
         try
         {
-            $controllerInstance->beforeAction();
+            $result = $controllerInstance->beforeAction();
+            if ($result !== true)
+            {
+                return $result;
+            }
             $result = $controllerInstance->$actionName();
             $controllerInstance->afterAction();
             unset($controllerInstance, $args);

@@ -7,6 +7,7 @@
  */
 namespace framework\web;
 
+
 class Application extends \framework\base\Application
 {
     protected function addBaseComponents()
@@ -16,7 +17,6 @@ class Application extends \framework\base\Application
         $componenets = array(
             'session' => 'framework\\components\\session\\Session',
             'db' => 'framework\\components\\db\\Pdo',
-            'validate' => 'framework\\components\\validate\\Validate',
             'view' => 'framework\\components\\view\\View'
         );
         $this->_container->addComponents($componenets);
