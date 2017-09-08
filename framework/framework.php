@@ -9,7 +9,6 @@ include __DIR__.'/autoloader.php';
 if(!defined('APP_NAME'))
     define('APP_NAME','application');
 define('APP_ROOT', dirname(dirname(__FILE__)));
-define('$APP_PUBLIC_PATH', APP_ROOT.'/public/'.APP_NAME.'/');
 
 $conf = array(
     'default' => require_once __DIR__.'/conf/base.php',
