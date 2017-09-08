@@ -15,7 +15,7 @@ abstract class Web extends Controller
         $result  = $this->validate();
         if ($result !== true)
         {
-            return $result;
+            return $this->ajax(null,500,$result);
         }
         $this->getComponent('session')->start();
         $this->assign('publicPath','public/assets/application/');

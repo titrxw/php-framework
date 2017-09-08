@@ -32,6 +32,13 @@ class Response extends Component
         $this->contentType('text');
     }
 
+    public function noCache()
+    {
+        $this->addHeader('Cache-Control','no-store, no-cache, must-revalidate');
+        $this->addHeader('Pragma','no-cache');
+        header("Cache-Control: post-check=0, pre-check=0", false);
+    }
+
     public function send($data)
     {
         http_response_code($this->_code);

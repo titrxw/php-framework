@@ -35,6 +35,7 @@ class Index extends Web
     public function indexAction()
     {
 //        var_dump($this->_userM->getList());
+        return $this->ajax(array(1,2,3,4,5));
         $this->assign('content', '12121212fdgfd');
         return $this->display();
     }

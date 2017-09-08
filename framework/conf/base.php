@@ -8,7 +8,7 @@
 return array(
     'components' => array(
         'log' => array(
-            'path' => '',
+            'path' => 'runtime/log/',
             'debug' => true,
             'maxSize' => 2097152
         ),
