@@ -148,6 +148,7 @@ abstract class Controller extends Component
         $rule = $this->rule();
         if (empty($rule[$this->_action]))
         {
+            unset($rule);
             return true;
         }
         $data = array('get' => $this->get(),'post' => $this->post());

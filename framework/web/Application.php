@@ -42,6 +42,7 @@ class Application extends \framework\base\Application
         $instance->getResponse()->send($result.$content);
         unset($result,$content);
         $instance->finish();
+
         unset($default, $conf, $instance);
     }
 }

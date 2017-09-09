@@ -26,12 +26,12 @@ class Dispatcher extends Component
         }
 
         $actionName = $this->getActionPrefix() . $args['action'] . $this->getActionSuffix();
-
-        $controllerInstance = $this->getComponent($controllerHashName);
-        $controllerInstance->setController($controllerName);
-        $controllerInstance->setAction($actionName);
         try
         {
+            $controllerInstance = $this->getComponent($controllerHashName);
+            $controllerInstance->setController($controllerName);
+            $controllerInstance->setAction($actionName);
+
             $result = $controllerInstance->beforeAction();
             if ($result !== true)
             {

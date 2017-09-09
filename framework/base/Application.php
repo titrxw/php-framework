@@ -1,7 +1,6 @@
 <?php
 namespace framework\base;
 
-
 class Application extends Base
 {
     protected $_container;
@@ -41,7 +40,22 @@ class Application extends Base
         );
 
         $this->_container = new Container($conf);
-        unset($conf,$this->_conf['components'], $this->_appConf['components']);
+
+        if (COMPOSER)
+        {
+            $composerConf = array(
+                'default' => $this->_conf['composer'],
+                'app' => $this->_appConf['composer']
+            );
+            $this->_container->setComposer(new Composer($composerConf));
+        }
+        unset($conf,
+            $composerConf,
+            $this->_conf['components'],
+            $this->_appConf['components'],
+            $this->_conf['composer'],
+            $this->_appConf['composer']
+        );
     }
 
     protected function addBaseComponents()

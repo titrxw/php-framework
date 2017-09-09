@@ -5,10 +5,20 @@
  * Date: 17-8-26
  * Time: 下午8:55
  */
-include __DIR__.'/autoloader.php';
+
+define('APP_ROOT', dirname(dirname(__FILE__)));
 if(!defined('APP_NAME'))
     define('APP_NAME','application');
-define('APP_ROOT', dirname(dirname(__FILE__)));
+include __DIR__.'/autoloader.php';
+
+
+if (file_exists(APP_ROOT. '/vendor/autoload.php')) {
+    define('COMPOSER', true);
+    require_once (APP_ROOT. '/vendor/autoload.php');
+} else {
+    define('COMPOSER', false);
+}
+
 
 $conf = array(
     'default' => require_once __DIR__.'/conf/base.php',

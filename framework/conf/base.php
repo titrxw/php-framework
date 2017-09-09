@@ -6,6 +6,9 @@
  * Time: 下午9:33
  */
 return array(
+    'composer' => array(
+
+    ),
     'components' => array(
         'log' => array(
             'path' => 'runtime/log/',

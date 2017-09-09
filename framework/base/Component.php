@@ -13,9 +13,11 @@ abstract class Component extends Base
         unset($conf);
     }
 
-    protected function getComponent($componentName)
+    protected function getComponent($componentName,$params = array())
     {
-        return Container::getInstance()->getComponent($componentName);
+        $params = func_get_args();
+        array_shift($params);
+        return Container::getInstance()->getComponent($componentName, $params);
     }
 
     protected function unInstall($isComplete = true)

@@ -9,6 +9,11 @@
 namespace application\conf;
 
 return array(
+    'composer' => array(
+        'Logger' => function (array $params) {
+            return new \Monolog\Logger($params[0]);
+        }
+    ),
     'addComponentsMap' => array(
         'Redis' => 'framework\\components\\cache\\Redis',
         'Pdo' => 'framework\\components\\db\\Pdo',
@@ -20,7 +25,8 @@ return array(
         'dispatcher',
         'log',
         'Redis',
-        'validate'
+        'validate',
+        'Logger'
     ),
     'components' => array(
         'log' => array(

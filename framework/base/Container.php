@@ -4,6 +4,7 @@ namespace framework\base;
 class Container extends Base
 {
     protected static $instance;
+    protected $_composer;
     protected $_instances;
     protected $_components;
     protected $_delInstanceComponents = array();
@@ -19,6 +20,12 @@ class Container extends Base
     public static function getInstance()
     {
         return self::$instance;
+    }
+
+
+    public function setComposer(Composer $composer)
+    {
+        $this->_composer = $composer;
     }
 
     /**
@@ -60,52 +67,54 @@ class Container extends Base
         }
     }
 
-    public function getComponent($key)
+    public function getComponent($key, $params = array())
     {
-        if(empty($key))
+        try
         {
-            return false;
-        }
+            if (empty($key)) {
+                return false;
+            }
 
-        $classPath = $this->getClassPathByKey($key);
-        if(!empty($classPath))
-        {
-            if(!empty($this->_instances[$key]))
-            {
+            if (!empty($this->_instances[$key])) {
                 return $this->_instances[$key];
             }
 
-            try
+            $classPath = $this->getClassPathByKey($key);
+            if (!empty($classPath))
             {
                 $conf = array(
-                    'default' => empty($this->_conf[$key]) ? array(): $this->_conf[$key],
-                    'app' => empty($this->_appConf[$key]) ? array(): $this->_appConf[$key]
+                    'default' => empty($this->_conf[$key]) ? array() : $this->_conf[$key],
+                    'app' => empty($this->_appConf[$key]) ? array() : $this->_appConf[$key]
                 );
                 $instance = new $classPath($conf);
                 unset($conf);
 
-                if($instance instanceof Component)
-                {
+                if ($instance instanceof Component) {
                     $instance->setUniqueId($key);
                     $this->_instances[$key] = $instance;
                     unset($instance);
                 }
                 else
                 {
-                    throw new \Exception('instance' . $classPath. 'have to instance of Component', 500);
+                    throw new \Exception('instance' . $classPath . 'have to instance of Component', 500);
                 }
             }
-            catch (\Exception $e)
+            else
             {
-                throw new \Exception($e->getMessage(). ' maybe this class not instance of Components ',500);
+                if (COMPOSER && $this->_composer->checkComposer($key)) {
+                    $this->_instances[$key] = $this->_composer->getComposer($key, $params);
+                }
+                else
+                {
+                    throw new \Exception("components {$key} not exists", 500);
+                }
             }
-
-            return $this->_instances[$key];
         }
-        else
+        catch (\Exception $e)
         {
-            throw new \Exception('components not exists');
+            throw new \Exception($e->getMessage() . ' maybe this class not instance of Components ', 500);
         }
+        return $this->_instances[$key];
     }
 
     public function unInstall($componentKey, $completeDel = true)
@@ -121,7 +130,7 @@ class Container extends Base
 
     public function getClassPathByKey($key)
     {
-        return $this->_components[$key];
+        return empty($this->_components[$key]) ? null : $this->_components[$key];
     }
 
     protected function destroyComponent($key)

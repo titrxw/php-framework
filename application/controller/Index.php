@@ -15,7 +15,7 @@ class Index extends Web
     protected function rule()
     {
         return array(
-            'indexAction' => array(
+            'testAction' => array(
                 'id|get|请求编号'=>'require|integer',
                 'mobile|get|电话号码' => 'regex|/^1[34578]\d{9}$/'
             ),
@@ -34,14 +34,13 @@ class Index extends Web
 
     public function indexAction()
     {
-//        var_dump($this->_userM->getList());
-        return $this->ajax(array(1,2,3,4,5));
         $this->assign('content', '12121212fdgfd');
         return $this->display();
     }
 
     public function testAction()
     {
-        return 1;
+        $log = $this->getComponent('Logger',1,2,3,4);
+        return $this->ajax(array(1,2,3,4,5));
     }
 }
