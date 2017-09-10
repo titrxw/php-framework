@@ -115,8 +115,7 @@ class Session extends Component
      */
     public function set($name, $value = '', $prefix = null)
     {
-        if(!$this->_isStart) return false;
-        if (empty($name)) return array();
+        if(!$this->_isStart || empty($name)) return false;
 
         $prefix = !is_null($prefix) ? $prefix : $this->getPrefix();
         if ($prefix) {
