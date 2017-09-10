@@ -34,7 +34,11 @@ class Index extends Web
 
     public function indexAction()
     {
-        $this->assign('content', '12121212fdgfd');
+//        var_dump($this->cache);
+//        var_dump($this->session);
+        //var_dump($this->getComponent('Logger',1));
+        //$this->assign('content', '12121212fdgfd');
+
         return $this->display();
     }
 

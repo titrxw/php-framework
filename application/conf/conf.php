@@ -15,24 +15,21 @@ return array(
         }
     ),
     'addComponentsMap' => array(
-        'Redis' => 'framework\\components\\cache\\Redis',
+        'cache' => 'framework\\components\\cache\\Redis',
         'Pdo' => 'framework\\components\\db\\Pdo',
         'validate' => 'framework\\components\\validate\\Validate'
     ),
     'unInstallComponents' => array(
-        'Pdo',
-        'url',
-        'dispatcher',
-        'log',
-        'Redis',
-        'validate',
-        'Logger'
+        'Pdo' => false,
+        'url' => false,
+        'dispatcher' => false,
+        'log' => false,
+        'cache' => false,
+        'validate' => false,
+        'Logger' => false
     ),
     'components' => array(
-        'log' => array(
-            'floder' => '',
-        ),
-        'Redis' => array(
+        'cache' => array(
             'host'         => '127.0.0.1', // redis主机
             'port'         => 6379, // redis端口
             'password'     => '', // 密码
@@ -45,7 +42,12 @@ return array(
         'session' => array(
             'Redis' => array(
                 'session_name' => '', // sessionkey前缀
-            )
+            ),
+            'httpOnly'=> true,
+            'driver'=> '',
+            'path'=> '',
+            'name' => 'EASYSESSION',
+            'prefix' => 'easy-'
         ),
         'Pdo' => array(
             'db' => array(

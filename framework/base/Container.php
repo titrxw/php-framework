@@ -112,7 +112,9 @@ class Container extends Base
         }
         catch (\Exception $e)
         {
-            throw new \Exception($e->getMessage() . ' maybe this class not instance of Components ', 500);
+            $msg = $e->getMessage();
+            $msg = empty($msg) ? ' maybe this class not instance of Components ' : $msg;
+            throw new \Exception( $msg, 500);
         }
         return $this->_instances[$key];
     }
@@ -160,9 +162,12 @@ class Container extends Base
         {
             $this->destroyComponent($item);
         }
-        foreach ($components as $item)
+        foreach ($components as $key => $item)
         {
-            $this->destroyComponent($item);
+            if ($item === true)
+                $this->destroyComponent($key);
+            else
+                $this->destroyComponentsInstance($key);
         }
         $this->_delInstanceComponents = array();
         $this->_completeDelInstanceComponents = array();

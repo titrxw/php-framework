@@ -43,7 +43,16 @@ class Url extends Component
         }
         else
         {
-            $query = $this->_server['QUERY_STRING'];
+            $routerKey = $this->getValueFromConf('routerKey');
+            if (!empty($routerKey))
+            {
+                $query = empty($_GET[$routerKey])? '' : $_GET[$routerKey];
+            }
+            else
+            {
+                $query = $this->_server['QUERY_STRING'];
+            }
+
             $tmpQuery = explode($this->getSeparator(), $query);
 
             $urlInfo =  array(

@@ -7,6 +7,7 @@
  */
 namespace framework\web;
 
+
 class Application extends \framework\base\Application
 {
     protected function addBaseComponents()

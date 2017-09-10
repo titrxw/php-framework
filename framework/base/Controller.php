@@ -124,7 +124,10 @@ abstract class Controller extends Component
 
     protected function ajax($data)
     {
-        $this->getComponent('response')->contentType('json');
+        $urlComponent = $this->getComponent('response');
+        $urlComponent->noCache();
+        $urlComponent->contentType('json');
+        unset($urlComponent);
         return json_encode($data);
     }
 
@@ -155,5 +158,20 @@ abstract class Controller extends Component
         $result = $this->getComponent('validate')->run($data, $rule[$this->_action]);
         unset($rule, $data);
         return $result;
+    }
+
+    /**
+     * desc component 快捷获取方式
+     * @param $name
+     * @return null
+     */
+    public function __get($name)
+    {
+        $func = 'get'.ucfirst($name);
+        if (method_exists($this, $func))
+        {
+            return $this->$func();
+        }
+        return null;
     }
 }

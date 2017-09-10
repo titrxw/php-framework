@@ -16,6 +16,7 @@ return array(
             'maxSize' => 2097152
         ),
         'url' => array(
+            'routerKey' => 'r',
             'type' => '/',
             'separator' => '/',
             'defaultController' => 'index',
