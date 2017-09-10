@@ -14,14 +14,14 @@ class Application extends \framework\base\Application
     {
         $this->_appConf['addComponentsMap'] = empty($this->_appConf['addComponentsMap']) ? array() : $this->_appConf['addComponentsMap'];
         parent::addBaseComponents();
-        $componenets = array(
+        $components = array(
             'session' => 'framework\\components\\session\\Session',
             'db' => 'framework\\components\\db\\Pdo',
             'view' => 'framework\\components\\view\\View'
         );
-        $this->_container->addComponents($componenets);
+        $this->_container->addComponents($components);
         $this->_container->addComponents($this->_appConf['addComponentsMap']);
-        unset($this->_appConf['addComponentsMap'], $componenets);
+        unset($this->_appConf['addComponentsMap'], $components);
     }
 
     protected function beforeInit()
