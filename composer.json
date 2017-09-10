@@ -20,6 +20,7 @@
     	}
 	},
     "require": {
+//      作为实例  框架并不使用
         "monolog/monolog": "1.0.*"
     }
 }
