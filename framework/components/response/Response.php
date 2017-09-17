@@ -27,7 +27,7 @@ class Response extends Component
 
     protected function init()
     {
-        $this->unInstall(false);
+        $this->unInstall();
         $this->initHeader();
         $this->contentType('text');
     }

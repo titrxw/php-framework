@@ -5,9 +5,6 @@
  * Date: 17-8-26
  * Time: 下午8:50
  */
-
-namespace application\conf;
-
 return array(
     'composer' => array(
         'Logger' => function (array $params) {
@@ -15,18 +12,8 @@ return array(
         }
     ),
     'addComponentsMap' => array(
-        'cache' => 'framework\\components\\cache\\Redis',
-        'Pdo' => 'framework\\components\\db\\Pdo',
-        'validate' => 'framework\\components\\validate\\Validate'
-    ),
-    'unInstallComponents' => array(
-        'Pdo' => false,
-        'url' => false,
-        'dispatcher' => false,
-        'log' => false,
-        'cache' => false,
-        'validate' => false,
-        'Logger' => false
+        'validate' => 'framework\\components\\validate\\Validate',
+        'page' => 'framework\\components\\page\\Page'
     ),
     'components' => array(
         'cache' => array(

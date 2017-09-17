@@ -10,6 +10,11 @@ class Dispatcher extends Component
     protected $_actionPrefix = null;
     protected $_actionSuffix = null;
 
+    protected function init()
+    {
+        $this->unInstall();
+    }
+
     public function run($args = array())
     {
         $controllerName = $this->getControllerPrefix() . $args['controller'] . $this->getControllerSuffix();

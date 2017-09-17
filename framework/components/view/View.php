@@ -30,7 +30,7 @@ class View extends Component
             $this->_cacheExpire = $this->getValueFromConf('cacheExpire',31536000);
         $this->_leftDelimiter = $this->getValueFromConf('leftDelimiter','{');
         $this->_rightDelimiter = $this->getValueFromConf('rightDelimiter','}');
-        $this->unInstall(false);
+        $this->unInstall();
     }
 
     /**
@@ -162,14 +162,13 @@ class View extends Component
                 //重新生成编译缓存文件
                 $this->createCompileFile($compileFile, $templateContent);
             }
-            echo require_once $compileFile;
+            include_once $compileFile;
         }
         else
         {
-            echo require_once $cache;
+            include_once $cache;
         }
         $viewContent = ob_get_clean();
-
         if(!$cache)
         {
             $this->createCache($viewContent);
@@ -222,7 +221,7 @@ class View extends Component
 
         //加载编译缓存文件
         ob_start();
-        include $compileFile;
+        include_once $compileFile;
         $viewContent = ob_get_clean();
 
         //返回信息
@@ -271,7 +270,7 @@ class View extends Component
         if (!is_dir($compileDir)) {
             mkdir($compileDir, 0777, true);
         }
-        $content = "<?php " . "?>" . $content ;
+        $content = "<?php " . "?>" . $content ."<?php " . "?>" ;
         return file_put_contents($compileFile, $content, LOCK_EX);
     }
 
@@ -343,7 +342,6 @@ class View extends Component
             '#'.$this->_leftDelimiter.'\s*(widget\s.+?)\s*'.$this->_rightDelimiter.'#is',
         );
         $viewContent = preg_replace_callback($patternArray, array($this, 'parseTags'), $viewContent);
-
         return $viewContent;
     }
 

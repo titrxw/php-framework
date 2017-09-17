@@ -103,6 +103,7 @@ class Container extends Base
             {
                 if (COMPOSER && $this->_composer->checkComposer($key)) {
                     $this->_instances[$key] = $this->_composer->getComposer($key, $params);
+                    $this->unInstall($key);
                 }
                 else
                 {
@@ -152,7 +153,7 @@ class Container extends Base
         unset($this->_instances[$key]);
     }
 
-    public function finish($components)
+    public function finish()
     {
         foreach ($this->_delInstanceComponents as $item)
         {
@@ -162,13 +163,7 @@ class Container extends Base
         {
             $this->destroyComponent($item);
         }
-        foreach ($components as $key => $item)
-        {
-            if ($item === true)
-                $this->destroyComponent($key);
-            else
-                $this->destroyComponentsInstance($key);
-        }
+
         $this->_delInstanceComponents = array();
         $this->_completeDelInstanceComponents = array();
     }

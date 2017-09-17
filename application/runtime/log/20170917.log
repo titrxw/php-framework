@@ -1,0 +1,208 @@
+[2017-09-17 08:03:29] [ log ] localhost/easy-framework-web/index.php/<?php%20echo%20$publicPath;%20?%3E/images/1457781452.jpg
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\controller\<' not found 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 89 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('17ea76b588c2613...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): framework\base\Component->getComponent('17ea76b588c2613...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(41): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-09-17 08:05:21] [ log ] localhost/easy-framework-web/index.php/{$publicPath}/images/1457781452.jpg
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\controller\{$publicPath}' not found 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 89 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('a9f1b651b29e615...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): framework\base\Component->getComponent('a9f1b651b29e615...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(41): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-09-17 08:05:22] [ log ] localhost/easy-framework-web/index.php/{$publicPath}/images/1457781452.jpg
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\controller\{$publicPath}' not found 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 89 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('a9f1b651b29e615...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): framework\base\Component->getComponent('a9f1b651b29e615...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(41): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-09-17 08:05:26] [ log ] localhost/easy-framework-web/index.php/{$publicPath}/images/1457781452.jpg
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\controller\{$publicPath}' not found 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 89 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('a9f1b651b29e615...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): framework\base\Component->getComponent('a9f1b651b29e615...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(41): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-09-17 08:05:56] [ log ] localhost/easy-framework-web/index.php/<?php%20echo%20$publicPath;%20?%3E/images/1457781452.jpg
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\controller\<' not found 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 89 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('17ea76b588c2613...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): framework\base\Component->getComponent('17ea76b588c2613...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(41): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-09-17 08:05:58] [ log ] localhost/easy-framework-web/index.php/<?php%20echo%20$publicPath;%20?%3E/images/1457781452.jpg
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\controller\<' not found 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 89 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('17ea76b588c2613...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): framework\base\Component->getComponent('17ea76b588c2613...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(41): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-09-17 08:06:27] [ log ] localhost/easy-framework-web/index.php/<?php%20echo%20$publicPath;%20?%3E/images/1457781452.jpg
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\controller\<' not found 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 89 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('17ea76b588c2613...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): framework\base\Component->getComponent('17ea76b588c2613...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(41): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-09-17 08:06:28] [ log ] localhost/easy-framework-web/index.php/<?php%20echo%20$publicPath;%20?%3E/images/1457781452.jpg
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\controller\<' not found 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 89 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('17ea76b588c2613...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): framework\base\Component->getComponent('17ea76b588c2613...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(41): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-09-17 08:17:24] [ log ] localhost/easy-framework-web/index.php/<?php%20echo%20$publicPath;%20?%3E/images/1457781452.jpg
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\controller\<' not found 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 89 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('17ea76b588c2613...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): framework\base\Component->getComponent('17ea76b588c2613...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(42): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-09-17 08:17:25] [ log ] localhost/easy-framework-web/index.php/<?php%20echo%20$publicPath;%20?%3E/images/1457781452.jpg
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\controller\<' not found 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 89 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('17ea76b588c2613...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): framework\base\Component->getComponent('17ea76b588c2613...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(42): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-09-17 08:20:07] [ log ] localhost/easy-framework-web/index.php/<?php%20echo%20$publicPath;%20?%3E/images/1457781452.jpg
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\controller\<' not found 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 89 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('17ea76b588c2613...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): framework\base\Component->getComponent('17ea76b588c2613...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(42): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-09-17 08:20:09] [ log ] localhost/easy-framework-web/index.php/<?php%20echo%20$publicPath;%20?%3E/images/1457781452.jpg
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\controller\<' not found 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 89 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('17ea76b588c2613...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): framework\base\Component->getComponent('17ea76b588c2613...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(42): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-09-17 08:31:10] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined variable: publicPath at  file: C:\web\php\www\easy-framework-web\application\runtime\compile\index\index.action.compilecache.php, on line: 8 
+ file : C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php 
+ line : 54 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\web\Application.php(42): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-17 08:31:10] [ log ] localhost/easy-framework-web/index.php/object(Exception)
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Class 'application\controller\object(Exception)' not found 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 89 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('f6f3a6103ac6d96...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): framework\base\Component->getComponent('f6f3a6103ac6d96...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(42): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(27): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+

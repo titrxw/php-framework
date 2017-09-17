@@ -7,7 +7,6 @@
  */
 return array(
     'composer' => array(
-
     ),
     'components' => array(
         'log' => array(
@@ -16,7 +15,7 @@ return array(
             'maxSize' => 2097152
         ),
         'url' => array(
-            'routerKey' => 'r',
+            'routerKey' => '',
             'type' => '/',
             'separator' => '/',
             'defaultController' => 'index',
@@ -44,7 +43,7 @@ return array(
             'cachePath' => 'runtime/viewCache',
             'compilePath' => 'runtime/compile',
             'viewExt' => '.html',
-            'isCache' => true,
+            'isCache' => false,
             'cacheExpire' => 3600,
             'leftDelimiter' => '{',
             'rightDelimiter' => '}'

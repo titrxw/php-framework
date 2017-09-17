@@ -18,7 +18,6 @@ abstract class Web extends Controller
             return $this->ajax(null,500,$result);
         }
         $this->getComponent('session')->start();
-        $this->assign('publicPath','public/assets/application/');
         return true;
     }
 
@@ -27,5 +26,4 @@ abstract class Web extends Controller
         $this->getComponent('session')->destroy();
         return true;
     }
-
 }

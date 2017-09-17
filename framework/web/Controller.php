@@ -7,6 +7,8 @@
  */
 namespace framework\web;
 
+use framework\base\Container;
+
 abstract class Controller extends \framework\base\Controller
 {
     protected function isAjax()
@@ -41,5 +43,10 @@ abstract class Controller extends \framework\base\Controller
     protected function getCache()
     {
         return $this->getComponent('cache');
+    }
+
+    protected function getPage()
+    {
+        return $this->getComponent('page');
     }
 }

@@ -45,7 +45,7 @@ class Session extends Component
      */
     protected function init()
     {
-        $this->unInstall(false);
+        $this->unInstall();
         // 启动session
         $this->_autoStart = $this->getValueFromConf('autoStart',true);
         if ($this->_autoStart === true && PHP_SESSION_ACTIVE != session_status()) {

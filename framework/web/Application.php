@@ -16,8 +16,10 @@ class Application extends \framework\base\Application
         parent::addBaseComponents();
         $components = array(
             'session' => 'framework\\components\\session\\Session',
-            'db' => 'framework\\components\\db\\Pdo',
-            'view' => 'framework\\components\\view\\View'
+            'view' => 'framework\\components\\view\\View',
+            'cache' => 'framework\\components\\cache\\Redis',
+            'Pdo' => 'framework\\components\\db\\Pdo',
+            'log' => 'framework\\components\\log\\Log'
         );
         $this->_container->addComponents($components);
         $this->_container->addComponents($this->_appConf['addComponentsMap']);
@@ -43,7 +45,6 @@ class Application extends \framework\base\Application
         $instance->getResponse()->send($result.$content);
         unset($result,$content);
         $instance->finish();
-
         unset($default, $conf, $instance);
     }
 }

@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<img src="<?php echo $publicPath; ?>/images/1457781452.jpg">
 <?php echo $content; ?>
+<?php echo $page; ?>
 </body>
-</html>
+</html><?php ?>

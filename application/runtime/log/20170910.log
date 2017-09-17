@@ -533,3 +533,133 @@
 #9 C:\web\php\www\easy-framework1\index.php(8): require('C:\\web\\php\\www\\...')
 #10 {main}
 
+[2017-09-10 07:31:09] [ log ] localhost/easy-framework1/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined variable: content at  file: C:\web\php\www\easy-framework1\application\runtime\compile\index\index.action.compilecache.php, on line: 9 
+ file : C:\web\php\www\easy-framework1\framework\components\dispatcher\Dispatcher.php 
+ line : 49 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework1\framework\web\Application.php(40): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework1\framework\framework.php(27): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework1\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-10 07:31:10] [ log ] localhost/easy-framework1/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined variable: content at  file: C:\web\php\www\easy-framework1\application\runtime\compile\index\index.action.compilecache.php, on line: 9 
+ file : C:\web\php\www\easy-framework1\framework\components\dispatcher\Dispatcher.php 
+ line : 49 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework1\framework\web\Application.php(40): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework1\framework\framework.php(27): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework1\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-10 13:40:36] [ log ] localhost/easy-framework1/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined variable: content at  file: C:\web\php\www\easy-framework1\application\runtime\compile\index\index.action.compilecache.php, on line: 9 
+ file : C:\web\php\www\easy-framework1\framework\components\dispatcher\Dispatcher.php 
+ line : 49 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework1\framework\web\Application.php(40): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework1\framework\framework.php(27): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework1\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-10 13:40:59] [ log ] localhost/easy-framework1/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined variable: content at  file: C:\web\php\www\easy-framework1\application\runtime\compile\index\index.action.compilecache.php, on line: 9 
+ file : C:\web\php\www\easy-framework1\framework\components\dispatcher\Dispatcher.php 
+ line : 49 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework1\framework\web\Application.php(40): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework1\framework\framework.php(27): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework1\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-10 13:48:12] [ log ] localhost/easy-framework1/?index/index
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Division by zero at  file: C:\web\php\www\easy-framework1\framework\components\page\Page.php, on line: 180 
+ file : C:\web\php\www\easy-framework1\framework\components\dispatcher\Dispatcher.php 
+ line : 49 
+ code : 2 
+ trace : #0 C:\web\php\www\easy-framework1\framework\web\Application.php(40): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework1\framework\framework.php(27): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework1\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-10 13:49:01] [ log ] localhost/easy-framework1/?index/index
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Division by zero at  file: C:\web\php\www\easy-framework1\framework\components\page\Page.php, on line: 181 
+ file : C:\web\php\www\easy-framework1\framework\components\dispatcher\Dispatcher.php 
+ line : 49 
+ code : 2 
+ trace : #0 C:\web\php\www\easy-framework1\framework\web\Application.php(40): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework1\framework\framework.php(27): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework1\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-10 14:09:41] [ log ] localhost/easy-framework1/?index/index
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined offset: 0 at  file: C:\web\php\www\easy-framework1\framework\components\page\Page.php, on line: 125 
+ file : C:\web\php\www\easy-framework1\framework\components\dispatcher\Dispatcher.php 
+ line : 49 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework1\framework\web\Application.php(40): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework1\framework\framework.php(27): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework1\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-10 14:09:55] [ log ] localhost/easy-framework1/?index/index
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined offset: 0 at  file: C:\web\php\www\easy-framework1\framework\components\page\Page.php, on line: 126 
+ file : C:\web\php\www\easy-framework1\framework\components\dispatcher\Dispatcher.php 
+ line : 49 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework1\framework\web\Application.php(40): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework1\framework\framework.php(27): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework1\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-10 14:14:10] [ log ] localhost/easy-framework1/index.php?index/index/tr/ty/page/6
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : A non-numeric value encountered at  file: C:\web\php\www\easy-framework1\framework\components\page\Page.php, on line: 182 
+ file : C:\web\php\www\easy-framework1\framework\components\dispatcher\Dispatcher.php 
+ line : 49 
+ code : 2 
+ trace : #0 C:\web\php\www\easy-framework1\framework\web\Application.php(40): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework1\framework\framework.php(27): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework1\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+
+[2017-09-10 14:14:35] [ log ] localhost/easy-framework1/index.php?index/index/tr/ty/page/6
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: page at  file: C:\web\php\www\easy-framework1\framework\components\page\Page.php, on line: 52 
+ file : C:\web\php\www\easy-framework1\framework\components\dispatcher\Dispatcher.php 
+ line : 49 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework1\framework\web\Application.php(40): framework\components\dispatcher\Dispatcher->run(Array)
+#1 C:\web\php\www\easy-framework1\framework\framework.php(27): framework\web\Application::run(Array)
+#2 C:\web\php\www\easy-framework1\index.php(8): require('C:\\web\\php\\www\\...')
+#3 {main}
+

@@ -17,6 +17,7 @@ class Pdo extends Component implements DbInterface
 
     protected function init()
     {
+        $this->unInstall();
         unset($this->_conf);
         foreach ($this->_appConf['db'] as $key=>$item)
         {

@@ -4,7 +4,7 @@ use framework\base\Component;
 
 class Url extends Component
 {
-    private $_server;
+    protected $_server;
     protected $_defaultType;
     protected $_defaultController;
     protected $_defaultAction;
@@ -12,6 +12,12 @@ class Url extends Component
     protected $_defaultActionKey;
     protected $_defaultSeparator;
     protected $_currentModule;
+    protected $_curPage = array();
+
+    protected function init()
+    {
+        $this->unInstall();
+    }
 
     public function run($args = array())
     {
@@ -36,7 +42,7 @@ class Url extends Component
         $type = $this->getType();
         if ($type === '?')
         {
-            return array(
+            $urlInfo =  array(
                 'controller' => empty($_GET[$this->getDefaultControllerKey()]) ? $this->getDefaultController() : $_GET[$this->getDefaultControllerKey()],
                 'action' => empty($_GET[$this->getDefaultActionKey()]) ? $this->getDefaultAction() : $_GET[$this->getDefaultActionKey()]
             );
@@ -50,11 +56,10 @@ class Url extends Component
             }
             else
             {
-                $query = $this->_server['QUERY_STRING'];
+                $query = $this->getPathInfo();
+                $query = ltrim($query,'/');
             }
-
             $tmpQuery = explode($this->getSeparator(), $query);
-
             $urlInfo =  array(
                 'controller' => empty($tmpQuery[0]) ? $this->getDefaultController() : $tmpQuery[0],
                 'action' => empty($tmpQuery[1]) ? $this->getDefaultAction() : $tmpQuery[1]
@@ -67,8 +72,10 @@ class Url extends Component
                 $_GET[$tmpQuery[$i]] = !isset($tmpQuery[$i+1]) ?  '' : $tmpQuery[$i+1];
             }
             unset($tmpQuery);
-            return $urlInfo;
         }
+        $this->_curPage = $urlInfo;
+        unset($urlInfo);
+        return $this->_curPage;
     }
 
     public function getHost()
@@ -78,12 +85,22 @@ class Url extends Component
 
     public function getUrl()
     {
-        return $this->_server['PHP_SELF'];
+        return $this->_server['URL'];
     }
 
     public function getResquestUrl()
     {
         return $this->_server['REQUEST_URI'];
+    }
+
+    public function getPathInfo()
+    {
+        return empty($this->_server['PATH_INFO']) ? '' : $this->_server['PATH_INFO'];
+    }
+
+    public function getCurPage()
+    {
+        return $this->_curPage;
     }
 
     public function getType()
