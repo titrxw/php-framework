@@ -43,6 +43,8 @@ class Response extends Component
     {
         http_response_code($this->_code);
         $this->sendHeader();
+        if (is_array($data))
+            $data = json_encode($data);
         echo $data;
     }
 

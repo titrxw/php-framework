@@ -17,9 +17,9 @@ abstract class Controller extends Component
         return true;
     }
 
-    public function afterAction()
+    public function afterAction($data = array())
     {
-        return true;
+        return $data;
     }
 
     protected function rule()
@@ -128,7 +128,7 @@ abstract class Controller extends Component
         $urlComponent->noCache();
         $urlComponent->contentType('json');
         unset($urlComponent);
-        return json_encode($data);
+        return $data;
     }
 
     protected function model($name)

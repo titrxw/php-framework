@@ -43,7 +43,7 @@ class Dispatcher extends Component
                 return $result;
             }
             $result = $controllerInstance->$actionName();
-            $controllerInstance->afterAction();
+            $result = $controllerInstance->afterAction($result);
             unset($controllerInstance, $args);
             return $result;
         }

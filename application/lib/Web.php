@@ -6,24 +6,46 @@
  * Time: 12:14
  */
 namespace application\lib;
-use framework\web\Controller;
+use framework\web\Api;
 
-abstract class Web extends Controller
+//abstract class Web extends Controller
+//{
+//    public function beforeAction()
+//    {
+//        $result  = $this->validate();
+//        if ($result !== true)
+//        {
+//            return $this->ajax(null,500,$result);
+//        }
+//        $this->getComponent('session')->start();
+//        return true;
+//    }
+//
+//    public function afterAction()
+//    {
+//        $this->getComponent('session')->destroy();
+//        return true;
+//    }
+//}
+
+abstract class Web extends Api
 {
     public function beforeAction()
     {
         $result  = $this->validate();
         if ($result !== true)
         {
-            return $this->ajax(null,500,$result);
+            return array(500, null, $result);
         }
-        $this->getComponent('session')->start();
         return true;
     }
 
-    public function afterAction()
+    public function afterAction($data = array())
     {
-        $this->getComponent('session')->destroy();
-        return true;
+        $data = array('ret' => empty($data[0]) ? 200 : $data[0],
+            'data' => empty($data[1]) ? null : $data[1],
+            'msg' => empty($data[2]) ? '' : $data[2]);
+//        这里必须把结果结果返回去，该方法是放回结果前的结果
+        return $data;
     }
 }
