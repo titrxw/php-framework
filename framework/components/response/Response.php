@@ -15,7 +15,13 @@ class Response extends Component
         'jpg'  => 'image/jpg,image/jpeg,image/pjpeg',
         'gif'  => 'image/gif',
         'csv'  => 'text/csv',
-        'text' => 'text/html,application/xhtml+xml,*/*'
+        'txt' => 'text/plain',
+        'html' => 'text/html,application/xhtml+xml,*/*',
+        'pdf' => 'application/pdf',
+        'xls' => 'application/x-xls',
+        'apk' => 'application/vnd.android.package-archive',
+        'doc' => 'application/msword',
+        'zip' => 'application/zip'
     );
 
     protected function initHeader()
@@ -29,7 +35,7 @@ class Response extends Component
     {
         $this->unInstall();
         $this->initHeader();
-        $this->contentType('text');
+        $this->contentType('html');
     }
 
     public function noCache()
@@ -65,7 +71,7 @@ class Response extends Component
     {
         if(empty($this->_defaultType))
         {
-            $this->_defaultType = $this->getValueFromConf('defaultType', 'text');
+            $this->_defaultType = $this->getValueFromConf('defaultType', 'html');
         }
         return $this->_defaultType;
     }

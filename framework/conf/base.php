@@ -47,6 +47,9 @@ return array(
             'cacheExpire' => 3600,
             'leftDelimiter' => '{',
             'rightDelimiter' => '}'
+        ),
+        'upload' => array(
+            'maxSize' => 2088960
         )
     )
 );

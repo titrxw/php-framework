@@ -31,10 +31,7 @@ class Pdo extends Component implements DbInterface
     {
         if (!empty($this->_instances[$this->_currentDb]))
         {
-            if($this->reConnect())
-                return $this->_instances[$this->_currentDb];
-            else
-                return $this->getPdoHandle();
+            return $this->_instances[$this->_currentDb];
         }
 
         if(!empty($this->_appConf['db'][$this->_currentDb]) && is_array($this->_appConf['db'][$this->_currentDb]))
@@ -63,22 +60,6 @@ class Pdo extends Component implements DbInterface
         {
             throw new \Exception("db {$this->_currentDb} not found",500);
         }
-    }
-
-    protected function reConnect()
-    {
-        try
-        {
-            $this->_instances[$this->_currentDb]->getAttribute(\PDO::ATTR_SERVER_INFO);
-        }
-        catch (\PDOException $e) 
-        {
-            if(strpos($e->getMessage(), 'MySQL server has gone away')!==false)
-            {
-                return false;
-            }
-        }
-        return true;
     }
 
     public function query($sql)

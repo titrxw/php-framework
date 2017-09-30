@@ -13,7 +13,8 @@ return array(
     ),
     'addComponentsMap' => array(
         'validate' => 'framework\\components\\validate\\Validate',
-        'page' => 'framework\\components\\page\\Page'
+        'page' => 'framework\\components\\page\\Page',
+        'upload' => 'framework\\components\\upload\\Upload'
     ),
     'components' => array(
         'cache' => array(
@@ -46,6 +47,12 @@ return array(
                     'host' => 'localhost:3306',
                     'persistent' => true
                 )
+            )
+        ),
+        'upload' => array(
+            'accept' => array(
+                'jpg',
+                'png'
             )
         )
     )
