@@ -37,7 +37,11 @@ class Index extends Web
 //        var_dump($this->cache);
 //        var_dump($this->session);
         //var_dump($this->getComponent('Logger',1));
-        return 2;
+        $this->assign(array(
+            'page' => $this->page->out(100,null,array('tr' => 'ty')),
+            'content' => '3rere'
+        ));
+        return $this->display();
     }
 
     public function testAction()
