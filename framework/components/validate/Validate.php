@@ -17,7 +17,6 @@ class Validate extends Component
 
     protected function init()
     {
-        $this->unInstall();
         $this->_separator = $this->getValueFromConf('separator', '|');
     }
 

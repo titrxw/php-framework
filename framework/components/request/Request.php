@@ -11,11 +11,6 @@ class Request extends Component
     protected $_hasCheckPost = false;
     protected $_hasCheckRequest = false;
 
-    protected function init()
-    {
-        $this->unInstall();
-    }
-
     protected function stripSlashes(&$data)
     {
         if(is_array($data))

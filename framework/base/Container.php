@@ -103,7 +103,6 @@ class Container extends Base
             {
                 if (COMPOSER && $this->_composer->checkComposer($key)) {
                     $this->_instances[$key] = $this->_composer->getComposer($key, $params);
-                    $this->unInstall($key);
                 }
                 else
                 {
@@ -118,17 +117,6 @@ class Container extends Base
             throw new \Exception( $msg, 500);
         }
         return $this->_instances[$key];
-    }
-
-    public function unInstall($componentKey, $completeDel = true)
-    {
-        if ($completeDel) {
-            $this->_completeDelInstanceComponents[] = $componentKey;
-        }
-        else
-        {
-            $this->_delInstanceComponents[] = $componentKey;
-        }
     }
 
     public function getClassPathByKey($key)
@@ -151,20 +139,5 @@ class Container extends Base
             return false;
 
         unset($this->_instances[$key]);
-    }
-
-    public function finish()
-    {
-        foreach ($this->_delInstanceComponents as $item)
-        {
-            $this->destroyComponentsInstance($item);
-        }
-        foreach ($this->_completeDelInstanceComponents as $item)
-        {
-            $this->destroyComponent($item);
-        }
-
-        $this->_delInstanceComponents = array();
-        $this->_completeDelInstanceComponents = array();
     }
 }

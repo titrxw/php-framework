@@ -21,10 +21,10 @@ use framework\web\Api;
 //        return true;
 //    }
 //
-//    public function afterAction()
+//    public function afterAction($data = '')
 //    {
 //        $this->getComponent('session')->destroy();
-//        return true;
+//        return $data;
 //    }
 //}
 

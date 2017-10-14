@@ -6,12 +6,6 @@ class Exception extends Component
 {
     public  function handleException($exception)
     {
-        var_dump($exception);
-        $code = $exception->getCode();
-        if ($code > 0)
-        {
-            http_response_code($code);
-        }
         $this->getComponent('log')->save($this->formarMessage($exception));
     }
 

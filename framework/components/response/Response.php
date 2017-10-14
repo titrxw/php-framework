@@ -33,7 +33,6 @@ class Response extends Component
 
     protected function init()
     {
-        $this->unInstall();
         $this->initHeader();
         $this->contentType('html');
     }
@@ -99,4 +98,6 @@ class Response extends Component
     {
         $this->_code = $code;
     }
+
+
 }

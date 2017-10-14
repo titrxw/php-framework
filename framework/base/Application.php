@@ -102,9 +102,4 @@ class Application extends Base
     {
         return $this->_container->getComponent('response');
     }
-
-    protected function finish()
-    {
-        $this->_container->finish();
-    }
 }

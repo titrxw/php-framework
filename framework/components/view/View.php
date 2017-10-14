@@ -21,16 +21,15 @@ class View extends Component
 
     protected function init()
     {
-        $this->_viewPath = APP_ROOT.'/'.APP_NAME.'/'.$this->getValueFromConf('templatePath','view');
-        $this->_cachePath = APP_ROOT.'/'.APP_NAME.'/'.$this->getValueFromConf('cachePath','runtime/viewCache');
-        $this->_compilePath = APP_ROOT.'/'.APP_NAME.'/'.$this->getValueFromConf('compilePath','runtime/compile');
+        $this->_viewPath = APP_ROOT.APP_NAME.'/'.$this->getValueFromConf('templatePath','view');
+        $this->_cachePath = APP_ROOT.APP_NAME.'/'.$this->getValueFromConf('cachePath','runtime/viewCache');
+        $this->_compilePath = APP_ROOT.APP_NAME.'/'.$this->getValueFromConf('compilePath','runtime/compile');
         $this->_viewExt = $this->getValueFromConf('viewExt','.html');
         $this->_isCache = $this->getValueFromConf('isCache',true);
         if ($this->_isCache)
             $this->_cacheExpire = $this->getValueFromConf('cacheExpire',31536000);
         $this->_leftDelimiter = $this->getValueFromConf('leftDelimiter','{');
         $this->_rightDelimiter = $this->getValueFromConf('rightDelimiter','}');
-        $this->unInstall();
     }
 
     /**

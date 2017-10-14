@@ -14,11 +14,6 @@ class Url extends Component
     protected $_currentModule;
     protected $_curPage = array();
 
-    protected function init()
-    {
-        $this->unInstall();
-    }
-
     public function run($args = array())
     {
         $this->_server = $args;

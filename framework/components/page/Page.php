@@ -17,11 +17,6 @@ class Page extends Component
     protected $_curPage=0;
     protected $_protocol;
 
-    protected function init()
-    {
-        $this->unInstall();
-    }
-
     protected function initNeedData($count,$pageCount,$param=array())
     {
         $this->_count=intval($count)>0?$count:0;

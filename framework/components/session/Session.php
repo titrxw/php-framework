@@ -45,7 +45,6 @@ class Session extends Component
      */
     protected function init()
     {
-        $this->unInstall();
         // 启动session
         $this->_autoStart = $this->getValueFromConf('autoStart',true);
         if ($this->_autoStart === true && PHP_SESSION_ACTIVE != session_status()) {
@@ -78,31 +77,24 @@ class Session extends Component
     public function start()
     {
         if($this->_isStart === true) return true;
-        try
-        {
-            if (!empty($this->_driver)) {
-                // 读取session驱动
-                $driverClass = 'framework\\components\\session\\driver\\' . $this->_driver;
-                // 检查驱动类
-                if (class_exists($driverClass))
+        if (!empty($this->_driver)) {
+            // 读取session驱动
+            $driverClass = 'framework\\components\\session\\driver\\' . $this->_driver;
+            // 检查驱动类
+            if (class_exists($driverClass))
+            {
+                $this->_driverHandle = new $driverClass(empty($this->_appConf[$this->_driver])?array():$this->_appConf[$this->_driver]);
+                if(!session_set_save_handler($this->_driverHandle))
                 {
-                    $this->_driverHandle = new $driverClass(empty($this->_appConf[$this->_driver])?array():$this->_appConf[$this->_driver]);
-                    if(!session_set_save_handler($this->_driverHandle))
-                    {
-                        unset($this->_driverHandle);
-                        throw new \Error('session set handle failed',500);
-                    }
+                    unset($this->_driverHandle);
+                    throw new \Error('session set handle failed',500);
                 }
             }
-            if ($this->_autoStart)
-            {
-                session_start();
-                $this->_isStart = true;
-            }
         }
-        catch(\Error $e)
+        if ($this->_autoStart)
         {
-            throw $e;
+            session_start();
+            $this->_isStart = true;
         }
     }
 

@@ -36,15 +36,37 @@ class Application extends \framework\base\Application
     {
         $instance = new Application($conf);
         $server = $_SERVER;
-        $url = $instance->getUrl()->run($server);
-
-        ob_start();
-        $result = $instance->getDispatcher()->run($url);
-        $content = ob_get_clean();
-
-        $instance->getResponse()->send($result.$content);
-        unset($result,$content);
-        $instance->finish();
-        unset($default, $conf, $instance);
+        $result = '';
+        try
+        {
+            $url = $instance->getUrl()->run($server);
+            $result = $instance->getDispatcher()->run($url);
+            $instance->getResponse()->send($result);
+            unset($result,$content);
+        }
+        catch (\Exception $e)
+        {
+            $code = $e->getCode() > 0 ? $e->getCode() : 404;
+            $response = $instance->getResponse();
+            $response->setCode($code);
+            if (DEBUG) {
+                $result = $e->getMessage();
+            }
+            $response->send($result);
+            unset($default, $conf, $instance);
+            throw $e;
+        }
+        catch (\Error $e)
+        {
+            $code = $e->getCode() > 0 ? $e->getCode() : 500;
+            $response = $instance->getResponse();
+            $response->setCode($code);
+            if (DEBUG) {
+                $result = $e->getMessage();
+            }
+            $response->send($result);
+            unset($default, $conf, $instance);
+            throw $e;
+        }
     }
 }

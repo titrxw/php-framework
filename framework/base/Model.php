@@ -3,11 +3,6 @@ namespace framework\base;
 
 class Model extends Component
 {
-    protected function init()
-    {
-        $this->unInstall();
-    }
-
     protected function selectDb($db)
     {
         $this->getComponent('Pdo')->selectDb($db);

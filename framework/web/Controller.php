@@ -7,8 +7,6 @@
  */
 namespace framework\web;
 
-use framework\base\Container;
-
 abstract class Controller extends \framework\base\Controller
 {
     protected function isAjax()
