@@ -9,7 +9,7 @@ class Exception extends Component
         $this->getComponent('log')->save($this->formarMessage($exception));
     }
 
-    public function formarMessage($exception)
+    protected function formarMessage($exception)
     {
         return " msg : " . $exception->getMessage() .
             " \r\n file : " . $exception->getFile().

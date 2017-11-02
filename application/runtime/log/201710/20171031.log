@@ -1,13 +1,18 @@
-[2017-10-31 12:41:01] [ log ] localhost:81/index/
- client: 127.0.0.1
+[2017-10-31 11:51:21] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
 ---------------------------------------------------------------
-Declaration of application\lib\Web::afterAction($data = Array) must be compatible with framework\web\Api::afterAction($data = Array): array (/var/www/php/easy-framework-swoole/application/lib/Web.php:33)
-Stack trace:
-#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
-
-
-[2017-10-31 12:41:01] [ log ] 
- client: 
----------------------------------------------------------------
-workerid: 0  workerpid: 2974 code: 255
+ msg : redis auth password error 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('redis', Array)
+#1 C:\web\php\www\easy-framework-web\framework\web\Controller.php(161): framework\base\Component->getComponent('redis')
+#2 C:\web\php\www\easy-framework-web\framework\base\Controller.php(50): framework\web\Controller->getRedis()
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(38): framework\base\Controller->__get('redis')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(31): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
 

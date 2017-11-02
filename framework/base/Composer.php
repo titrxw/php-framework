@@ -15,7 +15,7 @@ class Composer extends Base
         unset($this->_appConf);
     }
 
-    public function checkComposer($name)
+    public function checkComposer($name): bool
     {
         if (!empty($this->_conf[$name]))
         {

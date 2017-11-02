@@ -14,22 +14,6 @@ class Session extends Component
     protected $_driverHandle;
     protected $_isStart = false;
 
-
-    /**
-     * 设置或者获取session作用域（前缀）
-     * @param string $prefix
-     * @return string|void
-     */
-    public function getPrefix($prefix = '')
-    {
-        if (empty($prefix) && null !== $prefix) {
-            return $this->getDefaultPrefix();
-        } else {
-            $this->_prefix = $prefix;
-            return $this->_prefix;
-        }
-    }
-
     protected function getDefaultPrefix()
     {
         if(empty($this->_prefix))
@@ -71,23 +55,28 @@ class Session extends Component
             ini_set('session.cookie_httponly',$httponly);
         }
 
-        $this->_driver = $this->getValueFromConf('driver','');
+        $this->_driver = $this->getValueFromConf('driver',array());
     }
 
     public function start()
     {
         if($this->_isStart === true) return true;
-        if (!empty($this->_driver)) {
+        if (!empty($this->_driver) && !empty($this->_driver['type'])) {
             // 读取session驱动
-            $driverClass = 'framework\\components\\session\\driver\\' . $this->_driver;
+            $driverClass = 'framework\\components\\session\\driver\\' . $this->_driver['type'];
             // 检查驱动类
             if (class_exists($driverClass))
             {
-                $this->_driverHandle = new $driverClass(empty($this->_appConf[$this->_driver])?array():$this->_appConf[$this->_driver]);
+                $conf = empty($this->_appConf[$this->_driver['type']])?array():$this->_appConf[$this->_driver['type']];
+                if (!empty($this->_driver['name'])) {
+                    $conf['_name'] = $this->_driver['name'];
+                }
+                $this->_driverHandle = new $driverClass($conf);
+                unset($conf);
                 if(!session_set_save_handler($this->_driverHandle))
                 {
                     unset($this->_driverHandle);
-                    throw new \Error('session set handle failed',500);
+                    throw new \Exception('session set handle failed',500);
                 }
             }
         }
@@ -109,7 +98,7 @@ class Session extends Component
     {
         if(!$this->_isStart || empty($name)) return false;
 
-        $prefix = !is_null($prefix) ? $prefix : $this->getPrefix();
+        $prefix = !is_null($prefix) ? $prefix : $this->getDefaultPrefix();
         if ($prefix) {
             $_SESSION[$prefix][$name] = $value;
         } else {
@@ -126,7 +115,7 @@ class Session extends Component
     public function get($name = '', $prefix = null)
     {
         if(!$this->_isStart) return false;
-        $prefix = !is_null($prefix) ? $prefix : $this->getPrefix();
+        $prefix = !is_null($prefix) ? $prefix : $this->getDefaultPrefix();
 
         if ('' == $name) {
             // 获取全部的session
@@ -148,7 +137,7 @@ class Session extends Component
     public function delete($name, $prefix = null)
     {
         if(!$this->_isStart) return false;
-        $prefix = !is_null($prefix) ? $prefix : $this->getPrefix();
+        $prefix = !is_null($prefix) ? $prefix : $this->getDefaultPrefix();
 
         if (is_array($name)) {
             foreach ($name as $key) {
@@ -171,7 +160,7 @@ class Session extends Component
     public function clear($prefix = null)
     {
         if(!$this->_isStart) return false;
-        $prefix = !is_null($prefix) ? $prefix : $this->getPrefix();
+        $prefix = !is_null($prefix) ? $prefix : $this->getDefaultPrefix();
 
         if ($prefix) {
             unset($_SESSION[$prefix]);
@@ -189,7 +178,7 @@ class Session extends Component
     public function has($name, $prefix = null)
     {
         if(!$this->_isStart) return false;
-        $prefix = !is_null($prefix) ? $prefix : $this->getPrefix();
+        $prefix = !is_null($prefix) ? $prefix : $this->getDefaultPrefix();
 
         return $prefix ? isset($_SESSION[$prefix][$name]) : isset($_SESSION[$name]);
     }
@@ -234,10 +223,5 @@ class Session extends Component
     public function finish()
     {
         unset($this->_driverHandle);
-    }
-
-    public function __destruct()
-    {
-        $this->destroy();
     }
 }

@@ -29,7 +29,7 @@ class Url extends Component
 
     public function getCurrentModule()
     {
-        return $this->_currentModule;
+        return $this->_currentModule;;
     }
 
     protected function formatUrl()
@@ -59,10 +59,7 @@ class Url extends Component
                 'controller' => empty($tmpQuery[0]) ? $this->getDefaultController() : $tmpQuery[0],
                 'action' => empty($tmpQuery[1]) ? $this->getDefaultAction() : $tmpQuery[1]
             );
-            if ($tmpQuery[0] === 'favicon.ico') {
-//                处理图标
-                return false;
-            }
+
             $count = count($tmpQuery);
             $_GET = array();
             for($i=2;$i < $count; $i+=2)
@@ -86,14 +83,9 @@ class Url extends Component
         return $this->_server['URL'];
     }
 
-    public function getRequestUrl()
+    public function getResquestUrl()
     {
         return $this->_server['REQUEST_URI'];
-    }
-
-    public function getMethod()
-    {
-        return $this->_server['REQUEST_METHOD'];
     }
 
     public function getPathInfo()

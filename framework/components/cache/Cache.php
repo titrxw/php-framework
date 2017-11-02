@@ -8,7 +8,7 @@
 namespace framework\components\cache;
 use framework\base\Component;
 
-abstract class Cache extends Component
+class Cache extends Component
 {
     protected $_handle = null;
 

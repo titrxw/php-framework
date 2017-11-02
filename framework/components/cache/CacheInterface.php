@@ -8,9 +8,9 @@
 namespace framework\components\cache;
 interface CacheInterface
 {
-    public function getCacheKey($key);
     public function get($key,$default='');
     public function set($key,$value,$expire);
     public function rm($key);
     public function clear();
+    public function has($key);
 }

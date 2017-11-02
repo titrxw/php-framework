@@ -17,11 +17,6 @@ class Page extends Component
     protected $_curPage=0;
     protected $_protocol;
 
-    protected function init()
-    {
-        $this->unInstall(false);
-    }
-
     protected function initNeedData($count,$pageCount,$param=array())
     {
         $this->_count=intval($count)>0?$count:0;
@@ -68,7 +63,7 @@ class Page extends Component
         $url = $this->getComponent('url');
 
         $type = $url->getType();
-        $oldUrl=$url->getRequestUrl();
+        $oldUrl=$url->getResquestUrl();
         if ($type === '?')
         {
             $this->_separator = '&';

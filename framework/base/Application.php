@@ -49,7 +49,6 @@ class Application extends Base
             );
             $this->_container->setComposer(new Composer($composerConf));
         }
-
         unset($conf,
             $composerConf,
             $this->_conf['components'],
@@ -65,7 +64,7 @@ class Application extends Base
             'exception' => 'framework\\components\\exception\\Exception',
             'error' => 'framework\\components\\error\\Error',
             'shutdown' => 'framework\\components\\shutdown\\ShutDown',
-            'url' => 'framework\\components\\url\\SwooleUrl',
+            'url' => 'framework\\components\\url\\Url',
             'dispatcher' => 'framework\\components\\dispatcher\\Dispatcher',
             'request' => 'framework\\components\\request\\Request',
             'response' => 'framework\\components\\response\\Response'
@@ -87,5 +86,20 @@ class Application extends Base
     protected function setShutDownHandle()
     {
         register_shutdown_function(array($this->_container->getComponent('shutdown'), 'handleShutDown'));
+    }
+
+    protected function getUrl()
+    {
+        return $this->_container->getComponent('url');
+    }
+
+    protected function getDispatcher()
+    {
+        return $this->_container->getComponent('dispatcher');
+    }
+
+    protected function getResponse()
+    {
+        return $this->_container->getComponent('response');
     }
 }

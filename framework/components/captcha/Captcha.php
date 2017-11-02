@@ -55,19 +55,9 @@ class Captcha extends Component
         $this->_type = $this->getValueFromConf('type', 'png');
     }
 
-    public function GetCode()
-    {
-        return $this->_code;
-    }
-
     //输出图像
     public function send()
     {
-
-        if (!empty($this->_img))
-        {
-            imagedestroy($this->_img);
-        }
         //创建背景 (颜色， 大小， 边框)
         $this->CreateBack();
 
@@ -79,9 +69,8 @@ class Captcha extends Component
 
         $this->SetDisturbColor();
         //输出图像
-        ob_start();
         $this->PrintImg();
-        return ob_get_clean();
+        return $this->_code;
     }
 
     //创建背景
@@ -165,5 +154,10 @@ class Captcha extends Component
         {
             $this->_code .=$codes{rand(0, strlen($codes)-1)};
         }
+    }
+
+    public function __destruct()
+    {
+        imagedestroy($this->_img);
     }
 }

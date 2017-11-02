@@ -7,6 +7,7 @@
  */
 namespace framework\web;
 
+
 class Application extends \framework\base\Application
 {
     protected function addBaseComponents()
@@ -14,11 +15,11 @@ class Application extends \framework\base\Application
         $this->_appConf['addComponentsMap'] = empty($this->_appConf['addComponentsMap']) ? array() : $this->_appConf['addComponentsMap'];
         parent::addBaseComponents();
         $components = array(
-            'server' => 'framework\\server\\Server',
-            'log' => 'framework\\components\\log\\SwooleLog',
+            'session' => 'framework\\components\\session\\Session',
+            'view' => 'framework\\components\\view\\View',
             'cache' => 'framework\\components\\cache\\Redis',
             'db' => 'framework\\components\\db\\Pdo',
-            'taskManager' => 'framework\\task\\Task',
+            'log' => 'framework\\components\\log\\Log',
             'redis' => 'framework\\components\\cache\\Redis'
         );
         $this->_container->addComponents($components);
@@ -34,17 +35,39 @@ class Application extends \framework\base\Application
 
     public static function run($conf)
     {
-        if (PHP_SAPI !== 'cli')
-        {
-            echo 'have to run at cli';
-            return false;
-        }
-        if (!empty($conf['server']))
-        {
-            unset($conf['server']);
-        }
         $instance = new Application($conf);
-        $instance->_container->getComponent('server')->start();
-        unset($default, $conf, $instance);
+        $server = $_SERVER;
+        $result = '';
+        try
+        {
+            $url = $instance->getUrl()->run($server);
+            $result = $instance->getDispatcher()->run($url);
+            $instance->getResponse()->send($result);
+            unset($result,$content);
+        }
+        catch (\Exception $e)
+        {
+            $code = $e->getCode() > 0 ? $e->getCode() : 404;
+            $response = $instance->getResponse();
+            $response->setCode($code);
+            if (DEBUG) {
+                $result = $e->getMessage() . "\n trace: " . $e->getTraceAsString();
+            }
+            $response->send($result);
+            unset($default, $conf, $instance);
+            throw $e;
+        }
+        catch (\Error $e)
+        {
+            $code = $e->getCode() > 0 ? $e->getCode() : 500;
+            $response = $instance->getResponse();
+            $response->setCode($code);
+            if (DEBUG) {
+                $result = $e->getMessage() . "\n trace: " . $e->getTraceAsString();
+            }
+            $response->send($result);
+            unset($default, $conf, $instance);
+            throw $e;
+        }
     }
 }

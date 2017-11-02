@@ -1,0 +1,1435 @@
+[2017-10-28 12:17:46] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:19:04] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:19:04] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:19:05] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:19:06] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:19:35] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:19:36] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:19:41] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:19:48] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:19:49] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:19:49] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:19:50] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:19:51] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:20:32] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:20:32] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:20:33] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:20:33] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:20:34] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:20:34] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:20:38] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:21:41] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:21:41] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:21:42] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:21:42] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:21:43] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 74 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:21:55] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Use of undefined constant CURLOPT_IPRESOLVE - assumed 'CURLOPT_IPRESOLVE' at  file: C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Core\Http.php, on line: 75 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('wechat', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(47): framework\base\Component->getComponent('wechat', Array)
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:31:55] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:31:56] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:31:56] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:31:56] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:31:56] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:31:56] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:09] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:09] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:10] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:10] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:10] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:10] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:11] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:11] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:11] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:11] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:11] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:12] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:12] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:12] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:33:12] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-28 12:35:28] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Cannot modify header information - headers already sent by (output started at C:\web\php\www\easy-framework-web\application\controller\Index.php:52) at  file: C:\web\php\www\easy-framework-web\framework\components\response\Response.php, on line: 91 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'Cannot modify h...', 'C:\\web\\php\\www\\...', 91, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(91): header('X-Powered-By:es...')
+#2 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(50): framework\components\response\Response->sendHeader()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(55): framework\components\response\Response->send('Cannot modify h...')
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:37:25] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Cannot modify header information - headers already sent by (output started at C:\web\php\www\easy-framework-web\application\controller\Index.php:52) at  file: C:\web\php\www\easy-framework-web\framework\components\response\Response.php, on line: 91 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'Cannot modify h...', 'C:\\web\\php\\www\\...', 91, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(91): header('X-Powered-By:es...')
+#2 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(50): framework\components\response\Response->sendHeader()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(55): framework\components\response\Response->send('Cannot modify h...')
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:38:16] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : The directory "C:\WINDOWS\TEMP" is not writable. 
+ file : C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php 
+ line : 92 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('C:\\WINDOWS\\TEMP', '.doctrinecache....', 2)
+#1 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('C:\\WINDOWS\\TEMP')
+#2 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#3 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#4 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#5 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\MenuServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#6 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\MenuServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#7 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('menu')
+#8 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('menu')
+#9 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#10 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#11 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#12 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#13 {main}
+
+[2017-10-28 12:38:41] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Cannot modify header information - headers already sent by (output started at C:\web\php\www\easy-framework-web\application\controller\Index.php:52) at  file: C:\web\php\www\easy-framework-web\framework\components\response\Response.php, on line: 91 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'Cannot modify h...', 'C:\\web\\php\\www\\...', 91, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(91): header('X-Powered-By:es...')
+#2 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(50): framework\components\response\Response->sendHeader()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(55): framework\components\response\Response->send('Cannot modify h...')
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:38:57] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Identifier "message" is not defined. 
+ file : C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php 
+ line : 101 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('message')
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('message')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:39:09] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Identifier "app" is not defined. 
+ file : C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php 
+ line : 101 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('app')
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('app')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:39:22] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Cannot modify header information - headers already sent by (output started at C:\web\php\www\easy-framework-web\application\controller\Index.php:52) at  file: C:\web\php\www\easy-framework-web\framework\components\response\Response.php, on line: 91 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'Cannot modify h...', 'C:\\web\\php\\www\\...', 91, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(91): header('X-Powered-By:es...')
+#2 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(50): framework\components\response\Response->sendHeader()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(55): framework\components\response\Response->send('Cannot modify h...')
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:40:26] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Cannot modify header information - headers already sent by (output started at C:\web\php\www\easy-framework-web\application\controller\Index.php:52) at  file: C:\web\php\www\easy-framework-web\framework\components\response\Response.php, on line: 91 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'Cannot modify h...', 'C:\\web\\php\\www\\...', 91, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(91): header('X-Powered-By:es...')
+#2 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(50): framework\components\response\Response->sendHeader()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(55): framework\components\response\Response->send('Cannot modify h...')
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:41:11] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Identifier "replay" is not defined. 
+ file : C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php 
+ line : 101 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('replay')
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('replay')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 12:41:17] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : The directory "C:\WINDOWS\TEMP" is not writable. 
+ file : C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php 
+ line : 92 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('C:\\WINDOWS\\TEMP', '.doctrinecache....', 2)
+#1 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('C:\\WINDOWS\\TEMP')
+#2 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#3 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#4 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#5 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#6 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#7 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#8 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#9 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#10 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#11 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#12 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#13 {main}
+
+[2017-10-28 12:44:26] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : The directory "C:\WINDOWS\TEMP" is not writable. 
+ file : C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php 
+ line : 92 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('C:\\WINDOWS\\TEMP', '.doctrinecache....', 2)
+#1 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('C:\\WINDOWS\\TEMP')
+#2 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#3 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#4 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#5 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#6 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#7 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#8 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#9 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#10 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#11 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#12 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#13 {main}
+
+[2017-10-28 12:44:26] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : The directory "C:\WINDOWS\TEMP" is not writable. 
+ file : C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php 
+ line : 92 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('C:\\WINDOWS\\TEMP', '.doctrinecache....', 2)
+#1 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('C:\\WINDOWS\\TEMP')
+#2 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#3 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#4 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#5 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#6 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#7 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#8 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#9 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#10 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#11 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#12 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#13 {main}
+
+[2017-10-28 12:44:27] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : The directory "C:\WINDOWS\TEMP" is not writable. 
+ file : C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php 
+ line : 92 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('C:\\WINDOWS\\TEMP', '.doctrinecache....', 2)
+#1 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('C:\\WINDOWS\\TEMP')
+#2 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#3 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#4 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#5 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#6 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#7 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#8 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#9 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#10 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#11 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#12 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#13 {main}
+
+[2017-10-28 12:44:27] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : The directory "C:\WINDOWS\TEMP" is not writable. 
+ file : C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php 
+ line : 92 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('C:\\WINDOWS\\TEMP', '.doctrinecache....', 2)
+#1 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('C:\\WINDOWS\\TEMP')
+#2 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#3 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#4 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#5 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#6 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#7 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#8 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#9 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#10 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#11 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#12 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#13 {main}
+
+[2017-10-28 12:44:28] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : The directory "C:\WINDOWS\TEMP" is not writable. 
+ file : C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php 
+ line : 92 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('C:\\WINDOWS\\TEMP', '.doctrinecache....', 2)
+#1 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('C:\\WINDOWS\\TEMP')
+#2 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#3 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#4 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#5 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#6 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#7 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#8 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#9 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#10 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#11 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#12 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#13 {main}
+
+[2017-10-28 12:44:28] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : The directory "C:\WINDOWS\TEMP" is not writable. 
+ file : C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php 
+ line : 92 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('C:\\WINDOWS\\TEMP', '.doctrinecache....', 2)
+#1 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('C:\\WINDOWS\\TEMP')
+#2 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#3 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#4 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#5 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#6 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#7 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#8 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#9 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#10 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#11 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#12 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#13 {main}
+
+[2017-10-28 12:48:00] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : mkdir(): No such file or directory at  file: C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php, on line: 223 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'mkdir(): No suc...', 'C:\\web\\php\\www\\...', 223, Array)
+#1 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(223): mkdir('\xE2\x80\xAAC:\\web\\php\\p...', 509, true)
+#2 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(84): Doctrine\Common\Cache\FileCache->createPathIfNeeded('\xE2\x80\xAAC:\\web\\php\\p...')
+#3 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...', '.doctrinecache....', 2)
+#4 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...')
+#5 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#6 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#7 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#8 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#9 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#10 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#11 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#12 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#13 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#14 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#15 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#16 {main}
+
+[2017-10-28 12:49:00] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : mkdir(): No such file or directory at  file: C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php, on line: 224 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'mkdir(): No suc...', 'C:\\web\\php\\www\\...', 224, Array)
+#1 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(224): mkdir('\xE2\x80\xAAC:\\web\\php\\p...', 509, true)
+#2 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(84): Doctrine\Common\Cache\FileCache->createPathIfNeeded('\xE2\x80\xAAC:\\web\\php\\p...')
+#3 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...', '.doctrinecache....', 2)
+#4 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...')
+#5 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#6 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#7 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#8 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#9 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#10 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#11 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#12 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#13 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#14 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#15 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#16 {main}
+
+[2017-10-28 12:50:35] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : mkdir(): No such file or directory at  file: C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php, on line: 223 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'mkdir(): No suc...', 'C:\\web\\php\\www\\...', 223, Array)
+#1 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(223): mkdir('\xE2\x80\xAAC:\\web\\php\\p...', 509, true)
+#2 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(84): Doctrine\Common\Cache\FileCache->createPathIfNeeded('\xE2\x80\xAAC:\\web\\php\\p...')
+#3 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...', '.doctrinecache....', 2)
+#4 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...')
+#5 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#6 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#7 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#8 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#9 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#10 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#11 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#12 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#13 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#14 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#15 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#16 {main}
+
+[2017-10-28 12:50:51] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : mkdir(): No such file or directory at  file: C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php, on line: 223 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'mkdir(): No suc...', 'C:\\web\\php\\www\\...', 223, Array)
+#1 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(223): mkdir('\xE2\x80\xAAC:\\web\\php\\p...', 509, true)
+#2 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(84): Doctrine\Common\Cache\FileCache->createPathIfNeeded('\xE2\x80\xAAC:\\web\\php\\p...')
+#3 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...', '.doctrinecache....', 2)
+#4 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...')
+#5 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#6 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#7 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#8 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#9 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#10 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#11 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#12 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#13 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#14 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#15 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#16 {main}
+
+[2017-10-28 12:50:52] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : mkdir(): No such file or directory at  file: C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php, on line: 223 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'mkdir(): No suc...', 'C:\\web\\php\\www\\...', 223, Array)
+#1 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(223): mkdir('\xE2\x80\xAAC:\\web\\php\\p...', 509, true)
+#2 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(84): Doctrine\Common\Cache\FileCache->createPathIfNeeded('\xE2\x80\xAAC:\\web\\php\\p...')
+#3 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...', '.doctrinecache....', 2)
+#4 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...')
+#5 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#6 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#7 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#8 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#9 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#10 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#11 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#12 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#13 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#14 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#15 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#16 {main}
+
+[2017-10-28 12:50:52] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : mkdir(): No such file or directory at  file: C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php, on line: 223 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'mkdir(): No suc...', 'C:\\web\\php\\www\\...', 223, Array)
+#1 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(223): mkdir('\xE2\x80\xAAC:\\web\\php\\p...', 509, true)
+#2 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(84): Doctrine\Common\Cache\FileCache->createPathIfNeeded('\xE2\x80\xAAC:\\web\\php\\p...')
+#3 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...', '.doctrinecache....', 2)
+#4 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...')
+#5 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#6 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#7 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#8 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#9 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#10 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#11 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#12 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#13 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#14 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#15 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#16 {main}
+
+[2017-10-28 12:50:52] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : mkdir(): No such file or directory at  file: C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php, on line: 223 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'mkdir(): No suc...', 'C:\\web\\php\\www\\...', 223, Array)
+#1 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(223): mkdir('\xE2\x80\xAAC:\\web\\php\\p...', 509, true)
+#2 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php(84): Doctrine\Common\Cache\FileCache->createPathIfNeeded('\xE2\x80\xAAC:\\web\\php\\p...')
+#3 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...', '.doctrinecache....', 2)
+#4 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('\xE2\x80\xAAC:\\web\\php\\p...')
+#5 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#6 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#7 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#8 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#9 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#10 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#11 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#12 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#13 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#14 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#15 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#16 {main}
+
+[2017-10-28 12:51:25] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : The directory "C:\WINDOWS\TEMP" is not writable. 
+ file : C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php 
+ line : 92 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('C:\\WINDOWS\\TEMP', '.doctrinecache....', 2)
+#1 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('C:\\WINDOWS\\TEMP')
+#2 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#3 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#4 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#5 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#6 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#7 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#8 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#9 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#10 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#11 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#12 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#13 {main}
+
+[2017-10-28 12:51:26] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : The directory "C:\WINDOWS\TEMP" is not writable. 
+ file : C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php 
+ line : 92 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('C:\\WINDOWS\\TEMP', '.doctrinecache....', 2)
+#1 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('C:\\WINDOWS\\TEMP')
+#2 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#3 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#4 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#5 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#6 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#7 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#8 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#9 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#10 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#11 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#12 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#13 {main}
+
+[2017-10-28 12:51:27] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : The directory "C:\WINDOWS\TEMP" is not writable. 
+ file : C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php 
+ line : 92 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('C:\\WINDOWS\\TEMP', '.doctrinecache....', 2)
+#1 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('C:\\WINDOWS\\TEMP')
+#2 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#3 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#4 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#5 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#6 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#7 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#8 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#9 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#10 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#11 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#12 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#13 {main}
+
+[2017-10-28 12:52:44] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : The directory "C:\WINDOWS\TEMP" is not writable. 
+ file : C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php 
+ line : 92 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('C:\\WINDOWS\\TEMP', '.doctrinecache....', 2)
+#1 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('C:\\WINDOWS\\TEMP')
+#2 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#3 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#4 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#5 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#6 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#7 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#8 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#9 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#10 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#11 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#12 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#13 {main}
+
+[2017-10-28 12:52:44] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : The directory "C:\WINDOWS\TEMP" is not writable. 
+ file : C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FileCache.php 
+ line : 92 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\vendor\doctrine\cache\lib\Doctrine\Common\Cache\FilesystemCache.php(37): Doctrine\Common\Cache\FileCache->__construct('C:\\WINDOWS\\TEMP', '.doctrinecache....', 2)
+#1 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(231): Doctrine\Common\Cache\FilesystemCache->__construct('C:\\WINDOWS\\TEMP')
+#2 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#3 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(239): Pimple\Container->offsetGet('cache')
+#4 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\Application->EasyWeChat\Foundation\{closure}(Object(EasyWeChat\Foundation\Application))
+#5 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\ServiceProviders\ReplyServiceProvider.php(45): Pimple\Container->offsetGet('access_token')
+#6 C:\web\php\www\easy-framework-web\vendor\pimple\pimple\src\Pimple\Container.php(118): EasyWeChat\Foundation\ServiceProviders\ReplyServiceProvider->EasyWeChat\Foundation\ServiceProviders\{closure}(Object(EasyWeChat\Foundation\Application))
+#7 C:\web\php\www\easy-framework-web\vendor\overtrue\wechat\src\Foundation\Application.php(194): Pimple\Container->offsetGet('reply')
+#8 C:\web\php\www\easy-framework-web\application\controller\Index.php(52): EasyWeChat\Foundation\Application->__get('reply')
+#9 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#10 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#11 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#12 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#13 {main}
+
+[2017-10-28 12:52:55] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Cannot modify header information - headers already sent by (output started at C:\web\php\www\easy-framework-web\application\controller\Index.php:52) at  file: C:\web\php\www\easy-framework-web\framework\components\response\Response.php, on line: 91 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'Cannot modify h...', 'C:\\web\\php\\www\\...', 91, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(91): header('X-Powered-By:es...')
+#2 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(50): framework\components\response\Response->sendHeader()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(55): framework\components\response\Response->send('Cannot modify h...')
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-28 13:33:02] [ log ] localhost/easy-framework-web/index.php/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Cannot modify header information - headers already sent by (output started at C:\web\php\www\easy-framework-web\application\controller\Index.php:52) at  file: C:\web\php\www\easy-framework-web\framework\components\response\Response.php, on line: 91 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'Cannot modify h...', 'C:\\web\\php\\www\\...', 91, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(91): header('X-Powered-By:es...')
+#2 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(50): framework\components\response\Response->sendHeader()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(55): framework\components\response\Response->send('Cannot modify h...')
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+

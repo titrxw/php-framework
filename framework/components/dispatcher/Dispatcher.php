@@ -13,14 +13,13 @@ class Dispatcher extends Component
     public function run($args = array())
     {
         $controllerName = $this->getControllerPrefix() . $args['controller'] . $this->getControllerSuffix();
-        $controllerName = ucfirst($controllerName);
-        if (!file_exists(APP_ROOT.APP_NAME.'/controller/'.$controllerName.'.php'))
+
+        if (!file_exists(APP_ROOT.APP_NAME.'/controller/'.ucfirst($controllerName).'.php'))
         {
-            throw new \Exception(APP_ROOT.APP_NAME.'/controller/'.$controllerName.'.phpnot exists', 404);
+            throw new \Exception(APP_ROOT.APP_NAME.'/controller/'.ucfirst($controllerName).'.phpnot exists', 404);
         }
 
         $controllerHashName = md5(APP_NAME.'application/controller/'.$controllerName);
-
         Container::getInstance()->addComponent($controllerHashName,
             'application\\controller\\'. $controllerName);
 
@@ -32,13 +31,7 @@ class Dispatcher extends Component
         $result = $controllerInstance->beforeAction();
         if ($result !== true)
         {
-            unset($controllerInstance, $args);
             return $result;
-        }
-        if (!method_exists($controllerInstance, $actionName))
-        {
-            unset($controllerInstance, $args);
-            throw new \Exception('action ' . $actionName . ' not found');
         }
         $result = $controllerInstance->$actionName();
         $result = $controllerInstance->afterAction($result);

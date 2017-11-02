@@ -11,11 +11,11 @@ use framework\base\Container;
 
 abstract class Controller extends \framework\base\Controller
 {
-
     protected function rule()
     {
         return array();
     }
+
     /**
      * desc 获取请求参数中的get参数
      * @param $key
@@ -39,12 +39,38 @@ abstract class Controller extends \framework\base\Controller
     /**
      * 获取请求参数中的所有参数 包括get和post
      */
-    protected function getRequestParams()
+    protected function requestParams()
     {
         return $this->getComponent('request')->request();
     }
 
-    protected function rediret($url)
+    protected function isPost() : bool
+    {
+        if ($this->getComponent('request')->getMethod() === 'post')
+        {
+            return true;
+        }
+        return false;
+    }
+
+    protected function isAjax() : bool
+    {
+        $server = $this->getComponent('url')->getServer();
+        $result = isset($server['HTTP_X_REQUESTED_WITH']) && $server['HTTP_X_REQUESTED_WITH']==='XMLHttpRequest';
+        unset($server);
+        return $result;
+    }
+
+    protected function ajax($data)
+    {
+        $urlComponent = $this->getComponent('response');
+        $urlComponent->noCache();
+        $urlComponent->contentType('json');
+        unset($urlComponent);
+        return $data;
+    }
+
+    protected function redirect($url)
     {
         $response = $this->getComponent('response');
         $response->addHeader('Location', $url);
@@ -53,13 +79,23 @@ abstract class Controller extends \framework\base\Controller
         return '';
     }
 
-    protected function isPost()
+    protected function assign($key, $value = null)
     {
-        if ($this->getComponent('request')->getMethod() === 'post')
-        {
-            return true;
-        }
-        return false;
+        $this->getComponent('view')->assign($key, $value);
+    }
+
+    protected function display($path = '')
+    {
+        return $this->getComponent('view')->display($path);
+    }
+
+    protected function model($name)
+    {
+        $componentModel = md5(APP_NAME.'application/controller/'.$name);
+        Container::getInstance()->addComponent($componentModel,
+            'application\\model\\'. $name);
+
+        return $this->getComponent($componentModel);
     }
 
     protected function createUrl($url)
@@ -91,24 +127,7 @@ abstract class Controller extends \framework\base\Controller
         return $tmpUrl;
     }
 
-    protected function ajax($data)
-    {
-        $urlComponent = $this->getComponent('response');
-        $urlComponent->noCache();
-        $urlComponent->contentType('json');
-        unset($urlComponent);
-        return $data;
-    }
-
-    protected function model($name)
-    {
-        $componentModel = md5(APP_NAME.'application/controller/'.$name);
-        Container::getInstance()->addComponent($componentModel,
-            'application\\model\\'. $name);
-        return $this->getComponent($componentModel);
-    }
-
-    protected function validate()
+    protected function validate() : bool
     {
         $rule = $this->rule();
         if (empty($rule[$this->_action]))
@@ -122,27 +141,9 @@ abstract class Controller extends \framework\base\Controller
         return $result;
     }
 
-    protected function isAjax()
+    protected function getSession()
     {
-        $server = $this->getComponent('url')->getServer();
-        $result = isset($server['HTTP_X_REQUESTED_WITH']) && $server['HTTP_X_REQUESTED_WITH']==='XMLHttpRequest';
-        unset($server);
-        return $result;
-    }
-
-    protected function assign($key, $value = null)
-    {
-        $this->getComponent('view')->assign($key, $value);
-    }
-
-    protected function display($path = '')
-    {
-        return $this->getComponent('view')->display($path);
-    }
-
-    protected function getRedis()
-    {
-        return $this->getComponent('redis');
+        return $this->getComponent('session');
     }
 
     protected function getPage()
@@ -150,38 +151,8 @@ abstract class Controller extends \framework\base\Controller
         return $this->getComponent('page');
     }
 
-    protected function sendFile($path, $type = 'jpg')
+    protected function getRedis()
     {
-        if (file_exists(!$path))
-        {
-            return false;
-        }
-        $urlComponent = $this->getComponent('response');
-        $urlComponent->contentType($type);
-        $urlComponent->sendFile($path);
-        unset($urlComponent);
-        return true;
-    }
-
-    protected function addTask($className, $funcName, $params, $taskId = -1, $isAsync = false)
-    {
-        if (!$isAsync)
-        {
-            $this->getComponent('taskManager')->addTask($className, $funcName, $params, $taskId);
-        }
-        else
-        {
-            $this->getComponent('taskManager')->addAsyncTask($className, $funcName, $params, $taskId);
-        }
-    }
-
-    public function addTimer($timeStep, callable $callable, $params= array())
-    {
-        return $this->getComponent('server')->getServer()->addTimer($timeStep, $callable, $params);
-    }
-
-    public function addTimerAfter($timeStep, callable $callable, $params= array())
-    {
-        return $this->getComponent('server')->getServer()->addTimerAfter($timeStep, $callable, $params);
+        return $this->getComponent('redis');
     }
 }

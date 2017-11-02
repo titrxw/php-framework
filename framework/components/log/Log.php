@@ -7,7 +7,6 @@ class Log extends Component
     protected $_savePath;
     protected $_isLog = null;
     protected $_maxSize;
-
     /**
      * 日志写入接口
      * @access public

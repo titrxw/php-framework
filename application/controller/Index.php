@@ -14,7 +14,7 @@ class Index extends Web
 
     protected function rule()
     {
-        return array(
+//        return array(
 //            'testAction' => array(
 //                'id|get|请求编号'=>'require|integer',
 //                'mobile|get|电话号码' => 'regex|/^1[34578]\d{9}$/'
@@ -23,58 +23,48 @@ class Index extends Web
 //                'id|post|请求编号'=>'url',
 //                'name|post|请求姓名' => 'require',
 //            )
-        );
+//        );
     }
 
     protected function init()
     {
+        parent::init();
         $this->_userM = $this->model('User');
-        parent::init(); // 这里必须有  在运行结束后要回收
     }
 
     public function indexAction()
     {
-
-//        if (function_exists('hello_word')) {
-//            var_dump(hello_word($this->getAction()));
-//            return [404, ['er','ererer']];
-//        }
-//        定时器
-//        $this->addTimer(10000, function ($id, $params) {
-//            var_dump($params);
-////            swoole_timer_clear($id);
-//        }, ['er','ererer']);
-//        再10000毫秒后执行  执行完后自动清理计时器   该函数返回计时器id
-//         $this->addTimerAfter(10000, function ($params) {
-//             var_dump($params);
-//         }, ['er','ererer']);
-// //        for($i=0; $i<10;$i++)
-// //        {
-// //            $this->addTask('msgTask', 'sendMsg', array('mobile' => '1212121212'));
-// //        }
-//         $this->addTask('msgTask', 'sendMsg', array('mobile' => '1212121212'));
-//        var_dump($this->cache);
+        $_SESSION['test'] = 12;
+        $this->redis->selectDb(1);
+        $this->redis->selectRollBack();
+        $this->redis->set('index', array(1,223,3,4,5));
 //        var_dump($this->session);
         //var_dump($this->getComponent('Logger',1));
-        return [404, ['er','�߸���߸���ָ����ߺ͹���'],'�߸���߸���ָ����ߺ͹���'];
+//        $this->assign(array(
+//            'page' => $this->page->out(100,null,array('tr' => 'ty')),
+//            'content' => '3rere'
+//        ));
+//        return $this->display('de/er');
+//https://easywechat.org/zh-cn/docs/configuration.html
+//        $wechat = $this->getComponent('wechat', array(
+//            'app_id'  => 'your-app-id',         // AppID
+//            'secret'  => 'your-app-secret',     // AppSecret
+//            'token'   => 'your-token',          // Token
+//            'aes_key' => '',                    // EncodingAESKey，安全模式下请一定要填写！！
+//        ));
+//        $result = $this->getComponent('aes');
+        return 1;
     }
 
     public function testAction()
     {
-//        var_dump($this->getComponent('db'));
-//        var_dump($this->getComponent('log'));
-        $result = $this->_userM->getList();
-        return [404, $result,'fds'];
+        $log = $this->getComponent('Logger',1,2,3,4);
+        return array(200, $this->_userM->getList());
     }
 
     public function imgAction()
     {
 //        $this->getComponent('captcha')->getCode();
         return $this->getComponent('captcha')->send();
-    }
-
-    public function downloadAction()
-    {
-        return $this->sendFile(APP_ROOT. '/public/assets/' . APP_NAME. '/images/1457781452.jpg', 'jpg');
     }
 }

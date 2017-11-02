@@ -8,17 +8,22 @@
 return array(
     'composer' => array(
         'Logger' => function (array $params) {
-            return new \Monolog\Logger($params[0]);      //这里测试composer的加载
+            return new \Monolog\Logger($params[0]);
+        },
+        'wechat' => function ($params) {
+            return new EasyWeChat\Foundation\Application($params);
         }
     ),
     'addComponentsMap' => array(
         'validate' => 'framework\\components\\validate\\Validate',
-        'page' => 'framework\\components\\page\\Page',//如果使用api的话这里不需要
-        'view' => 'framework\\components\\view\\View',     //如果使用api的话这里不需要,
+        'page' => 'framework\\components\\page\\Page',
         'upload' => 'framework\\components\\upload\\Upload',
-        'msgTask' => 'application\\conf\\Task',
-        'captcha' => 'framework\\components\\captcha\\Captcha'
-    ), //该项因为设计上的问题暂时不添加
+        'captcha' => 'framework\\components\\captcha\\Captcha',
+        'aes' => 'framework\\components\\security\\Aes',
+        'rsa' => 'framework\\components\\security\\Rsa',
+        'sessionRedis' => 'framework\\components\\cache\\Redis',
+        'memcache' => 'framework\\components\\cache\\Memcached'
+    ),
     'components' => array(
         'redis' => array(
             'host'         => '127.0.0.1', // redis主机
@@ -29,6 +34,41 @@ return array(
             'timeout'      => 0, // 超时时间(秒)
             'persistent'   => false, // 是否长连接,
             'prefix' => ''
+        ),
+        'sessionRedis' => array(
+            'host'         => '127.0.0.1', // redis主机
+            'port'         => 6379, // redis端口
+            'password'     => '', // 密码
+            'select'       => 0, // 操作库
+            'expire'       => 3600, // 有效期(秒)
+            'timeout'      => 0, // 超时时间(秒)
+            'persistent'   => true, // 是否长连接,
+            'prefix' => ''
+        ),
+//        'memcache' => array(
+//            'servers' => array(
+//                array('127.0.0.1:1121')
+//            ),
+//            'username' => '',
+//            'password'     => '', // 密码
+//            'expire'       => 3600, // 有效期(秒)
+//            'timeout'      => 0, // 超时时间(秒)
+//            'persistent'   => 'test', // 是否长连接,
+//            'compress_threshold' => 1024,
+//            'prefix' => ''
+//        ),
+        'session' => array(
+            'redis' => array(
+                'session_name' => '', // sessionkey前缀
+            ),
+            'httpOnly'=> true,
+            'driver'=> array(
+                'type' => 'redis',
+                'name' => 'sessionRedis'
+            ),
+            'path'=> '',
+            'name' => 'EASYSESSION',
+            'prefix' => 'easy-'
         ),
         'db' => array(
             'db' => array(
@@ -41,12 +81,6 @@ return array(
                     'persistent' => true
                 )
             )
-        ),
-        'server' => array(
-            'event' => 'application\\conf\\ServerWebSocketEvent',
-            'ip' => '127.0.0.1',
-            'port' => '81',
-            'supportHttp' => true
         ),
         'upload' => array(
             'accept' => array(

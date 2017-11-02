@@ -1,0 +1,1071 @@
+[2017-10-25 13:56:47] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Function mcrypt_generic_deinit() is deprecated at  file: C:\web\php\www\easy-framework-web\framework\components\security\Aes.php, on line: 214 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8192 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\security\Aes.php(214): framework\components\error\Error->handleError(8192, 'Function mcrypt...', 'C:\\web\\php\\www\\...', 214, Array)
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(122): framework\components\security\Aes->__destruct()
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:57:21] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 122 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 13:57:22] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 122 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 13:57:22] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 122 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 13:57:23] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 122 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 13:57:23] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 122 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 13:57:23] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 122 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 13:57:23] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 122 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 13:57:24] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 122 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 13:57:24] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 122 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 13:57:24] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 122 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 13:57:24] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 122 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 13:57:42] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:57:43] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:57:43] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:57:43] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:57:43] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:57:43] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:57:44] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:57:44] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:57:44] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:57:44] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:57:44] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:16] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:17] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:22] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:22] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:26] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:36] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:36] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:37] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:48] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:49] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:49] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:49] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:49] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:50] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:50] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:58:50] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:59:09] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:59:25] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:59:25] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:59:25] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 13:59:25] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : not support: php_mcrypt 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Aes.php 
+ line : 50 
+ code : 0 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(26): framework\components\security\Aes->init()
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(93): framework\base\Component->setUniqueId('aes')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('aes', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('aes')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 14:11:24] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : include(C:\web\php\www\easy-framework-web/framework/components/security/Ras.php): failed to open stream: No such file or directory at  file: C:\web\php\www\easy-framework-web\framework\autoloader.php, on line: 5 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('ras', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('ras')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 14:13:05] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : syntax error, unexpected ';', expecting function (T_FUNCTION) or const (T_CONST) 
+ file : C:\web\php\www\easy-framework-web\framework\components\security\Rsa.php 
+ line : 24 
+ code : 0 
+ trace : #0 [internal function]: autoload('framework/compo...')
+#1 C:\web\php\www\easy-framework-web\framework\base\Container.php(89): spl_autoload_call('framework\\compo...')
+#2 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('rsa', Array)
+#3 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('rsa')
+#4 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#5 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#6 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#7 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#8 {main}
+
+[2017-10-25 14:13:38] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : RAS init file  not exists  
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('rsa', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('rsa')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 14:13:59] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : RAS init key file  not exists  
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('rsa', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('rsa')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 14:13:59] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : RAS init key file  not exists  
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('rsa', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('rsa')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 14:13:59] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : RAS init key file  not exists  
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('rsa', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('rsa')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 14:14:08] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : RAS init security key file  not exists  
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('rsa', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('rsa')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 14:17:55] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : RAS init private key file not exists  
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('rsa', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('rsa')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 14:18:07] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : RAS private key file not exists  
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('rsa', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('rsa')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 14:27:51] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : include(C:\web\php\www\easy-framework-web/framework/web/Container.php): failed to open stream: No such file or directory at  file: C:\web\php\www\easy-framework-web\framework\autoloader.php, on line: 5 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('c4e9dd57cd1f832...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(27): framework\base\Component->getComponent('c4e9dd57cd1f832...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-10-25 14:27:51] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : include(C:\web\php\www\easy-framework-web/framework/web/Container.php): failed to open stream: No such file or directory at  file: C:\web\php\www\easy-framework-web\framework\autoloader.php, on line: 5 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('c4e9dd57cd1f832...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(27): framework\base\Component->getComponent('c4e9dd57cd1f832...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-10-25 14:27:52] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : include(C:\web\php\www\easy-framework-web/framework/web/Container.php): failed to open stream: No such file or directory at  file: C:\web\php\www\easy-framework-web\framework\autoloader.php, on line: 5 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('c4e9dd57cd1f832...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(27): framework\base\Component->getComponent('c4e9dd57cd1f832...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-10-25 14:27:52] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : include(C:\web\php\www\easy-framework-web/framework/web/Container.php): failed to open stream: No such file or directory at  file: C:\web\php\www\easy-framework-web\framework\autoloader.php, on line: 5 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('c4e9dd57cd1f832...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(27): framework\base\Component->getComponent('c4e9dd57cd1f832...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-10-25 14:27:52] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : include(C:\web\php\www\easy-framework-web/framework/web/Container.php): failed to open stream: No such file or directory at  file: C:\web\php\www\easy-framework-web\framework\autoloader.php, on line: 5 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('c4e9dd57cd1f832...', Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(27): framework\base\Component->getComponent('c4e9dd57cd1f832...')
+#2 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#3 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#4 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#5 {main}
+
+[2017-10-25 14:28:30] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : RAS private key file not exists  
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('rsa', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('rsa')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 14:28:31] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : RAS private key file not exists  
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('rsa', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('rsa')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 14:28:31] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : RAS private key file not exists  
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('rsa', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('rsa')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 14:28:31] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : RAS private key file not exists  
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('rsa', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('rsa')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-10-25 14:28:31] [ log ] localhost/easy-framework-web/
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : RAS private key file not exists  
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 117 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\base\Component.php(20): framework\base\Container->getComponent('rsa', Array)
+#1 C:\web\php\www\easy-framework-web\application\controller\Index.php(45): framework\base\Component->getComponent('rsa')
+#2 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(36): application\controller\Index->indexAction()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(43): framework\components\dispatcher\Dispatcher->run(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(36): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(8): require('C:\\web\\php\\www\\...')
+#6 {main}
+

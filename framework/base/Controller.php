@@ -7,11 +7,6 @@ abstract class Controller extends Component
     protected $_action;
     protected $_view;
 
-    protected function init()
-    {
-        $this->unInstall();
-    }
-
     public function beforeAction()
     {
         return true;

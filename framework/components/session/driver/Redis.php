@@ -21,7 +21,10 @@ class Redis extends \SessionHandler
     public function __construct($config = array())
     {
         if (!extension_loaded('redis')) {
-            throw new \Error('not support: redis');
+            throw new \Exception('not support: redis', 500);
+        }
+        if (empty($config['_name'])) {
+            $config['_name'] = 'redis';
         }
         $this->_conf = $config;
         unset($config);
@@ -39,7 +42,7 @@ class Redis extends \SessionHandler
     {
         try
         {
-            $this->_handler = Container::getInstance()->getComponent('Redis');
+            $this->_handler = Container::getInstance()->getComponent($this->_conf['_name']);
         }
         catch(\Exception $e)
         {
@@ -90,7 +93,8 @@ class Redis extends \SessionHandler
      */
     public function destroy($sessID)
     {
-        return $this->_handler->rm($this->_conf['session_name'] . $sessID) > 0;
+        $this->_handler->rm($this->_conf['session_name'] . $sessID);
+        return true;
     }
 
     /**

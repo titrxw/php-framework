@@ -11,11 +11,6 @@ class Request extends Component
     protected $_hasCheckPost = false;
     protected $_hasCheckRequest = false;
 
-    protected function init()
-    {
-        $this->unInstall(false);
-    }
-
     protected function stripSlashes(&$data)
     {
         if(is_array($data))
@@ -69,7 +64,7 @@ class Request extends Component
     public function getMethod()
     {
         if (empty($this->_method))
-            $this->_method = $this->getServer()->getMethod();
+            $this->_method = $this->getServer()['REQUEST_METHOD'];
 
         return $this->_method;
     }
