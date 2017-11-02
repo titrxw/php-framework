@@ -96,7 +96,12 @@ class Upload extends Component
 
     protected function moveUploadFile($tmpfile, $newfile)
     {
-        return move_uploaded_file($tmpfile, $newfile);
+//            return move_uploaded_file($tmpfile, $newfile);    不支持
+        if (rename($tmpfile, $newfile) === false)
+        {
+            return false;
+        }
+        return chmod($newfile, 0666);
     }
 
     public function save($name, $filename = null, $allow = null)
@@ -107,10 +112,6 @@ class Upload extends Component
             return false;
         }
 
-        if (!is_uploaded_file($_FILES[$name]['tmp_name']))
-        {
-            return false;
-        }
 //        检测文件大小
         $fileSize = filesize($_FILES[$name]['tmp_name']);
         if ($this->_maxSize > 0 && $fileSize > $this->_maxSize)

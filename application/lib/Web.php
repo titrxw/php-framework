@@ -7,7 +7,9 @@
  */
 namespace application\lib;
 use framework\web\Api;
-
+//
+//use framework\web\Controller;
+//
 //abstract class Web extends Controller
 //{
 //    public function beforeAction()
@@ -40,15 +42,15 @@ abstract class Web extends Api
         return true;
     }
 
-    public function afterAction($data = array())
+    public function afterAction($data = array()):array
     {
         if (is_array($data))
         {
             $data = array('ret' => empty($data[0]) ? 200 : $data[0],
-            'data' => empty($data[1]) ? null : $data[1],
-            'msg' => empty($data[2]) ? '' : $data[2]);
-//        这里必须把结果结果返回去，该方法是放回结果前的结果
+                'data' => empty($data[1]) ? null : $data[1],
+                'msg' => empty($data[2]) ? '' : $data[2]);
         }
+//        这里必须把结果结果返回去，该方法是放回结果前的结果
         return $data;
     }
 }

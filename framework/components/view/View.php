@@ -161,11 +161,11 @@ class View extends Component
                 //重新生成编译缓存文件
                 $this->createCompileFile($compileFile, $templateContent);
             }
-            include_once $compileFile;
+            include $compileFile;
         }
         else
         {
-            include_once $cache;
+            include $cache;
         }
         $viewContent = ob_get_clean();
         if(!$cache)
@@ -218,17 +218,9 @@ class View extends Component
             }
         }
 
-        //加载编译缓存文件
-        ob_start();
-        include_once $compileFile;
-        $viewContent = ob_get_clean();
+        $viewContent = require_once $compileFile;
 
-        //返回信息
-        if (!$return) {
-            echo $viewContent;
-        } else {
-            return $viewContent;
-        }
+        return $viewContent;
     }
 
     /**
@@ -269,7 +261,7 @@ class View extends Component
         if (!is_dir($compileDir)) {
             mkdir($compileDir, 0777, true);
         }
-        $content = "<?php " . "?>" . $content ."<?php " . "?>" ;
+        $content = "<?php " . "?>" . $content ;
         return file_put_contents($compileFile, $content, LOCK_EX);
     }
 
@@ -341,6 +333,7 @@ class View extends Component
             '#'.$this->_leftDelimiter.'\s*(widget\s.+?)\s*'.$this->_rightDelimiter.'#is',
         );
         $viewContent = preg_replace_callback($patternArray, array($this, 'parseTags'), $viewContent);
+
         return $viewContent;
     }
 

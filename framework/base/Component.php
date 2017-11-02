@@ -20,6 +20,11 @@ abstract class Component extends Base
         return Container::getInstance()->getComponent($componentName, $params);
     }
 
+    protected function unInstall($isComplete = true)
+    {
+        Container::getInstance()->unInstall($this->_uniqueId, $isComplete);
+    }
+
     public function setUniqueId($name)
     {
         $this->_uniqueId = $name;
