@@ -37,7 +37,7 @@ class Composer extends Base
         }
         catch (\Error $e)
         {
-            throw new \Error('composer ' . $name . 'not found' . $e->getMessage(), 500);
+            throw new \Error('composer ' . $name . ' not found' . $e->getMessage(), 500);
         }
     }
 }

@@ -5,7 +5,6 @@
  * Date: 17-8-26
  * Time: 下午8:55
  */
-header("Content-type: text/html; charset=utf-8");
 define('APP_ROOT', dirname(dirname(__FILE__)) . '/');
 if(!defined('DEBUG'))
     define('DEBUG',TRUE);

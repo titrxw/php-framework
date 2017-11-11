@@ -20,9 +20,10 @@ return array(
         'upload' => 'framework\\components\\upload\\Upload',
         'captcha' => 'framework\\components\\captcha\\Captcha',
         'aes' => 'framework\\components\\security\\Aes',
+        'aes7' => 'framework\\components\\security\\Aes7',
         'rsa' => 'framework\\components\\security\\Rsa',
         'sessionRedis' => 'framework\\components\\cache\\Redis',
-        'memcache' => 'framework\\components\\cache\\Memcached'
+        'curl' => 'framework\\components\\cache\\Redis'
     ),
     'components' => array(
         'redis' => array(
@@ -59,7 +60,7 @@ return array(
 //        ),
         'session' => array(
             'redis' => array(
-                'session_name' => '', // sessionkey前缀
+                'prefix' => 'test', // sessionkey前缀
             ),
             'httpOnly'=> true,
             'driver'=> array(
@@ -93,6 +94,11 @@ return array(
             'width' => 200,
             'num' => 5,
             'type' => 'png'   //png jpg gif
+        ),
+        'curl' => array(
+            'timeout' => 30,
+            'retry' => 3,
+            'ssl' => true
         )
     )
 );

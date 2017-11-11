@@ -36,10 +36,12 @@ class Upload extends Component
         $this->_accept = $this->getValueFromConf('accept', array());
         $this->_maxSize = $this->getValueFromConf('maxSize', 0);
         $this->_nameType = $this->getValueFromConf('nameType', 'time');
-        $this->_deep = $this->getValueFromConf('deep', 2);
-        if ($this->_deep > 5)
-        {
-            $this->_deep = 5;
+        if ($this->_nameType === 'md5') {
+            $this->_deep = $this->getValueFromConf('deep', 2);
+            if ($this->_deep > 5)
+            {
+                $this->_deep = 5;
+            }
         }
     }
 

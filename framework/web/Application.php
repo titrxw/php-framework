@@ -7,13 +7,12 @@
  */
 namespace framework\web;
 
-
 class Application extends \framework\base\Application
 {
     protected function addBaseComponents()
     {
-        $this->_appConf['addComponentsMap'] = empty($this->_appConf['addComponentsMap']) ? array() : $this->_appConf['addComponentsMap'];
         parent::addBaseComponents();
+        $this->_appConf['addComponentsMap'] = empty($this->_appConf['addComponentsMap']) ? array() : $this->_appConf['addComponentsMap'];
         $components = array(
             'session' => 'framework\\components\\session\\Session',
             'view' => 'framework\\components\\view\\View',
@@ -22,8 +21,9 @@ class Application extends \framework\base\Application
             'log' => 'framework\\components\\log\\Log',
             'redis' => 'framework\\components\\cache\\Redis'
         );
+        $components = array_merge($components, $this->_appConf['addComponentsMap']);
         $this->_container->addComponents($components);
-        $this->_container->addComponents($this->_appConf['addComponentsMap']);
+
         unset($this->_appConf['addComponentsMap'], $components);
     }
 

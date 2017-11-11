@@ -47,7 +47,9 @@ abstract class Controller extends Component
         $func = 'get'.ucfirst($name);
         if (method_exists($this, $func))
         {
-            return $this->$func();
+            $this->$name = $this->$func();
+//            保证只会调用一次func
+            return $this->$name;
         }
         return null;
     }

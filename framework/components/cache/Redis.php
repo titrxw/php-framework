@@ -47,7 +47,11 @@ class Redis extends Cache implements CacheInterface
 
     public function selectRollBack()
     {
-        $this->_handle->select(0);
+        if (0 != $this->_appConf['select']) {
+            $this->_handle->select($this->_appConf['select']);
+        } else {
+            $this->_handle->select(0);
+        }
     }
 
     /**

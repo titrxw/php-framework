@@ -146,6 +146,11 @@ abstract class Controller extends \framework\base\Controller
         return $this->getComponent('session');
     }
 
+    protected function getCache()
+    {
+        return $this->getComponent('cache');
+    }
+
     protected function getPage()
     {
         return $this->getComponent('page');

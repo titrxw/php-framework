@@ -34,6 +34,7 @@ class Index extends Web
 
     public function indexAction()
     {
+//        var_dump($this->getComponent('aes')->encrypt(123));
         $_SESSION['test'] = 12;
         $this->redis->selectDb(1);
         $this->redis->selectRollBack();
