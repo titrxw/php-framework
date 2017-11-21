@@ -53,6 +53,7 @@ class Application extends \framework\base\Application
             if (DEBUG) {
                 $result = $e->getMessage() . "\n trace: " . $e->getTraceAsString();
             }
+
             $response->send($result);
             unset($default, $conf, $instance);
             throw $e;

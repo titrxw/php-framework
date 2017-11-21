@@ -75,7 +75,7 @@ class Redis extends Cache implements CacheInterface
     public function get($name, $default = false)
     {
         $value = $this->_handle->get($this->getCacheKey($name));
-        if (false !== $value) {
+        if (false === $value) {
             return $default;
         }
 

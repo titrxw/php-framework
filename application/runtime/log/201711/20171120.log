@@ -1,0 +1,398 @@
+[2017-11-20 13:44:37] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:44:38] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:44:38] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:44:38] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:44:42] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:45:20] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:46:35] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:46:36] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:46:36] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:46:36] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:46:52] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:46:52] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:46:53] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:47:51] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Undefined index: _name at  file: C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php, on line: 29 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 8 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\components\error\Error->handleError(8, 'Undefined index...', 'C:\\web\\php\\www\\...', 29, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:49:13] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Redis::pconnect(): connect() failed: ����Ŀ����������ܾ����޷����ӡ�
+ at  file: C:\web\php\www\easy-framework-web\framework\components\cache\Redis.php, on line: 28 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 118 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\base\Container->getComponent('sessionRedis')
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:49:17] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Redis::pconnect(): connect() failed: ����Ŀ����������ܾ����޷����ӡ�
+ at  file: C:\web\php\www\easy-framework-web\framework\components\cache\Redis.php, on line: 28 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 118 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\base\Container->getComponent('sessionRedis')
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:49:25] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Redis::pconnect(): connect() failed: ����Ŀ����������ܾ����޷����ӡ�
+ at  file: C:\web\php\www\easy-framework-web\framework\components\cache\Redis.php, on line: 28 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 118 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\base\Container->getComponent('sessionRedis')
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:49:26] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Redis::pconnect(): connect() failed: ����Ŀ����������ܾ����޷����ӡ�
+ at  file: C:\web\php\www\easy-framework-web\framework\components\cache\Redis.php, on line: 28 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 118 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\base\Container->getComponent('sessionRedis')
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:49:43] [ log ] localhost/easy-framework-web/index.php/index/test
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Redis::pconnect(): connect() failed: ����Ŀ����������ܾ����޷����ӡ�
+ at  file: C:\web\php\www\easy-framework-web\framework\components\cache\Redis.php, on line: 28 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 118 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\base\Container->getComponent('sessionRedis')
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:52:24] [ log ] localhost/easy-framework-web/index.php
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Cannot modify header information - headers already sent by (output started at C:\web\php\www\easy-framework-web\application\controller\Index.php:56) at  file: C:\web\php\www\easy-framework-web\framework\components\response\Response.php, on line: 91 
+ file : C:\web\php\www\easy-framework-web\framework\components\error\Error.php 
+ line : 9 
+ code : 2 
+ trace : #0 [internal function]: framework\components\error\Error->handleError(2, 'Cannot modify h...', 'C:\\web\\php\\www\\...', 91, Array)
+#1 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(91): header('X-Powered-By:es...')
+#2 C:\web\php\www\easy-framework-web\framework\components\response\Response.php(50): framework\components\response\Response->sendHeader()
+#3 C:\web\php\www\easy-framework-web\framework\web\Application.php(56): framework\components\response\Response->send(Array)
+#4 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#5 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#6 {main}
+
+[2017-11-20 13:57:34] [ log ] localhost/easy-framework-web/index.php
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Redis::pconnect(): connect() failed: ����Ŀ����������ܾ����޷����ӡ�
+ at  file: C:\web\php\www\easy-framework-web\framework\components\cache\Redis.php, on line: 26 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 118 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\base\Container->getComponent('sessionRedis')
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:58:23] [ log ] localhost/easy-framework-web/index.php
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Redis::pconnect(): connect() failed: ����Ŀ����������ܾ����޷����ӡ�
+ at  file: C:\web\php\www\easy-framework-web\framework\components\cache\Redis.php, on line: 26 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 118 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\base\Container->getComponent('sessionRedis')
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+
+[2017-11-20 13:58:31] [ log ] localhost/easy-framework-web/index.php
+ server: 0.0.0.0
+ client: 0.0.0.0
+---------------------------------------------------------------
+ msg : Redis::pconnect(): connect() failed: ����Ŀ����������ܾ����޷����ӡ�
+ at  file: C:\web\php\www\easy-framework-web\framework\components\cache\Redis.php, on line: 26 
+ file : C:\web\php\www\easy-framework-web\framework\base\Container.php 
+ line : 118 
+ code : 500 
+ trace : #0 C:\web\php\www\easy-framework-web\framework\components\session\driver\Redis.php(29): framework\base\Container->getComponent('sessionRedis')
+#1 C:\web\php\www\easy-framework-web\framework\components\session\Session.php(74): framework\components\session\driver\Redis->__construct(Array)
+#2 C:\web\php\www\easy-framework-web\application\lib\Web.php(41): framework\components\session\Session->start()
+#3 C:\web\php\www\easy-framework-web\framework\components\dispatcher\Dispatcher.php(31): application\lib\Web->beforeAction()
+#4 C:\web\php\www\easy-framework-web\framework\web\Application.php(44): framework\components\dispatcher\Dispatcher->run(Array)
+#5 C:\web\php\www\easy-framework-web\framework\framework.php(30): framework\web\Application::run(Array)
+#6 C:\web\php\www\easy-framework-web\index.php(10): require('C:\\web\\php\\www\\...')
+#7 {main}
+

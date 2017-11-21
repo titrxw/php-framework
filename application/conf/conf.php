@@ -23,7 +23,7 @@ return array(
         'aes7' => 'framework\\components\\security\\Aes7',
         'rsa' => 'framework\\components\\security\\Rsa',
         'sessionRedis' => 'framework\\components\\cache\\Redis',
-        'curl' => 'framework\\components\\cache\\Redis'
+        'curl' => 'framework\\components\\curl\\Curl'
     ),
     'components' => array(
         'redis' => array(

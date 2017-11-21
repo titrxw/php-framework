@@ -47,14 +47,14 @@ class Index extends Web
 //        ));
 //        return $this->display('de/er');
 //https://easywechat.org/zh-cn/docs/configuration.html
-//        $wechat = $this->getComponent('wechat', array(
-//            'app_id'  => 'your-app-id',         // AppID
-//            'secret'  => 'your-app-secret',     // AppSecret
-//            'token'   => 'your-token',          // Token
-//            'aes_key' => '',                    // EncodingAESKey，安全模式下请一定要填写！！
-//        ));
+        $wechat = $this->getComponent('wechat', array(
+            'app_id'  => 'your-app-id',         // AppID
+            'secret'  => 'your-app-secret',     // AppSecret
+            'token'   => 'your-token',          // Token
+            'aes_key' => '',                    // EncodingAESKey，安全模式下请一定要填写！！
+        ));
 //        $result = $this->getComponent('aes');
-        return 1;
+        return $this->redis->get('index');
     }
 
     public function testAction()

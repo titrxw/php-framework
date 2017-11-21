@@ -26,6 +26,7 @@ class Redis extends \SessionHandler
         if (empty($config['_name'])) {
             $config['_name'] = 'redis';
         }
+        $this->_handler = Container::getInstance()->getComponent($config['_name']);
         $this->_conf = $config;
         unset($config);
     }
@@ -40,14 +41,6 @@ class Redis extends \SessionHandler
      */
     public function open($savePath, $sessName)
     {
-        try
-        {
-            $this->_handler = Container::getInstance()->getComponent($this->_conf['_name']);
-        }
-        catch(\Exception $e)
-        {
-            throw new \Exception($e->getMessage(),500);
-        }
         return true;
     }
 
