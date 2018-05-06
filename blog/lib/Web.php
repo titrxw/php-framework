@@ -32,7 +32,7 @@ use framework\web\Api;
 
 abstract class Web extends Api
 {
-    public function beforeAction()
+    public function before()
     {
         $this->response->addHeader('Access-Control-Allow-Origin', '*');
 //        $this->tokenBucket->run();
@@ -48,7 +48,7 @@ abstract class Web extends Api
         return true;
     }
 
-    public function afterAction($data = array())
+    public function after($data = array())
     {
 //        $this->getComponent('session')->destroy();
         if (is_array($data))
