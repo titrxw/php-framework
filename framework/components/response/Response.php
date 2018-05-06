@@ -4,10 +4,9 @@ use framework\base\Component;
 
 class Response extends Component
 {
-    protected $_headers = array();
+    protected $_headers = [];
     protected $_code = 200;
-    protected $_defaultType;
-    protected $_defaultCharSet;
+    protected $_curType;
     protected $_contentTypes = array(
         'xml'  => 'application/xml,text/xml,application/x-xml',
         'json' => 'application/json,text/x-json,application/jsonrequest,text/json',
@@ -26,8 +25,10 @@ class Response extends Component
 
     protected function initHeader()
     {
+//        面向对象的思想，header应该分离出去
         $this->_headers = array(
-            'X-Powered-By' => 'esay-framework'
+            'X-Powered-By' => 'esay-framework',
+            'server' => 'esay-framework'
         );
     }
 
@@ -41,57 +42,49 @@ class Response extends Component
     {
         $this->addHeader('Cache-Control','no-store, no-cache, must-revalidate');
         $this->addHeader('Pragma','no-cache');
-        header("Cache-Control: post-check=0, pre-check=0", false);
+//        header("Cache-Control: post-check=0, pre-check=0", false);
     }
 
-    public function send($data)
+    public function send($result,$else='')
     {
         http_response_code($this->_code);
-        $this->sendHeader();
-        if (is_array($data))
-            $data = json_encode($data);
-        echo $data;
+        foreach ($this->_headers as $key=>$item)
+        {
+            header($key . ':' . $item);
+        }
+
+        if (is_array($result)) {
+            $result = json_encode($result);
+        }
+        if (DEBUG)
+        {
+            $elseContent = ob_get_clean();
+            if (is_array($elseContent)) {
+                $elseContent = json_encode($elseContent);
+            }
+            $result = $elseContent . $result;
+            unset($elseContent);
+        }
+
+        echo $result;
+
+        $this->rollback();
+        unset($result, $response);
+        return true;
     }
 
     public function addHeader($key, $header)
     {
-        if(!empty($key) && !empty($header))
+        if($key && $header)
             $this->_headers[$key] = $header;
     }
 
     public function contentType($type, $charset = '')
     {
-        $contentType = empty($this->_contentTypes[$type])?$this->_contentTypes[$this->getDefaultType()] : $this->_contentTypes[$type];
-        $charset = empty($charset) ? $this->getDefaultCharSet(): $charset;
+        $contentType = $this->_contentTypes[$type] ?? $this->_contentTypes[$this->getValueFromConf('defaultType', 'html')];
+        $charset = empty($charset) ? $this->getValueFromConf('charset', 'utf-8') : $charset;
+        $this->_curType = $type;
         $this->_headers['Content-Type'] = $contentType . '; charset=' . $charset;
-    }
-
-    protected function getDefaultType()
-    {
-        if(empty($this->_defaultType))
-        {
-            $this->_defaultType = $this->getValueFromConf('defaultType', 'html');
-        }
-        return $this->_defaultType;
-    }
-
-    protected function getDefaultCharSet()
-    {
-        if(empty($this->_defaultCharSet))
-        {
-            $this->_defaultCharSet = $this->getValueFromConf('charset', 'utf-8');
-        }
-        return $this->_defaultCharSet;
-    }
-
-    public function sendHeader()
-    {
-        foreach ($this->_headers as $key=>$item)
-        {
-            header($key . ':' . $item);
-        }
-        $this->initHeader();
-        $this->_code = 200;
     }
 
     public function setCode($code)
@@ -99,5 +92,24 @@ class Response extends Component
         $this->_code = $code;
     }
 
+    public function ajax($data)
+    {
+        $this->noCache();
+        $this->contentType('json');
+        return $data;
+    }
 
+    public function rediret($url)
+    {
+        $this->addHeader('Location', $url);
+        $this->setCode(302);
+        return '';
+    }
+
+    protected function rollback()
+    {
+        $this->initHeader();
+        $this->_curType = 'html';
+        $this->_code = 200;
+    }
 }

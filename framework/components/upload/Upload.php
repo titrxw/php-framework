@@ -32,16 +32,17 @@ class Upload extends Component
 
     protected function init()
     {
-        $this->_baseDir = APP_ROOT . APP_NAME . '/' . $this->getValueFromConf('baseDir','runtime/upload');
-        $this->_accept = $this->getValueFromConf('accept', array());
+        $this->_baseDir = APP_ROOT . getModule() . '/' . $this->getValueFromConf('baseDir','runtime/upload');
+        $this->_accept = $this->getValueFromConf('accept', []);
         $this->_maxSize = $this->getValueFromConf('maxSize', 0);
         $this->_nameType = $this->getValueFromConf('nameType', 'time');
-        if ($this->_nameType === 'md5') {
-            $this->_deep = $this->getValueFromConf('deep', 2);
-            if ($this->_deep > 5)
-            {
-                $this->_deep = 5;
-            }
+        if ($this->_nameType !== 'md5')
+            return true;
+
+        $this->_deep = $this->getValueFromConf('deep', 2);
+        if ($this->_deep > 5)
+        {
+            $this->_deep = 5;
         }
     }
 
@@ -49,13 +50,21 @@ class Upload extends Component
     {
         if (!file_exists($this->_baseDir))
         {
-            mkdir($this->_baseDir, 0755);
+            $dirs = explode('/', $this->_baseDir);
+            $path = '';
+            foreach ($dirs as $item) {
+                $path .= $item;
+                if (!file_exists($path)) {
+                    mkdir($path, 0755);
+                }
+                $path .= '/';
+            }
         }
         switch ($this->_nameType)
         {
             case 'md5':
                 $name = mt_rand() . $name;
-                $name = md5($name);
+                $name = md5($name . SYSTEM_WORK_ID . microtime());
                 $length = strlen($name);
                 $particle = ceil($length / $this->_deep);
                 $currentPath = '';
@@ -71,17 +80,15 @@ class Upload extends Component
                 return $this->_baseDir . '/' . $currentPath . '/' . $name . '.' . $ext;
                 break;
             case 'time':
+            default:
                 $name = mt_rand() . $name;
-                $name = md5($name);
+                $name = md5($name . SYSTEM_WORK_ID . microtime());
                 $subPath = date('Ymd');
                 if (!file_exists($this->_baseDir . '/' . $subPath))
                 {
                     mkdir($this->_baseDir . '/' . $subPath, 0755);
                 }
                 return $this->_baseDir . '/' . $subPath . '/' . $name . '.' . $ext;
-                break;
-            default:
-                return $this->_baseDir . '/' . $name;
                 break;
         }
     }
@@ -98,10 +105,15 @@ class Upload extends Component
 
     protected function moveUploadFile($tmpfile, $newfile)
     {
-        return move_uploaded_file($tmpfile, $newfile);
+//            return move_uploaded_file($tmpfile, $newfile);    不支持
+        if (rename($tmpfile, $newfile) === false)
+        {
+            return false;
+        }
+        return chmod($newfile, 0666);
     }
 
-    public function save($name, $filename = null, $allow = null)
+    public function save($name)
     {
         //检查请求中是否存在上传的文件
         if (empty($_FILES[$name]))
@@ -109,10 +121,6 @@ class Upload extends Component
             return false;
         }
 
-        if (!is_uploaded_file($_FILES[$name]['tmp_name']))
-        {
-            return false;
-        }
 //        检测文件大小
         $fileSize = filesize($_FILES[$name]['tmp_name']);
         if ($this->_maxSize > 0 && $fileSize > $this->_maxSize)
@@ -140,10 +148,7 @@ class Upload extends Component
         //写入文件
         if ($this->moveUploadFile($_FILES[$name]['tmp_name'], $fileSavePath))
         {
-            $return['size'] = $fileSize;
-            $return['type'] = $ext;
-            $return['path'] = $fileSavePath;
-            return $return;
+            return str_replace(APP_ROOT, '', $fileSavePath);
         }
         else
         {
@@ -153,8 +158,8 @@ class Upload extends Component
 
     public function saveAll()
     {
-        $return = array();
-        if(!empty($_FILES))
+        $return = [];
+        if($_FILES)
         {
             foreach($_FILES as $k=>$f)
             {

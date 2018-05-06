@@ -8,7 +8,7 @@ class View extends Component
     protected $_layout = null;
     protected $_viewPath = null;
     protected $_compilePath = null;
-    protected $_options = array();
+    protected $_options = [];
     protected $_cachePath;
     protected $_cacheFile = null;
     protected $_leftDelimiter;
@@ -76,9 +76,7 @@ class View extends Component
 
         //获取视图缓存文件
         $cacheFile = $this->parseCacheFile($cacheId);
-        $server = $this->getComponent('url')->getServer();
-        if (is_file($cacheFile) && (filemtime($cacheFile) + $expire >= $server['REQUEST_TIME'])) {
-            unset($server);
+        if (is_file($cacheFile) && (filemtime($cacheFile) + $expire >= $_SERVER['REQUEST_TIME'])) {
             return $cacheFile;
         }
 
@@ -135,10 +133,10 @@ class View extends Component
         //模板变量赋值
         if ($this->_options) {
             extract($this->_options, EXTR_PREFIX_SAME, 'data');
-            $this->_options = array();
+            $this->_options = [];
         }
 
-        $currentModule = $this->getComponent('url')->getCurrentModule();
+        $currentModule = $this->getComponent(SYSTEM_APP_NAME, 'url')->getCurrentModule();
         $this->_controller = $currentModule['controller'];
         $this->_action = $currentModule['action'];
         unset($currentModule);
@@ -161,11 +159,11 @@ class View extends Component
                 //重新生成编译缓存文件
                 $this->createCompileFile($compileFile, $templateContent);
             }
-            include_once $compileFile;
+            include $compileFile;
         }
         else
         {
-            include_once $cache;
+            include $cache;
         }
         $viewContent = ob_get_clean();
         if(!$cache)
@@ -173,7 +171,7 @@ class View extends Component
             $this->createCache($viewContent);
         }
 
-        $this->_options = array();
+        $this->_options = [];
         return $viewContent;
     }
 
@@ -190,7 +188,7 @@ class View extends Component
      *
      * @return string
      */
-    public function render($fileName = null, $data = array(), $return = false) {
+    public function render($fileName = null, $data = [], $return = false) {
 
         //分析视图文件名
         $viewName    = $this->parseViewName($fileName);
@@ -214,21 +212,13 @@ class View extends Component
             //当且仅当本方法在处理action视图(非视图片段)时，对本类assign()所传递的视图变量进行赋值
             if (!$fileName && $this->_options) {
                 extract($this->_options, EXTR_PREFIX_SAME, 'data');
-                $this->_options = array();
+                $this->_options = [];
             }
         }
 
-        //加载编译缓存文件
-        ob_start();
-        include_once $compileFile;
-        $viewContent = ob_get_clean();
+        $viewContent = require_once $compileFile;
 
-        //返回信息
-        if (!$return) {
-            echo $viewContent;
-        } else {
-            return $viewContent;
-        }
+        return $viewContent;
     }
 
     /**
@@ -269,7 +259,7 @@ class View extends Component
         if (!is_dir($compileDir)) {
             mkdir($compileDir, 0777, true);
         }
-        $content = "<?php " . "?>" . $content ."<?php " . "?>" ;
+        $content = "<?php " . "?>" . $content ;
         return file_put_contents($compileFile, $content, LOCK_EX);
     }
 
@@ -341,6 +331,7 @@ class View extends Component
             '#'.$this->_leftDelimiter.'\s*(widget\s.+?)\s*'.$this->_rightDelimiter.'#is',
         );
         $viewContent = preg_replace_callback($patternArray, array($this, 'parseTags'), $viewContent);
+
         return $viewContent;
     }
 

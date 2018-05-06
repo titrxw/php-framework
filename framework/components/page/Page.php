@@ -12,12 +12,17 @@ class Page extends Component
     protected $_separator;
     protected $_offset=0;
     protected $_pageKey;
-    protected $_param=array();
+    protected $_param=[];
     protected $_url='';
     protected $_curPage=0;
     protected $_protocol;
 
-    protected function initNeedData($count,$pageCount,$param=array())
+    protected function init()
+    {
+        $this->unInstall();
+    }
+
+    protected function initNeedData($count,$pageCount,$param=[])
     {
         $this->_count=intval($count)>0?$count:0;
         $pageCount = (int) $pageCount;
@@ -46,24 +51,23 @@ class Page extends Component
      */
     private function getCurrentPage()
     {
-        if(empty($this->_curPage))
-            $this->_curPage=(int) empty($_GET[$this->_pageKey])?1:$_GET[$this->_pageKey];
+        if(!$this->_curPage)
+            $this->_curPage=(int) $_GET[$this->_pageKey] ?? 1;
         return $this->_curPage;
     }
 
-	/**
-	 * @return unknown|string
-	 * 获取当前的访问连接
-	 */
+    /**
+     * @return unknown|string
+     * 获取当前的访问连接
+     */
     private function getCurrentUrl()
     {
-        if(!empty($this->_url))
+        if($this->_url)
             return $this->_url;
 
-        $url = $this->getComponent('url');
+        $url = $this->getComponent(SYSTEM_APP_NAME, 'url');
 
         $type = $url->getType();
-        $oldUrl=$url->getResquestUrl();
         if ($type === '?')
         {
             $this->_separator = '&';
@@ -72,23 +76,23 @@ class Page extends Component
         {
             $this->_separator = '/';
         }
-        if(empty($this->_separator)||$this->_separator=='&')
+        if(!$this->_separator||$this->_separator=='&')
         {
             /**
              * 表示使用的是默认的链接的方式
              */
-            $this->_url=$url->getHost() . $url->getUrl() . '?';
+            $this->_url=$_SERVER['HTTP_HOST'] . $_SERVER['URL'] . '?';
             $urlArgs=explode($this->_separator, $url->getPathInfo());
-	        $urlArgs=array_unique($urlArgs);
+            $urlArgs=array_unique($urlArgs);
             foreach ($this->_needSaveArgsFromCurrentUrl  as $nitem)
             {
                 $len=strlen($nitem);
                 foreach ($urlArgs as $k=>$item)
-                       if(substr($item, 0,$len)==$nitem)
-                       {
-	                       $this->_url .= $item . $this->_separator;
-	                       unset($urlArgs[$k]);
-                       }
+                    if(substr($item, 0,$len)==$nitem)
+                    {
+                        $this->_url .= $item . $this->_separator;
+                        unset($urlArgs[$k]);
+                    }
             }
             unset($urlArgs);
             foreach ($this->_param as  $key=>$item)
@@ -96,31 +100,31 @@ class Page extends Component
                     $this->_url.=$key.'='.$item.$this->_separator;
             $this->_separator='=';
         }
-        else 
+        else
         {
-        	$tmpparam='';
-	        foreach ($this->_param as  $key=>$v)
-		        if(!is_integer($key))
-			        $tmpparam.=$key.$this->_separator.$v.$this->_separator;
-	             else
-		             $tmpparam.=$v.$this->_separator;
-        	$tmpargs=explode($this->_separator,$oldUrl);
+            $tmpparam='';
+            foreach ($this->_param as  $key=>$v)
+                if(!is_integer($key))
+                    $tmpparam.=$key.$this->_separator.$v.$this->_separator;
+                else
+                    $tmpparam.=$v.$this->_separator;
+            $tmpargs=explode($this->_separator,$_SERVER['REQUEST_URI']);
             $tmpurl='';
-			foreach ($this->_needSaveArgsFromCurrentUrl as $item)
-			{
-				foreach ($tmpargs as $k=>$tmparg)
-				{
-					if($item==$tmparg)
-					{
-						$tmpurl .= $item . $this->_separator . $tmpargs[$k + 1] . $this->_separator;
-						unset($tmpargs[$k]);
-						unset($tmpargs[$k + 1]);
-					}
-				}
-			}
-			$curPage = $url->getCurPage();
-            $this->_url=$url->getHost() . $url->getUrl().$this->_separator  .$curPage['controller'] . $this->_separator . $curPage['action']. $this->_separator.$tmpparam.$tmpurl;
-            unset($curPage);
+            foreach ($this->_needSaveArgsFromCurrentUrl as $item)
+            {
+                foreach ($tmpargs as $k=>$tmparg)
+                {
+                    if($item==$tmparg)
+                    {
+                        $tmpurl .= $item . $this->_separator . $tmpargs[$k + 1] . $this->_separator;
+                        unset($tmpargs[$k]);
+                        unset($tmpargs[$k + 1]);
+                    }
+                }
+            }
+            $curRoute = $url->getCurRoute();
+            $this->_url=$_SERVER['HTTP_HOST'] . $_SERVER['URL'].$this->_separator  .$curRoute['system'] . $this->_separator .$curRoute['controller'] . $this->_separator . $curRoute['action']. $this->_separator.$tmpparam.$tmpurl;
+            unset($curRoute);
         }
         unset($url);
         return $this->_url;
@@ -167,7 +171,7 @@ class Page extends Component
     /**
      * 绘制分页标签
      */
-    public function out($count = 0,$pageCount = 10,$param=array())
+    public function out($count = 0,$pageCount = 10,$param=[])
     {
         $this->initNeedData($count, $pageCount, $param);
         $element='<div>';

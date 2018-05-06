@@ -55,9 +55,19 @@ class Captcha extends Component
         $this->_type = $this->getValueFromConf('type', 'png');
     }
 
+    public function GetCode()
+    {
+        return $this->_code;
+    }
+
     //输出图像
     public function send()
     {
+
+        if (!empty($this->_img))
+        {
+            imagedestroy($this->_img);
+        }
         //创建背景 (颜色， 大小， 边框)
         $this->CreateBack();
 
@@ -69,8 +79,9 @@ class Captcha extends Component
 
         $this->SetDisturbColor();
         //输出图像
+        ob_start();
         $this->PrintImg();
-        return $this->_code;
+        return ob_get_clean();
     }
 
     //创建背景
@@ -128,17 +139,17 @@ class Captcha extends Component
     {
         if (imagetypes() & IMG_GIF && $this->_type === 'git')
         {
-            $this->getComponent('response')->contentType('gif');
+            $this->getComponent(SYSTEM_APP_NAME, 'response')->contentType('gif');
             imagegif($this->_img);
         }
         elseif (function_exists("imagejpeg") && IMG_JPG && $this->_type === 'jpg')
         {
-            $this->getComponent('response')->contentType('jpg');
+            $this->getComponent(SYSTEM_APP_NAME, 'response')->contentType('jpg');
             imagejpeg($this->_img);
         }
         elseif (imagetypes() & IMG_PNG && $this->_type === 'png')
         {
-            $this->getComponent('response')->contentType('png');
+            $this->getComponent(SYSTEM_APP_NAME, 'response')->contentType('png');
             imagepng($this->_img);
         }
     }
@@ -146,18 +157,15 @@ class Captcha extends Component
     //生成验证码字符串
     private function CreateCode()
     {
-        $codes = "3456789abcdefghijkmnpqrstuvwxyABCDEFGHIJKLMNPQRSTUVWXY";
-
-        $this->_code = "";
-
-        for($i=0; $i < $this->_num; $i++)
-        {
-            $this->_code .=$codes{rand(0, strlen($codes)-1)};
-        }
+        $this->_code = randStr($this->_num);
     }
+
 
     public function __destruct()
     {
-        imagedestroy($this->_img);
+        if (!empty($this->_img))
+        {
+            imagedestroy($this->_img);
+        }
     }
 }

@@ -5,73 +5,61 @@ use framework\base\Container;
 
 class Dispatcher extends Component
 {
-    protected $_controllerPrefix = null;
-    protected $_controllerSuffix = null;
-    protected $_actionPrefix = null;
-    protected $_actionSuffix = null;
+    protected $_system;
+    protected $_controller;
+    protected $_action;
 
-    public function run($args = array())
+    public function run($args = [])
     {
-        $controllerName = $this->getControllerPrefix() . $args['controller'] . $this->getControllerSuffix();
-
-        if (!file_exists(APP_ROOT.APP_NAME.'/controller/'.ucfirst($controllerName).'.php'))
+        $this->_system = getModule();
+        $controllerName = $this->getValueFromConf('controller.prefix') . $args['controller'] . $this->getValueFromConf('controller.suffix');
+        $controllerName = ucfirst($controllerName);
+        if (!file_exists(APP_ROOT.$this->_system.'/controller/'.$controllerName.'.php'))
         {
-            throw new \Exception(APP_ROOT.APP_NAME.'/controller/'.ucfirst($controllerName).'.phpnot exists', 404);
+            $this->triggerThrowable(new \Exception(APP_ROOT.$this->_system.'/controller/'.$controllerName.'.php not exists', 404));
         }
 
-        $controllerHashName = md5(APP_NAME.'application/controller/'.$controllerName);
-        Container::getInstance()->addComponent($controllerHashName,
-            'application\\controller\\'. $controllerName);
+        $controllerHashName = md5($this->_system.'/controller/'.$controllerName);
 
-        $actionName = $this->getActionPrefix() . $args['action'] . $this->getActionSuffix();
-        $controllerInstance = $this->getComponent($controllerHashName);
+        Container::getInstance()->addComponent($this->_system, $controllerHashName,
+            $this->_system.'\\controller\\'. $controllerName, Container::getInstance()->getComponentConf(getModule(), 'controller'));
+
+        $actionName = $this->getValueFromConf('action.prefix') . $args['action'] . $this->getValueFromConf('action.suffix');
+        $controllerInstance = $this->getComponent(getModule(), $controllerHashName);
+        if (!method_exists($controllerInstance, $actionName))
+        {
+            unset($controllerInstance, $args);
+            $this->triggerThrowable(new \Exception('action ' . $actionName . ' not found'));
+        }
+
+
         $controllerInstance->setController($controllerName);
         $controllerInstance->setAction($actionName);
+        $this->_controller = $controllerName;
+        $this->_action = $actionName;
+
 
         $result = $controllerInstance->beforeAction();
         if ($result !== true)
         {
+            unset($controllerInstance, $args);
             return $result;
         }
+
         $result = $controllerInstance->$actionName();
+
         $result = $controllerInstance->afterAction($result);
         unset($controllerInstance, $args);
         return $result;
     }
 
-    protected function getControllerPrefix()
+    public function getController ()
     {
-        if(!isset($this->_controllerPrefix))
-        {
-            $this->_controllerPrefix = $this->getValueFromConf('controller.prefix');
-        }
-        return $this->_controllerPrefix;
+        return $this->_controller;
     }
 
-    protected function getControllerSuffix()
+    public function getAction ()
     {
-        if(!isset($this->_controllerSuffix))
-        {
-            $this->_controllerSuffix = $this->getValueFromConf('controller.suffix');
-        }
-        return $this->_controllerSuffix;
-    }
-
-    protected function getActionPrefix()
-    {
-        if(!isset($this->_actionPrefix))
-        {
-            $this->_actionPrefix = $this->getValueFromConf('action.prefix');
-        }
-        return $this->_actionPrefix;
-    }
-
-    protected function getActionSuffix()
-    {
-        if(!isset($this->_actionSuffix))
-        {
-            $this->_actionSuffix = $this->getValueFromConf('action.suffix');
-        }
-        return $this->_actionSuffix;
+        return $this->_action;
     }
 }

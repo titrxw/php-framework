@@ -7,9 +7,12 @@ class Request extends Component
     protected $_method;
     protected $_rowBody;
     protected $_headers;
-    protected $_hasCheckGet = false;
-    protected $_hasCheckPost = false;
-    protected $_hasCheckRequest = false;
+    protected $_hasCheck = [];
+
+    protected function init()
+    {
+        $this->unInstall();
+    }
 
     protected function stripSlashes(&$data)
     {
@@ -25,81 +28,57 @@ class Request extends Component
             return stripslashes($data);
     }
 
-    protected function checkGet()
+    protected function checkData(&$data, $type, $params = '')
     {
-        if(!$this->_hasCheckGet)
+        $hasCheck =  $this->_hasCheck[$type][$params] ?? ($this->_hasCheck[$type.'ALL'] ?? false);
+        if(empty($this->_hasCheck[$type.'ALL']) && !$hasCheck)
         {
             if(function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc())
             {
-                $_GET = $this->stripSlashes($_GET);
+                $_GET = $this->stripSlashes($params ? $data[$params] : $data);
             }
-            $this->_hasCheckGet = true;
-        }
-    }
-
-    protected function checkPost()
-    {
-        if(!$this->_hasCheckPost)
-        {
-            if(function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc())
-            {
-                $_POST = $this->stripSlashes($_POST);
+            if ($params) {
+                $this->_hasCheck[$type][$params] = true;
+            } else {
+                $this->_hasCheck[$type.'ALL'] = true;
             }
-            $this->_hasCheckPost = true;
-        }
-    }
-
-    protected function checkRequest()
-    {
-        if(!$this->_hasCheckRequest)
-        {
-            if(function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc())
-            {
-                $_REQUEST = $this->stripSlashes($_REQUEST);
-            }
-            $this->_hasCheckRequest = true;
         }
     }
 
     public function getMethod()
     {
-        if (empty($this->_method))
-            $this->_method = $this->getServer()['REQUEST_METHOD'];
-
-        return $this->_method;
+        return $_SERVER['REQUEST_METHOD'];
     }
 
-    public function get($key = '', $default = '')
+    public function get($key = '', $default = '', $needCheck = true)
     {
-        $this->checkGet();
-        if(empty($key))
-            return $_GET;
-        if(!isset($_GET[$key]))
-            return $default;
-        else
-            return $_GET[$key];
+        return $this->data($_GET, 'get',  $key, $default, $needCheck);
     }
 
-    public function post($key = '', $default = '')
+    public function post($key = '', $default = '', $needCheck = true)
     {
-        $this->checkPost();
-        if(empty($key))
-            return $_POST;
-        if(!isset($_POST[$key]))
-            return $default;
-        else
-            return $_POST[$key];
+        return $this->data($_POST,'post',  $key, $default, $needCheck);
     }
 
-    public function request($key = '', $default = '')
+    public function request($key = '', $default = '', $needCheck = true)
     {
-        $this->checkRequest();
-        if(empty($key))
-            return $_REQUEST;
-        if(!isset($_REQUEST[$key]))
+        return $this->data($_REQUEST,'request',  $key, $default, $needCheck);
+    }
+
+    protected function data(&$data, $type, $key = '', $default = '', $needCheck = true)
+    {
+        if(!$key)
+        {
+            $needCheck&&$this->checkData($data, $type, $key);
+            return $data;
+        }
+        else if(!isset($data[$key]))
             return $default;
         else
-            return $_REQUEST[$key];
+        {
+            $needCheck&&$this->checkData($data, $type, $key);
+            return $data[$key];
+        }
     }
 
     public function getRawBody()
@@ -109,34 +88,104 @@ class Request extends Component
         return $this->_rowBody;
     }
 
+    public function isPost()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'post')
+        {
+            return true;
+        }
+        return false;
+    }
+
+
+    public function isAjax()
+    {
+        $result = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH']==='XMLHttpRequest';
+        return $result;
+    }
+
+
     public function headers()
     {
+
         if(!empty($this->_headers))
             return $this->_headers;
 
-        $tServuer = $this->getServer();
-        foreach ($tServuer as $name => $value)
+        foreach ($_SERVER as $name => $value)
         {
             if (substr($name, 0, 5) == 'HTTP_')
             {
                 $this->_headers[str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))))] = $value;
             }
         }
-        unset($tServuer);
         return $this->_headers;
     }
 
     public function header($key)
     {
-        $server = $this->getServer();
-        $result =  empty($server[$key]) ? '' : $server[$key];
-        unset($server);
+        $result =  $_SERVER[$key] ?? '';
         return $result;
     }
 
-    public function getServer()
+    public function getClientIp()
     {
-        return $this->getComponent('url')->getServer();
+        $realip = NULL;
+
+        if (isset($_SERVER))
+        {
+            if (isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+            {
+                $arr = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+
+                /* 取X-Forwarded-For中第一个非unknown的有效IP字符串 */
+                foreach ($arr AS $ip)
+                {
+                    $ip = trim($ip);
+
+                    if ($ip != 'unknown')
+                    {
+                        $realip = $ip;
+
+                        break;
+                    }
+                }
+            }
+            elseif (isset($_SERVER['HTTP_CLIENT_IP']))
+            {
+                $realip = $_SERVER['HTTP_CLIENT_IP'];
+            }
+            else
+            {
+                if (isset($_SERVER['REMOTE_ADDR']))
+                {
+                    $realip = $_SERVER['REMOTE_ADDR'];
+                }
+                else
+                {
+                    $realip = '0.0.0.0';
+                }
+            }
+        }
+        else
+        {
+            if (getenv('HTTP_X_FORWARDED_FOR'))
+            {
+                $realip = getenv('HTTP_X_FORWARDED_FOR');
+            }
+            elseif (getenv('HTTP_CLIENT_IP'))
+            {
+                $realip = getenv('HTTP_CLIENT_IP');
+            }
+            else
+            {
+                $realip = getenv('REMOTE_ADDR');
+            }
+        }
+
+        preg_match("/[\d\.]{7,15}/", $realip, $onlineip);
+        $realip = !empty($onlineip[0]) ? $onlineip[0] : '0.0.0.0';
+
+        return $realip;
     }
 
     public function __destruct()

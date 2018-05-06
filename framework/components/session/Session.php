@@ -5,8 +5,9 @@ use framework\base\Component;
 
 class Session extends Component
 {
+    protected $_cookieHandle;
+
     protected  $_prefix;
-    protected  $_autoStart;
     protected $_requestSessioId;
     protected $_name;
     protected $_path;
@@ -29,33 +30,29 @@ class Session extends Component
      */
     protected function init()
     {
-        // 启动session
-        $this->_autoStart = $this->getValueFromConf('autoStart',true);
-        if ($this->_autoStart === true && PHP_SESSION_ACTIVE != session_status()) {
-            ini_set('session.auto_start', 0);
-        }
-
-        $this->_requestSessioId = $this->getValueFromConf('requestSessionId','session');
-        if (!empty($this->_requestSessioId) && !empty($_REQUEST[$this->_requestSessioId])) {
-            session_id($_REQUEST[$this->_requestSessioId]);
-        }
-
         $this->_name = $this->getValueFromConf('name','PHPSESSION');
         if (!empty($this->_name)) {
             session_name($this->_name);
         }
 
-        $this->_path = $this->getValueFromConf('path','');
-        if (!empty($this->_path)) {
-            session_save_path($this->_path);
+        $this->_driver = $this->getValueFromConf('driver',[]);
+        if ($this->_driver && !empty($this->_driver['type']) && $this->_driver['type'] !== 'redis')
+        {
+            $this->_path = $this->getValueFromConf('path','');
+            if (!empty($this->_path)) {
+                session_save_path($this->_path);
+            }
         }
+    }
 
-        $httponly = $this->getValueFromConf('httpOnly',true);
-        if ($httponly === true) {
-            ini_set('session.cookie_httponly',$httponly);
-        }
+    public function getSessionId()
+    {
+        return session_id();
+    }
 
-        $this->_driver = $this->getValueFromConf('driver',array());
+    public function getSessionName()
+    {
+        return $this->_name;
     }
 
     public function start()
@@ -63,11 +60,12 @@ class Session extends Component
         if($this->_isStart === true) return true;
         if (!empty($this->_driver) && !empty($this->_driver['type'])) {
             // 读取session驱动
-            $driverClass = 'framework\\components\\session\\driver\\' . $this->_driver['type'];
+            $class = ucfirst($this->_driver['type']);
+            $driverClass = 'framework\\components\\session\\driver\\' . $class;
             // 检查驱动类
             if (class_exists($driverClass))
             {
-                $conf = empty($this->_appConf[$this->_driver['type']])?array():$this->_appConf[$this->_driver['type']];
+                $conf = empty($this->_appConf[$this->_driver['type']])?[]:$this->_appConf[$this->_driver['type']];
                 if (!empty($this->_driver['name'])) {
                     $conf['_name'] = $this->_driver['name'];
                 }
@@ -80,11 +78,15 @@ class Session extends Component
                 }
             }
         }
-        if ($this->_autoStart)
+
+        $sessionid = $this->getCookie()->get($this->_name);
+        if (!empty($sessionid))
         {
-            session_start();
-            $this->_isStart = true;
+            session_id($sessionid);
         }
+        session_start();
+        $this->getCookie()->set($this->_name, $this->getSessionId());
+        $this->_isStart = true;
     }
 
     /**
@@ -207,6 +209,12 @@ class Session extends Component
     public function regenerate($delete = false)
     {
         session_regenerate_id($delete);
+        if ($delete)
+        {
+            $this->getCookie()->set($this->_name, '', -1);
+        }
+
+        $this->getCookie()->set($this->_name, $this->getSessionId());
     }
 
     /**
@@ -224,4 +232,15 @@ class Session extends Component
     {
         unset($this->_driverHandle);
     }
+
+
+    protected function getCookie()
+    {
+        if (!$this->_cookieHandle)
+        {
+            $this->_cookieHandle = $this->getComponent(SYSTEM_APP_NAME, 'cookie');
+        }
+        return $this->_cookieHandle;
+    }
+
 }

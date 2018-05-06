@@ -11,13 +11,14 @@ use framework\base\Component;
 class Pdo extends Component implements DbInterface
 {
     protected $_execute;
-    protected $_instances;
+    protected $_instances = [];
     protected $_defaultDb;
     protected $_currentDb;
 
     protected function init()
     {
         unset($this->_conf);
+        $this->_appConf['db'] = $this->getValueFromConf('db');
         foreach ($this->_appConf['db'] as $key=>$item)
         {
             $this->_defaultDb = $key;
@@ -30,6 +31,13 @@ class Pdo extends Component implements DbInterface
     {
         if (!empty($this->_instances[$this->_currentDb]))
         {
+//            这里也可使用计时器，在数据库将要断开是 发送数据库请求
+//            if($this->reConnect())
+//                return $this->_instances[$this->_currentDb];
+//            else
+//                return $this->getPdoHandle();
+
+//            检测用定时器检测
             return $this->_instances[$this->_currentDb];
         }
 
@@ -52,27 +60,52 @@ class Pdo extends Component implements DbInterface
             }
             catch (\PDOException $e)
             {
-                throw new \Exception($e->getMessage(),500);
+                $this->triggerThrowable(new \Exception($e->getMessage(),500));
             }
         }
         else
         {
-            throw new \Exception("db {$this->_currentDb} not found",500);
+            $this->triggerThrowable(new \Exception("db {$this->_currentDb} not found",500));
         }
     }
 
+    public function heartBeat()
+    {
+        foreach ($this->_instances as $item)
+        {
+            $item->getAttribute(\PDO::ATTR_SERVER_INFO);
+        }
+    }
+
+//    protected function reConnect()
+//    {
+//        try
+//        {
+//            $this->_instances[$this->_currentDb]->getAttribute(\PDO::ATTR_SERVER_INFO);
+//        }
+//        catch (\PDOException $e)
+//        {
+//            if(strpos($e->getMessage(), 'MySQL server has gone away')!==false)
+//            {
+//                $this->_instances[$this->_currentDb] = null;
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+
     public function query($sql)
     {
-        if(!empty($sql))
+        if($sql)
         {
             $this->_execute=$this->getPdoHandle()->query($sql);
         }
         return $this;
     }
 
-    protected function prepare($sql,$value=array())
+    protected function prepare($sql,$value=[])
     {
-        if(!empty($sql))
+        if($sql)
         {
             $this->_execute=$this->getPdoHandle()->prepare($sql);
             $this->finish();
@@ -96,9 +129,9 @@ class Pdo extends Component implements DbInterface
             return false;
     }
 
-    public function getRow($sql,$value=array())
+    public function getRow($sql,$value=[])
     {
-        if(!empty($sql))
+        if($sql)
         {
             $this->prepare($sql,$value);
             unset($value);
@@ -108,12 +141,12 @@ class Pdo extends Component implements DbInterface
             }
         }
         else
-            return array();
+            return [];
     }
 
-    public function getAll($sql,$value=array())
+    public function getAll($sql,$value=[])
     {
-        if(!empty($sql))
+        if($sql)
         {
             $this->prepare($sql,$value);
             unset($value);
@@ -123,12 +156,12 @@ class Pdo extends Component implements DbInterface
             }
         }
         else
-            return array();
+            return [];
     }
 
-    public function count($sql,$value=array())
+    public function count($sql,$value=[])
     {
-        if(!empty($sql))
+        if($sql)
         {
             $this->prepare($sql,$value);
             unset($value);
@@ -151,7 +184,7 @@ class Pdo extends Component implements DbInterface
             return $result;
         }
         else
-            return array();
+            return [];
     }
 
     public function lastId()

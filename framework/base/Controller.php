@@ -7,6 +7,12 @@ abstract class Controller extends Component
     protected $_action;
     protected $_view;
 
+
+    protected function init()
+    {
+        $this->unInstall(true);
+    }
+
     public function beforeAction()
     {
         return true;
@@ -44,11 +50,12 @@ abstract class Controller extends Component
      */
     public function __get($name)
     {
-        $func = 'get'.ucfirst($name);
-        if (method_exists($this, $func))
-        {
-            $this->$name = $this->$func();
-//            保证只会调用一次func
+        if (Container::getInstance()->hasComponent(getModule(), $name)) {
+            $this->$name = $this->getComponent(getModule(), $name);
+            return $this->$name;
+        }
+        if (Container::getInstance()->hasComponent(SYSTEM_APP_NAME, $name)) {
+            $this->$name = $this->getComponent(SYSTEM_APP_NAME, $name);
             return $this->$name;
         }
         return null;

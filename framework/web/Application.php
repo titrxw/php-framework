@@ -7,68 +7,83 @@
  */
 namespace framework\web;
 
+use framework\base\Container;
+
 class Application extends \framework\base\Application
 {
+
     protected function addBaseComponents()
     {
         parent::addBaseComponents();
-        $this->_appConf['addComponentsMap'] = empty($this->_appConf['addComponentsMap']) ? array() : $this->_appConf['addComponentsMap'];
-        $components = array(
-            'session' => 'framework\\components\\session\\Session',
-            'view' => 'framework\\components\\view\\View',
-            'cache' => 'framework\\components\\cache\\Redis',
-            'db' => 'framework\\components\\db\\Pdo',
-            'log' => 'framework\\components\\log\\Log',
-            'redis' => 'framework\\components\\cache\\Redis'
-        );
-        $components = array_merge($components, $this->_appConf['addComponentsMap']);
-        $this->_container->addComponents($components);
 
-        unset($this->_appConf['addComponentsMap'], $components);
+        $components = [
+            'server' => 'framework\\server\\Server',
+            'msgTask' => 'blog\\conf\\Task',
+            'log' => 'framework\\components\\log\\Log',
+            'conf' => 'framework\\base\\Conf',
+            'cookie' => 'framework\\components\\cookie\\Cookie',
+            'response' => 'framework\\components\\response\\Response'
+        ];
+        $components = array_merge($components, $this->_conf['addComponentsMap'] ?? []);
+        $this->_container->addComponents(SYSTEM_APP_NAME, $components);
+
+        unset($components);
     }
 
     protected function beforeInit()
     {
-        $this->_conf['components'] = empty($this->_conf['components']) ? array() : $this->_conf['components'];
-        $this->_appConf['components'] = empty($this->_appConf['components']) ? array() : $this->_appConf['components'];
+        $this->_conf['components'] = $this->_conf['components']??[];
+        $this->_appConf['components'] = [];
+        $this->_conf['composer'] = $this->_conf['composer']??[];
+        $this->_appConf['composer'] = [];
     }
 
-    public static function run($conf)
+    public static function run($command = '')
     {
+        $conf = [
+            'default' =>  require_file('framework/conf/base.php'),
+            'app' => []
+        ];
         $instance = new Application($conf);
-        $server = $_SERVER;
         $result = '';
         try
         {
-            $url = $instance->getUrl()->run($server);
-            $result = $instance->getDispatcher()->run($url);
-            $instance->getResponse()->send($result);
-            unset($result,$content);
-        }
-        catch (\Exception $e)
-        {
-            $code = $e->getCode() > 0 ? $e->getCode() : 404;
-            $response = $instance->getResponse();
-            $response->setCode($code);
-            if (DEBUG) {
-                $result = $e->getMessage() . "\n trace: " . $e->getTraceAsString();
-            }
+            $container = Container::getInstance();
+            $urlInfo = $container->getComponent(SYSTEM_APP_NAME, 'url')->run();
+            $_SERVER['CURRENT_SYSTEM'] = $urlInfo['system'];
 
-            $response->send($result);
-            unset($default, $conf, $instance);
-            throw $e;
+
+            if ($urlInfo !== false) {
+                // 初始化配置项
+                if (!$container->appHasComponents($urlInfo['system'])) {
+//                这里现在还缺少文件系统
+                    $appConf = require_file($urlInfo['system'] . '/conf/conf.php');
+                    $container->addComponents($urlInfo['system'], $appConf['addComponentsMap'] ?? []);
+                    $container->setAppComponents($urlInfo['system'] ,array(
+                        'components' => $appConf['components'] ?? [],
+                        'composer' => $appConf['composer'] ?? []
+                    ));
+                    unset($appConf);
+                }
+
+                $result = $container->getComponent(SYSTEM_APP_NAME, 'dispatcher')->run($urlInfo);
+                $container->getComponent(SYSTEM_APP_NAME, 'cookie')->send();
+                $container->getComponent(SYSTEM_APP_NAME, 'response')->send($result);
+                unset($result);
+            }
         }
-        catch (\Error $e)
+        catch (\Throwable $e)
         {
             $code = $e->getCode() > 0 ? $e->getCode() : 500;
-            $response = $instance->getResponse();
+            $response = $container->getComponent(SYSTEM_APP_NAME, 'response');
             $response->setCode($code);
             if (DEBUG) {
                 $result = $e->getMessage() . "\n trace: " . $e->getTraceAsString();
             }
             $response->send($result);
+            $instance->handleThrowable($e);
             unset($default, $conf, $instance);
-            throw $e;
+
         }
     }
 }

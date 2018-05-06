@@ -16,9 +16,9 @@ use framework\base\Container;
 class Redis extends \SessionHandler
 {
     protected $_handler = null;
-    protected $_conf  = array();
+    protected $_conf  = [];
 
-    public function __construct($config = array())
+    public function __construct($config = [])
     {
         if (!extension_loaded('redis')) {
             throw new \Exception('not support: redis', 500);
@@ -26,8 +26,8 @@ class Redis extends \SessionHandler
         if (empty($config['_name'])) {
             $config['_name'] = 'redis';
         }
-        $this->_handler = Container::getInstance()->getComponent($config['_name']);
         $this->_conf = $config;
+        Container::getInstance()->getComponent($this->_conf['_name']);
         unset($config);
     }
 
@@ -41,6 +41,14 @@ class Redis extends \SessionHandler
      */
     public function open($savePath, $sessName)
     {
+        try
+        {
+            $this->_handler = Container::getInstance()->getComponent($this->_conf['_name']);
+        }
+        catch(\Exception $e)
+        {
+            throw new \Exception($e->getMessage(),500);
+        }
         return true;
     }
 
@@ -63,7 +71,7 @@ class Redis extends \SessionHandler
      */
     public function read($sessID)
     {
-        return (string) $this->_handler->get($this->_conf['prefix'] . $sessID);
+        return (string) $this->_handler->get($this->_conf['session_name'] . $sessID);
     }
 
     /**
@@ -75,7 +83,7 @@ class Redis extends \SessionHandler
      */
     public function write($sessID, $sessData)
     {
-        return $this->_handler->set($this->_conf['prefix'] . $sessID, $sessData);
+        return $this->_handler->set($this->_conf['session_name'] . $sessID, $sessData);
     }
 
     /**
@@ -86,7 +94,7 @@ class Redis extends \SessionHandler
      */
     public function destroy($sessID)
     {
-        $this->_handler->rm($this->_conf['prefix'] . $sessID);
+        $this->_handler->rm($this->_conf['session_name'] . $sessID);
         return true;
     }
 

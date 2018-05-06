@@ -3,30 +3,36 @@ namespace framework\base;
 
 class Model extends Component
 {
-    protected function selectDb($db)
+    protected $_dbHandle;
+
+    protected function init()
     {
-        $this->getComponent('db')->selectDb($db);
-        return $this;
+        $this->unInstall(true);
     }
 
-    protected function getRow($sql,$value=array())
+    public function db()
     {
-        return $this->getComponent('db')->getRow($sql, $value);
+        if (!$this->_dbHandle) {
+            $this->_dbHandle = $this->getComponent(SYSTEM_APP_NAME, $this->getValueFromConf('db','meedo'));
+        }
+        return $this->_dbHandle;
     }
 
-    protected function getAll($sql,$value=array())
+    /**
+     * desc component 快捷获取方式
+     * @param $name
+     * @return null
+     */
+    public function __get($name)
     {
-        return $this->getComponent('db')->getAll($sql, $value);
-    }
-
-    protected function query($sql)
-    {
-        $this->getComponent('db')->query($sql);
-        return $this;
-    }
-
-    protected function fetchAll($mode = \PDO::FETCH_BOTH)
-    {
-        return $this->getComponent('db')->fetchAll($mode);
+        if (Container::getInstance()->hasComponent(getModule(), $name)) {
+            $this->$name = $this->getComponent(getModule(), $name);
+            return $this->$name;
+        }
+        if (Container::getInstance()->hasComponent(SYSTEM_APP_NAME, $name)) {
+            $this->$name = $this->getComponent(SYSTEM_APP_NAME, $name);
+            return $this->$name;
+        }
+        return null;
     }
 }

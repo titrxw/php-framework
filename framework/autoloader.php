@@ -2,7 +2,7 @@
 function autoload($classFile)
 {
     $classFile = str_replace('\\','/',$classFile);
-    include APP_ROOT .$classFile.'.php';
+    require_file($classFile.'.php');
 }
 
 spl_autoload_register('autoload', true, true);
