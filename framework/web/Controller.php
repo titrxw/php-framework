@@ -6,7 +6,6 @@
  * Time: 12:11
  */
 namespace framework\web;
-
 use framework\base\Container;
 
 abstract class Controller extends \framework\base\Controller
@@ -54,12 +53,12 @@ abstract class Controller extends \framework\base\Controller
 
     protected function sendFile($path, $type = 'jpg')
     {
-        if (file_exists(!$path))
+        if (!file_exists($path))
         {
-            return false;
+            $this->triggerThrowable(new \Error('sendfile: ' . $path . ' not exists', 500));
         }
         $this->response->contentType($type);
-        $this->response->sendFile($path);
+        $this->getComponent(SYSTEM_APP_NAME,'sendfile', [])->send($path);
         return true;
     }
 }

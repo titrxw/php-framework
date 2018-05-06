@@ -14,16 +14,14 @@ class UniqueId extends Component
     const sequenceBits = 12;  
   
     protected $workId = 0;  
-  
-    //要用静态变量  
+
     protected $lastTimestamp = -1;  
     protected $sequence = 0;  
   
     protected function init()
     {
-        $maxWorkerId = -1 ^ (-1 << self::workerIdBits);
-        if(SYSTEM_WORK_ID > $maxWorkerId || SYSTEM_WORK_ID< 0){
-            $this->triggerThrowable(new \Exception("workerId can't be greater than ".$this->maxWorkerId." or less than 0", 500));
+        if(SYSTEM_WORK_ID< 0){
+            $this->triggerThrowable(new \Exception("workerId can't be  less than 0", 500));
         }
         //赋值
         $this->workId = SYSTEM_WORK_ID;
@@ -54,7 +52,7 @@ class UniqueId extends Component
         //时间毫秒/数据中心ID/机器ID,要左移的位数  
         $timestampLeftShift = self::sequenceBits + self::workerIdBits;  
         $workerIdShift = self::sequenceBits;  
-        //组合3段数据返回: 时间戳.工作机器.序列  
+        //组合3段数据返回: 时间戳.工作机器.序列
         $nextId = (($timestamp - self::twepoch) << $timestampLeftShift) | ($this->workId << $workerIdShift) | $this->sequence;  
         return $nextId;  
     }  

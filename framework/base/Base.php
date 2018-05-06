@@ -3,7 +3,7 @@ namespace framework\base;
 use framework\traits\Throwable;
 
 
-abstract class Base implements \ArrayAccess
+abstract class Base
 {
     use Throwable;
 
@@ -70,37 +70,37 @@ abstract class Base implements \ArrayAccess
     }
 
 
-//    array接口的方法暂时不用
-    public function offsetExists($offset)
-    {
-        if (isset($this->{$offset})) {
-            return true;
-        }
-
-        return false;
-    }
-
-    public function offsetGet($offset)
-    {
-        if (!$this->offsetExists($offset)) {
-            $this->{$offset} = $this->getValueFromConf($offset);
-            return $this->{$offset};
-        }
-        return $this->{$offset};
-    }
-
-    public function offsetSet($offset, $value)
-    {
-        $this->{$offset} = $value;
-    }
-
-    public function offsetUnset($offset)
-    {
-        unset($this->{$offset});
-    }
-
-    public function __destruct()
-    {
-        // TODO: Implement __destruct() method.
-    }
+////    array接口的方法暂时不用
+//    public function offsetExists($offset)
+//    {
+//        if (isset($this->{$offset})) {
+//            return true;
+//        }
+//
+//        return false;
+//    }
+//
+//    public function offsetGet($offset)
+//    {
+//        if (!$this->offsetExists($offset)) {
+//            $this->{$offset} = $this->getValueFromConf($offset);
+//            return $this->{$offset};
+//        }
+//        return $this->{$offset};
+//    }
+//
+//    public function offsetSet($offset, $value)
+//    {
+//        $this->{$offset} = $value;
+//    }
+//
+//    public function offsetUnset($offset)
+//    {
+//        unset($this->{$offset});
+//    }
+//
+//    public function __destruct()
+//    {
+//        // TODO: Implement __destruct() method.
+//    }
 }

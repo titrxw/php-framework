@@ -12,6 +12,9 @@ return array(
         },
         'meedo' => function (array $params) {
             return new \Medoo\Medoo($params);      //这里测试composer的加载
+        },
+        'sendfile' => function (array $params) {
+            return new \diversen\sendfile();
         }
     ),
     'addComponentsMap' => array(
@@ -28,13 +31,13 @@ return array(
             'routerKey' => '',
             'type' => '/',
             'separator' => '/',
-            'defaultSystem' => 'application',
+            'defaultSystem' => 'blog',
             'defaultSystemKey' => 's',
             'controllerKey' => 'm',
             'actionKey' => 'act',
             'defaultController' => 'index',
             'defaultAction' => 'index',
-            'systems' => array('application', 'application1', 'blog')
+            'systems' => array('blog', 'application1', 'blog')
         ),
         'dispatcher' => array(
             'controller' => array(

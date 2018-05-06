@@ -8,19 +8,19 @@ class Response extends Component
     protected $_code = 200;
     protected $_curType;
     protected $_contentTypes = array(
-        'xml'  => 'application/xml,text/xml,application/x-xml',
-        'json' => 'application/json,text/x-json,application/jsonrequest,text/json',
+        'xml'  => 'blog/xml,text/xml,blog/x-xml',
+        'json' => 'blog/json,text/x-json,blog/jsonrequest,text/json',
         'png'  => 'image/png',
         'jpg'  => 'image/jpg,image/jpeg,image/pjpeg',
         'gif'  => 'image/gif',
         'csv'  => 'text/csv',
         'txt' => 'text/plain',
-        'html' => 'text/html,application/xhtml+xml,*/*',
-        'pdf' => 'application/pdf',
-        'xls' => 'application/x-xls',
-        'apk' => 'application/vnd.android.package-archive',
-        'doc' => 'application/msword',
-        'zip' => 'application/zip'
+        'html' => 'text/html,blog/xhtml+xml,*/*',
+        'pdf' => 'blog/pdf',
+        'xls' => 'blog/x-xls',
+        'apk' => 'blog/vnd.android.package-archive',
+        'doc' => 'blog/msword',
+        'zip' => 'blog/zip'
     );
 
     protected function initHeader()

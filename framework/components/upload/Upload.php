@@ -22,12 +22,12 @@ class Upload extends Component
         'image/x-icon' => 'ico',
         'image/gif' => 'gif',
         'image/png' => 'png',
-        'application/x-tar' => 'tar',
-        'application/vnd.ms-powerpoint' => 'ppt',
-        'application/pdf' => 'pdf',
-        'application/x-shockwave-flash' => 'swf',
-        'application/x-zip-compressed' => 'zip',
-        'application/gzip' => 'gzip'
+        'blog/x-tar' => 'tar',
+        'blog/vnd.ms-powerpoint' => 'ppt',
+        'blog/pdf' => 'pdf',
+        'blog/x-shockwave-flash' => 'swf',
+        'blog/x-zip-compressed' => 'zip',
+        'blog/gzip' => 'gzip'
     );
 
     protected function init()

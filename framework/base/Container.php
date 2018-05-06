@@ -13,7 +13,6 @@ class Container extends Base
     protected function init()
     {
         $this->_components = [];
-        $this->_components[SYSTEM_APP_NAME] = $this->_conf;
         $this->_instances = [];
         self::$instance = $this;
     }
