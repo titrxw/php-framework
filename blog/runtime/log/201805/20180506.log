@@ -1,0 +1,218 @@
+[2018-05-06 13:58:46] [ log ] 
+ server: ::1
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login23Api not found 
+ file : /var/www/php/easy-framework-web/framework/components/dispatcher/Dispatcher.php 
+ line : 32 
+ code : 0 
+ trace : #0 /var/www/php/easy-framework-web/framework/web/Application.php(69): framework\components\dispatcher\Dispatcher->run(NULL)
+#1 /var/www/php/easy-framework-web/framework/framework.php(25): framework\web\Application::run('start')
+#2 /var/www/php/easy-framework-web/index.php(11): require('/var/www/php/ea...')
+#3 {main}
+
+[2018-05-06 13:59:36] [ log ] 
+ server: ::1
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : Class name must be a valid object or a string 
+ file : /var/www/php/easy-framework-web/framework/base/Container.php 
+ line : 177 
+ code : 500 
+ trace : #0 /var/www/php/easy-framework-web/framework/base/Component.php(20): framework\base\Container->getComponent('APP', 'captcha', Array)
+#1 /var/www/php/easy-framework-web/framework/base/Controller.php(58): framework\base\Component->getComponent('APP', 'captcha')
+#2 /var/www/php/easy-framework-web/blog/controller/Common.php(84): framework\base\Controller->__get('captcha')
+#3 /var/www/php/easy-framework-web/framework/components/dispatcher/Dispatcher.php(49): blog\controller\Common->imgApi()
+#4 /var/www/php/easy-framework-web/framework/web/Application.php(69): framework\components\dispatcher\Dispatcher->run(Array)
+#5 /var/www/php/easy-framework-web/framework/framework.php(25): framework\web\Application::run('start')
+#6 /var/www/php/easy-framework-web/index.php(11): require('/var/www/php/ea...')
+#7 {main}
+
+[2018-05-06 14:00:48] [ log ] 
+ server: ::1
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : Connection refused 
+ file : /var/www/php/easy-framework-web/framework/base/Container.php 
+ line : 171 
+ code : 500 
+ trace : #0 /var/www/php/easy-framework-web/framework/base/Component.php(20): framework\base\Container->getComponent('blog', 'tokenBucket', Array)
+#1 /var/www/php/easy-framework-web/framework/base/Controller.php(54): framework\base\Component->getComponent('blog', 'tokenBucket')
+#2 /var/www/php/easy-framework-web/blog/lib/Web.php(38): framework\base\Controller->__get('tokenBucket')
+#3 /var/www/php/easy-framework-web/framework/components/dispatcher/Dispatcher.php(42): blog\lib\Web->beforeAction()
+#4 /var/www/php/easy-framework-web/framework/web/Application.php(69): framework\components\dispatcher\Dispatcher->run(Array)
+#5 /var/www/php/easy-framework-web/framework/framework.php(25): framework\web\Application::run('start')
+#6 /var/www/php/easy-framework-web/index.php(11): require('/var/www/php/ea...')
+#7 {main}
+
+[2018-05-06 14:00:49] [ log ] 
+ server: ::1
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : Connection refused 
+ file : /var/www/php/easy-framework-web/framework/base/Container.php 
+ line : 171 
+ code : 500 
+ trace : #0 /var/www/php/easy-framework-web/framework/base/Component.php(20): framework\base\Container->getComponent('blog', 'tokenBucket', Array)
+#1 /var/www/php/easy-framework-web/framework/base/Controller.php(54): framework\base\Component->getComponent('blog', 'tokenBucket')
+#2 /var/www/php/easy-framework-web/blog/lib/Web.php(38): framework\base\Controller->__get('tokenBucket')
+#3 /var/www/php/easy-framework-web/framework/components/dispatcher/Dispatcher.php(42): blog\lib\Web->beforeAction()
+#4 /var/www/php/easy-framework-web/framework/web/Application.php(69): framework\components\dispatcher\Dispatcher->run(Array)
+#5 /var/www/php/easy-framework-web/framework/framework.php(25): framework\web\Application::run('start')
+#6 /var/www/php/easy-framework-web/index.php(11): require('/var/www/php/ea...')
+#7 {main}
+
+[2018-05-06 14:00:50] [ log ] 
+ server: ::1
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : Connection refused 
+ file : /var/www/php/easy-framework-web/framework/base/Container.php 
+ line : 171 
+ code : 500 
+ trace : #0 /var/www/php/easy-framework-web/framework/base/Component.php(20): framework\base\Container->getComponent('blog', 'tokenBucket', Array)
+#1 /var/www/php/easy-framework-web/framework/base/Controller.php(54): framework\base\Component->getComponent('blog', 'tokenBucket')
+#2 /var/www/php/easy-framework-web/blog/lib/Web.php(38): framework\base\Controller->__get('tokenBucket')
+#3 /var/www/php/easy-framework-web/framework/components/dispatcher/Dispatcher.php(42): blog\lib\Web->beforeAction()
+#4 /var/www/php/easy-framework-web/framework/web/Application.php(69): framework\components\dispatcher\Dispatcher->run(Array)
+#5 /var/www/php/easy-framework-web/framework/framework.php(25): framework\web\Application::run('start')
+#6 /var/www/php/easy-framework-web/index.php(11): require('/var/www/php/ea...')
+#7 {main}
+
+[2018-05-06 14:00:50] [ log ] 
+ server: ::1
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : Connection refused 
+ file : /var/www/php/easy-framework-web/framework/base/Container.php 
+ line : 171 
+ code : 500 
+ trace : #0 /var/www/php/easy-framework-web/framework/base/Component.php(20): framework\base\Container->getComponent('blog', 'tokenBucket', Array)
+#1 /var/www/php/easy-framework-web/framework/base/Controller.php(54): framework\base\Component->getComponent('blog', 'tokenBucket')
+#2 /var/www/php/easy-framework-web/blog/lib/Web.php(38): framework\base\Controller->__get('tokenBucket')
+#3 /var/www/php/easy-framework-web/framework/components/dispatcher/Dispatcher.php(42): blog\lib\Web->beforeAction()
+#4 /var/www/php/easy-framework-web/framework/web/Application.php(69): framework\components\dispatcher\Dispatcher->run(Array)
+#5 /var/www/php/easy-framework-web/framework/framework.php(25): framework\web\Application::run('start')
+#6 /var/www/php/easy-framework-web/index.php(11): require('/var/www/php/ea...')
+#7 {main}
+
+[2018-05-06 14:00:57] [ log ] 
+ server: ::1
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login23Api not found 
+ file : /var/www/php/easy-framework-web/framework/components/dispatcher/Dispatcher.php 
+ line : 32 
+ code : 0 
+ trace : #0 /var/www/php/easy-framework-web/framework/web/Application.php(69): framework\components\dispatcher\Dispatcher->run(NULL)
+#1 /var/www/php/easy-framework-web/framework/framework.php(25): framework\web\Application::run('start')
+#2 /var/www/php/easy-framework-web/index.php(11): require('/var/www/php/ea...')
+#3 {main}
+
+[2018-05-06 14:00:58] [ log ] 
+ server: ::1
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : Connection refused 
+ file : /var/www/php/easy-framework-web/framework/base/Container.php 
+ line : 171 
+ code : 500 
+ trace : #0 /var/www/php/easy-framework-web/framework/base/Component.php(20): framework\base\Container->getComponent('blog', 'tokenBucket', Array)
+#1 /var/www/php/easy-framework-web/framework/base/Controller.php(54): framework\base\Component->getComponent('blog', 'tokenBucket')
+#2 /var/www/php/easy-framework-web/blog/lib/Web.php(38): framework\base\Controller->__get('tokenBucket')
+#3 /var/www/php/easy-framework-web/framework/components/dispatcher/Dispatcher.php(42): blog\lib\Web->beforeAction()
+#4 /var/www/php/easy-framework-web/framework/web/Application.php(69): framework\components\dispatcher\Dispatcher->run(Array)
+#5 /var/www/php/easy-framework-web/framework/framework.php(25): framework\web\Application::run('start')
+#6 /var/www/php/easy-framework-web/index.php(11): require('/var/www/php/ea...')
+#7 {main}
+
+[2018-05-06 14:00:59] [ log ] 
+ server: ::1
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login23Api not found 
+ file : /var/www/php/easy-framework-web/framework/components/dispatcher/Dispatcher.php 
+ line : 32 
+ code : 0 
+ trace : #0 /var/www/php/easy-framework-web/framework/web/Application.php(69): framework\components\dispatcher\Dispatcher->run(NULL)
+#1 /var/www/php/easy-framework-web/framework/framework.php(25): framework\web\Application::run('start')
+#2 /var/www/php/easy-framework-web/index.php(11): require('/var/www/php/ea...')
+#3 {main}
+
+[2018-05-06 14:01:00] [ log ] 
+ server: ::1
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login23Api not found 
+ file : /var/www/php/easy-framework-web/framework/components/dispatcher/Dispatcher.php 
+ line : 32 
+ code : 0 
+ trace : #0 /var/www/php/easy-framework-web/framework/web/Application.php(69): framework\components\dispatcher\Dispatcher->run(NULL)
+#1 /var/www/php/easy-framework-web/framework/framework.php(25): framework\web\Application::run('start')
+#2 /var/www/php/easy-framework-web/index.php(11): require('/var/www/php/ea...')
+#3 {main}
+
+[2018-05-06 14:01:01] [ log ] 
+ server: ::1
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : Connection refused 
+ file : /var/www/php/easy-framework-web/framework/base/Container.php 
+ line : 171 
+ code : 500 
+ trace : #0 /var/www/php/easy-framework-web/framework/base/Component.php(20): framework\base\Container->getComponent('blog', 'tokenBucket', Array)
+#1 /var/www/php/easy-framework-web/framework/base/Controller.php(54): framework\base\Component->getComponent('blog', 'tokenBucket')
+#2 /var/www/php/easy-framework-web/blog/lib/Web.php(38): framework\base\Controller->__get('tokenBucket')
+#3 /var/www/php/easy-framework-web/framework/components/dispatcher/Dispatcher.php(42): blog\lib\Web->beforeAction()
+#4 /var/www/php/easy-framework-web/framework/web/Application.php(69): framework\components\dispatcher\Dispatcher->run(Array)
+#5 /var/www/php/easy-framework-web/framework/framework.php(25): framework\web\Application::run('start')
+#6 /var/www/php/easy-framework-web/index.php(11): require('/var/www/php/ea...')
+#7 {main}
+
+[2018-05-06 14:01:01] [ log ] 
+ server: ::1
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : Connection refused 
+ file : /var/www/php/easy-framework-web/framework/base/Container.php 
+ line : 171 
+ code : 500 
+ trace : #0 /var/www/php/easy-framework-web/framework/base/Component.php(20): framework\base\Container->getComponent('blog', 'tokenBucket', Array)
+#1 /var/www/php/easy-framework-web/framework/base/Controller.php(54): framework\base\Component->getComponent('blog', 'tokenBucket')
+#2 /var/www/php/easy-framework-web/blog/lib/Web.php(38): framework\base\Controller->__get('tokenBucket')
+#3 /var/www/php/easy-framework-web/framework/components/dispatcher/Dispatcher.php(42): blog\lib\Web->beforeAction()
+#4 /var/www/php/easy-framework-web/framework/web/Application.php(69): framework\components\dispatcher\Dispatcher->run(Array)
+#5 /var/www/php/easy-framework-web/framework/framework.php(25): framework\web\Application::run('start')
+#6 /var/www/php/easy-framework-web/index.php(11): require('/var/www/php/ea...')
+#7 {main}
+
+[2018-05-06 14:01:01] [ log ] 
+ server: ::1
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : Connection refused 
+ file : /var/www/php/easy-framework-web/framework/base/Container.php 
+ line : 171 
+ code : 500 
+ trace : #0 /var/www/php/easy-framework-web/framework/base/Component.php(20): framework\base\Container->getComponent('blog', 'tokenBucket', Array)
+#1 /var/www/php/easy-framework-web/framework/base/Controller.php(54): framework\base\Component->getComponent('blog', 'tokenBucket')
+#2 /var/www/php/easy-framework-web/blog/lib/Web.php(38): framework\base\Controller->__get('tokenBucket')
+#3 /var/www/php/easy-framework-web/framework/components/dispatcher/Dispatcher.php(42): blog\lib\Web->beforeAction()
+#4 /var/www/php/easy-framework-web/framework/web/Application.php(69): framework\components\dispatcher\Dispatcher->run(Array)
+#5 /var/www/php/easy-framework-web/framework/framework.php(25): framework\web\Application::run('start')
+#6 /var/www/php/easy-framework-web/index.php(11): require('/var/www/php/ea...')
+#7 {main}
+
