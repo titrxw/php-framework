@@ -11,7 +11,6 @@ use framework\base\Container;
 
 class Application extends \framework\base\Application
 {
-
     protected function addBaseComponents()
     {
         parent::addBaseComponents();
@@ -24,6 +23,9 @@ class Application extends \framework\base\Application
             'cookie' => 'framework\\components\\cookie\\Cookie',
             'response' => 'framework\\components\\response\\Response'
         ];
+        if (PHP_SAPI == 'cli') {
+            $components['url'] = 'framework\\components\\url\\CliUrl';
+        }
         $components = array_merge($components, $this->_conf['addComponentsMap'] ?? []);
         $this->_container->addComponents(SYSTEM_APP_NAME, $components);
 

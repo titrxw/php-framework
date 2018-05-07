@@ -32,6 +32,7 @@ class Application extends Base
         define('ISSWOOLE', false);
         define('FRAMEWORK_NAME', 'framework');
 
+
         date_default_timezone_set('PRC');
 
         if(!defined('DEBUG'))
