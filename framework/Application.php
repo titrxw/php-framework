@@ -20,8 +20,7 @@ class Application extends \framework\base\Application
             'msgTask' => 'blog\\conf\\Task',
             'log' => 'framework\\components\\log\\Log',
             'conf' => 'framework\\base\\Conf',
-            'cookie' => 'framework\\components\\cookie\\Cookie',
-            'response' => 'framework\\components\\response\\Response'
+            'cookie' => 'framework\\components\\cookie\\Cookie'
         ];
         if (PHP_SAPI == 'cli') {
             $components['url'] = 'framework\\components\\url\\CliUrl';

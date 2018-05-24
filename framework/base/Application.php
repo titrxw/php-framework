@@ -37,7 +37,7 @@ class Application extends Base
 
         if(!defined('DEBUG'))
             define('DEBUG',true);
-
+            
         define('SYSTEM_WORK_ID', getmypid());
         define('SYSTEM_APP_NAME', 'APP');
 

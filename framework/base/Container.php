@@ -117,7 +117,7 @@ class Container extends Base
             }
             unset($components);
         }
-        catch (\Exception $e)
+        catch (\Throwable $e)
         {
             $this->triggerThrowable(new \Exception('components add failed ' . $e->getMessage()));
         }
@@ -156,6 +156,7 @@ class Container extends Base
                 if (COMPOSER && $this->_composer->checkComposer($haver,$key)) {
                     $_params = $this->getComponentConf($haver, $key);
                     $this->_instances[$haver][$key] = $this->_composer->getComposer($haver, $key, array_merge($_params['default'], $_params['app'], $params));
+                    $this->unInstall($haver, $key);
                 }
                 else
                 {
@@ -163,23 +164,17 @@ class Container extends Base
                 }
             }
         }
-        catch (\Exception $e)
+        catch (\Throwable $e)
         {
             $msg = $e->getMessage();
             // $msg = empty($msg) ? ' maybe this class not instance of Components ' : $msg;
             $this->triggerThrowable(new \Exception( $msg, 500));
         }
-        catch (\Error $e)
-        {
-            $msg = $e->getMessage();
-            // $msg = empty($msg) ? ' maybe this class not instance of Components ' : $msg;
-            $this->triggerThrowable(new \Error( $msg, 500));
-        }
 
         return $this->_instances[$haver][$key];
     }
 
-    public function unInstall($haver, $componentKey, $completeDel = true)
+    public function unInstall($haver, $componentKey, $completeDel = false)
     {
         if ($completeDel) {
             $this->_completeDelInstanceComponents[$haver][] = $componentKey;
