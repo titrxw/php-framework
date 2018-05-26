@@ -16,9 +16,6 @@ class Application extends \framework\base\Application
         parent::addBaseComponents();
 
         $components = [
-            'server' => 'framework\\server\\Server',
-            'msgTask' => 'blog\\conf\\Task',
-            'log' => 'framework\\components\\log\\Log',
             'conf' => 'framework\\base\\Conf',
             'cookie' => 'framework\\components\\cookie\\Cookie'
         ];

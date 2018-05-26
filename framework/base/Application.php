@@ -87,6 +87,7 @@ class Application extends Base
             'exception' => 'framework\\components\\exception\\Exception',
             'error' => 'framework\\components\\error\\Error',
             'shutdown' => 'framework\\components\\shutdown\\ShutDown',
+            'log' => 'framework\\components\\log\\Log',
             'url' => 'framework\\components\\url\\Url',
             'dispatcher' => 'framework\\components\\dispatcher\\Dispatcher',
             'request' => 'framework\\components\\request\\Request',
