@@ -24,7 +24,7 @@ class Page extends Component
 
     protected function initNeedData($count,$pageCount,$param=[])
     {
-        $this->_count=intval($count)>0?$count:0;
+        $this->_count=\intval($count)>0?$count:0;
         $pageCount = (int) $pageCount;
         if ($pageCount <= 0)
         {
@@ -33,13 +33,13 @@ class Page extends Component
 
         $this->_pageCount=$pageCount;
         $this->_pageKey=$this->getValueFromConf('pageKey','page');
-        $this->_param=is_array($param)?$param:$this->_param;
+        $this->_param=\is_array($param)?$param:$this->_param;
         $this->_protocol = $this->getValueFromConf('protocol', 'http');
         $this->_pageBtnNum = $this->getValueFromConf('pageBtnNum', 6);
-        $paramkeys=array_keys($this->_param);
+        $paramkeys=\array_keys($this->_param);
         foreach ($this->_needSaveArgsFromCurrentUrl as $key=>$item)
         {
-            if(in_array($item,$paramkeys))
+            if(\in_array($item,$paramkeys))
                 unset($this->_needSaveArgsFromCurrentUrl[$key]);
         }
         unset($paramkeys, $param);
@@ -82,13 +82,13 @@ class Page extends Component
              * 表示使用的是默认的链接的方式
              */
             $this->_url=$_SERVER['HTTP_HOST'] . $_SERVER['URL'] . '?';
-            $urlArgs=explode($this->_separator, $url->getPathInfo());
-            $urlArgs=array_unique($urlArgs);
+            $urlArgs=\explode($this->_separator, $url->getPathInfo());
+            $urlArgs=\array_unique($urlArgs);
             foreach ($this->_needSaveArgsFromCurrentUrl  as $nitem)
             {
-                $len=strlen($nitem);
+                $len=\strlen($nitem);
                 foreach ($urlArgs as $k=>$item)
-                    if(substr($item, 0,$len)==$nitem)
+                    if(\substr($item, 0,$len)==$nitem)
                     {
                         $this->_url .= $item . $this->_separator;
                         unset($urlArgs[$k]);
@@ -96,7 +96,7 @@ class Page extends Component
             }
             unset($urlArgs);
             foreach ($this->_param as  $key=>$item)
-                if(!is_integer($key))
+                if(!\is_integer($key))
                     $this->_url.=$key.'='.$item.$this->_separator;
             $this->_separator='=';
         }
@@ -104,11 +104,11 @@ class Page extends Component
         {
             $tmpparam='';
             foreach ($this->_param as  $key=>$v)
-                if(!is_integer($key))
+                if(!\is_integer($key))
                     $tmpparam.=$key.$this->_separator.$v.$this->_separator;
                 else
                     $tmpparam.=$v.$this->_separator;
-            $tmpargs=explode($this->_separator,$_SERVER['REQUEST_URI']);
+            $tmpargs=\explode($this->_separator,$_SERVER['REQUEST_URI']);
             $tmpurl='';
             foreach ($this->_needSaveArgsFromCurrentUrl as $item)
             {

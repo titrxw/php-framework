@@ -15,22 +15,22 @@ abstract class Component extends Base
 
     final protected function getComponent($haver, $componentName,$params = [])
     {
-        $params = func_get_args();
-        array_shift($params);
+        $params = \func_get_args();
+        \array_shift($params);
         return Container::getInstance()->getComponent($haver, $componentName, $params);
     }
 
     final protected function unInstall($isComplete = false)
     {
-        Container::getInstance()->unInstall(getModule(), $this->_uniqueId, $isComplete);
+        Container::getInstance()->unInstall(\getModule(), $this->_uniqueId, $isComplete);
     }
 
     final public function unInstallNow($isComplete = false)
     {
         if ($isComplete) {
-            Container::getInstance()->destroyComponent(getModule(), $this->_uniqueId);
+            Container::getInstance()->destroyComponent(\getModule(), $this->_uniqueId);
         } else {
-            Container::getInstance()->destroyComponentsInstance(getModule(), $this->_uniqueId);
+            Container::getInstance()->destroyComponentsInstance(\getModule(), $this->_uniqueId);
         }
     }
 

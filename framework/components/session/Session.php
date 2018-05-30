@@ -32,7 +32,7 @@ class Session extends Component
     {
         $this->_name = $this->getValueFromConf('name','PHPSESSION');
         if (!empty($this->_name)) {
-            session_name($this->_name);
+            \session_name($this->_name);
         }
 
         $this->_driver = $this->getValueFromConf('driver',[]);
@@ -40,14 +40,14 @@ class Session extends Component
         {
             $this->_path = $this->getValueFromConf('path','');
             if (!empty($this->_path)) {
-                session_save_path($this->_path);
+                \session_save_path($this->_path);
             }
         }
     }
 
     public function getSessionId()
     {
-        return session_id();
+        return \session_id();
     }
 
     public function getSessionName()
@@ -60,10 +60,10 @@ class Session extends Component
         if($this->_isStart === true) return true;
         if (!empty($this->_driver) && !empty($this->_driver['type'])) {
             // 读取session驱动
-            $class = ucfirst($this->_driver['type']);
+            $class = \ucfirst($this->_driver['type']);
             $driverClass = 'framework\\components\\session\\driver\\' . $class;
             // 检查驱动类
-            if (class_exists($driverClass))
+            if (\class_exists($driverClass))
             {
                 $conf = empty($this->_appConf[$this->_driver['type']])?[]:$this->_appConf[$this->_driver['type']];
                 if (!empty($this->_driver['name'])) {
@@ -71,7 +71,7 @@ class Session extends Component
                 }
                 $this->_driverHandle = new $driverClass($conf);
                 unset($conf);
-                if(!session_set_save_handler($this->_driverHandle))
+                if(!\session_set_save_handler($this->_driverHandle))
                 {
                     unset($this->_driverHandle);
                     throw new \Exception('session set handle failed',500);
@@ -82,9 +82,9 @@ class Session extends Component
         $sessionid = $this->getCookie()->get($this->_name);
         if (!empty($sessionid))
         {
-            session_id($sessionid);
+            \session_id($sessionid);
         }
-        session_start();
+        \session_start();
         $this->getCookie()->set($this->_name, $this->getSessionId());
         $this->_isStart = true;
     }
@@ -100,7 +100,7 @@ class Session extends Component
     {
         if(!$this->_isStart || empty($name)) return false;
 
-        $prefix = !is_null($prefix) ? $prefix : $this->getDefaultPrefix();
+        $prefix = !\is_null($prefix) ? $prefix : $this->getDefaultPrefix();
         if ($prefix) {
             $_SESSION[$prefix][$name] = $value;
         } else {
@@ -117,7 +117,7 @@ class Session extends Component
     public function get($name = '', $prefix = null)
     {
         if(!$this->_isStart) return false;
-        $prefix = !is_null($prefix) ? $prefix : $this->getDefaultPrefix();
+        $prefix = !\is_null($prefix) ? $prefix : $this->getDefaultPrefix();
 
         if ('' == $name) {
             // 获取全部的session
@@ -139,9 +139,9 @@ class Session extends Component
     public function delete($name, $prefix = null)
     {
         if(!$this->_isStart) return false;
-        $prefix = !is_null($prefix) ? $prefix : $this->getDefaultPrefix();
+        $prefix = !\is_null($prefix) ? $prefix : $this->getDefaultPrefix();
 
-        if (is_array($name)) {
+        if (\is_array($name)) {
             foreach ($name as $key) {
                 $this->delete($key, $prefix);
             }
@@ -162,7 +162,7 @@ class Session extends Component
     public function clear($prefix = null)
     {
         if(!$this->_isStart) return false;
-        $prefix = !is_null($prefix) ? $prefix : $this->getDefaultPrefix();
+        $prefix = !\is_null($prefix) ? $prefix : $this->getDefaultPrefix();
 
         if ($prefix) {
             unset($_SESSION[$prefix]);
@@ -180,7 +180,7 @@ class Session extends Component
     public function has($name, $prefix = null)
     {
         if(!$this->_isStart) return false;
-        $prefix = !is_null($prefix) ? $prefix : $this->getDefaultPrefix();
+        $prefix = !\is_null($prefix) ? $prefix : $this->getDefaultPrefix();
 
         return $prefix ? isset($_SESSION[$prefix][$name]) : isset($_SESSION[$name]);
     }
@@ -194,8 +194,8 @@ class Session extends Component
         if($this->_isStart)
         {
             unset($_SESSION);
-            session_unset();
-            session_destroy();
+            \session_unset();
+            \session_destroy();
             $this->finish();
             $this->_isStart = false;
         }
@@ -208,7 +208,7 @@ class Session extends Component
      */
     public function regenerate($delete = false)
     {
-        session_regenerate_id($delete);
+        \session_regenerate_id($delete);
         if ($delete)
         {
             $this->getCookie()->set($this->_name, '', -1);
@@ -223,7 +223,7 @@ class Session extends Component
      */
     public function pause()
     {
-        session_write_close();
+        \session_write_close();
         $this->finish();
         $this->_isStart = false;
     }

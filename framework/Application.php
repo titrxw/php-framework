@@ -22,7 +22,7 @@ class Application extends \framework\base\Application
         if (PHP_SAPI == 'cli') {
             $components['url'] = 'framework\\components\\url\\CliUrl';
         }
-        $components = array_merge($components, $this->_conf['addComponentsMap'] ?? []);
+        $components = \array_merge($components, $this->_conf['addComponentsMap'] ?? []);
         $this->_container->addComponents(SYSTEM_APP_NAME, $components);
 
         unset($components);
@@ -39,7 +39,7 @@ class Application extends \framework\base\Application
     public static function run($command = '')
     {
         $conf = [
-            'default' =>  require_file('framework/conf/base.php'),
+            'default' =>  \require_file('framework/conf/base.php'),
             'app' => []
         ];
         $instance = new static($conf);
@@ -55,7 +55,7 @@ class Application extends \framework\base\Application
                 // 初始化配置项
                 if (!$container->appHasComponents($urlInfo['system'])) {
 //                这里现在还缺少文件系统
-                    $appConf = require_file($urlInfo['system'] . '/conf/conf.php');
+                    $appConf = \require_file($urlInfo['system'] . '/conf/conf.php');
                     $container->addComponents($urlInfo['system'], $appConf['addComponentsMap'] ?? []);
                     $container->setAppComponents($urlInfo['system'] ,array(
                         'components' => $appConf['components'] ?? [],

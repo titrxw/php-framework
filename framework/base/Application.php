@@ -29,23 +29,23 @@ class Application extends Base
 
     public function initEnv()
     {
-        define('ISSWOOLE', false);
-        define('FRAMEWORK_NAME', 'framework');
+        \define('ISSWOOLE', false);
+        \define('FRAMEWORK_NAME', 'framework');
 
 
-        date_default_timezone_set('PRC');
+        \date_default_timezone_set('PRC');
 
-        if(!defined('DEBUG'))
-            define('DEBUG',true);
+        if(!\defined('DEBUG'))
+            \define('DEBUG',true);
             
-        define('SYSTEM_WORK_ID', getmypid());
-        define('SYSTEM_APP_NAME', 'APP');
+        \define('SYSTEM_WORK_ID', getmypid());
+        \define('SYSTEM_APP_NAME', 'APP');
 
-        if (file_exists(APP_ROOT. 'vendor/autoload.php')) {
-            define('COMPOSER', true);
-            require_file('vendor/autoload.php');
+        if (\file_exists(APP_ROOT. 'vendor/autoload.php')) {
+            \define('COMPOSER', true);
+            \require_file('vendor/autoload.php');
         } else {
-            define('COMPOSER', false);
+            \define('COMPOSER', false);
         }
     }
 
@@ -99,16 +99,16 @@ class Application extends Base
 
     protected function setErrorHandle()
     {
-        set_error_handler(array($this->_container->getComponent(SYSTEM_APP_NAME, 'error'), 'handleError'));
+        \set_error_handler(array($this->_container->getComponent(SYSTEM_APP_NAME, 'error'), 'handleError'));
     }
 
     protected function setExceptionHandle()
     {
-        set_exception_handler(array($this->_container->getComponent(SYSTEM_APP_NAME, 'exception'), 'handleException'));
+        \set_exception_handler(array($this->_container->getComponent(SYSTEM_APP_NAME, 'exception'), 'handleException'));
     }
 
     protected function setShutDownHandle()
     {
-        register_shutdown_function(array($this->_container->getComponent(SYSTEM_APP_NAME, 'shutdown'), 'handleShutDown'));
+        \register_shutdown_function(array($this->_container->getComponent(SYSTEM_APP_NAME, 'shutdown'), 'handleShutDown'));
     }
 }

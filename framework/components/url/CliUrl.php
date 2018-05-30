@@ -13,10 +13,10 @@ class CliUrl extends Url
     protected function formatUrl()
     {
         global $argv;
-        array_shift($argv);
-        if (!empty($argv[0]) && in_array($argv[0], $this->getValueFromConf('systems',[]))) {
+        \array_shift($argv);
+        if (!empty($argv[0]) && \in_array($argv[0], $this->getValueFromConf('systems',[]))) {
             $system = $argv[0];
-            array_shift($argv);
+            \array_shift($argv);
         } else {
             $system = $this->getValueFromConf('defaultSystem');
         }
@@ -27,8 +27,8 @@ class CliUrl extends Url
         );
 
         foreach ($argv as $item) {
-            if (strpos($item, '=') > 0) {
-                $item = explode('=', $item);
+            if (\strpos($item, '=') > 0) {
+                $item = \explode('=', $item);
                 $_GET[$item[0]] = $item[1];
             }
         }

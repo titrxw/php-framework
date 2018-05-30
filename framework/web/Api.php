@@ -39,7 +39,7 @@ abstract class Api extends Controller
 
     public function after($data = [])
     {
-        if (!is_array($data))
+        if (!\is_array($data))
         {
             $data = array($data);
         }

@@ -66,7 +66,7 @@ class Captcha extends Component
 
         if (!empty($this->_img))
         {
-            imagedestroy($this->_img);
+            \imagedestroy($this->_img);
         }
         //创建背景 (颜色， 大小， 边框)
         $this->CreateBack();
@@ -79,24 +79,24 @@ class Captcha extends Component
 
         $this->SetDisturbColor();
         //输出图像
-        ob_start();
+        \ob_start();
         $this->PrintImg();
-        return ob_get_clean();
+        return \ob_get_clean();
     }
 
     //创建背景
     private function CreateBack()
     {
         //创建资源
-        $this->_img = imagecreatetruecolor($this->_width, $this->_height);
+        $this->_img = \imagecreatetruecolor($this->_width, $this->_height);
         //设置随机的背景颜色
-        $bgcolor = imagecolorallocate($this->_img, rand(225, 255), rand(225, 255), rand(225, 255));
+        $bgcolor = \imagecolorallocate($this->_img, \rand(225, 255), \rand(225, 255), \rand(225, 255));
         //设置背景填充
-        imagefill($this->_img, 0, 0, $bgcolor);
+        \imagefill($this->_img, 0, 0, $bgcolor);
         //画边框
-        $bordercolor = imagecolorallocate($this->_img, 0, 0, 0);
+        $bordercolor = \imagecolorallocate($this->_img, 0, 0, 0);
 
-        imagerectangle($this->_img, 0, 0, $this->_width-1, $this->_height-1, $bordercolor);
+        \imagerectangle($this->_img, 0, 0, $this->_width-1, $this->_height-1, $bordercolor);
     }
 
     //画字
@@ -104,15 +104,15 @@ class Captcha extends Component
     {
         for($i=0; $i<$this->_num; $i++)
         {
-            $color= imagecolorallocate($this->_img, rand(0, 128), rand(0, 128), rand(0, 128));
+            $color= \imagecolorallocate($this->_img, \rand(0, 128), \rand(0, 128), \rand(0, 128));
 
-            $fontsize=rand(17,20); //字体大小
+            $fontsize=\rand(17,20); //字体大小
 
             $x = 3+($this->_width/$this->_num)*$i; //水平位置
-            $y = rand(0, imagefontheight($fontsize)-3) + $this->_height/3;
+            $y = \rand(0, \imagefontheight($fontsize)-3) + $this->_height/3;
 
             //画出每个字符
-            imagechar($this->_img, $fontsize, $x, $y, $this->_code[$i], $color);
+            \imagechar($this->_img, $fontsize, $x, $y, $this->_code[$i], $color);
         }
     }
 
@@ -122,42 +122,42 @@ class Captcha extends Component
         //加上点数
         for($i=0; $i<100; $i++)
         {
-            $color= imagecolorallocate($this->_img, rand(0, 255), rand(0, 255), rand(0, 255));
-            imagesetpixel($this->_img, rand(1, $this->_width-2), rand(1, $this->_height-2), $color);
+            $color= \imagecolorallocate($this->_img, \rand(0, 255), \rand(0, 255), \rand(0, 255));
+            \imagesetpixel($this->_img, \rand(1, $this->_width-2), \rand(1, $this->_height-2), $color);
         }
 
         //加线条
         for($i=0; $i<10; $i++)
         {
-            $color= imagecolorallocate($this->_img, rand(0, 255), rand(0, 128), rand(0, 255));
-            imagearc($this->_img,rand(-10, $this->_width+10), rand(-10, $this->_height+10), rand(30, 300), rand(30, 300), 55,44, $color);
+            $color= \imagecolorallocate($this->_img, \rand(0, 255), \rand(0, 128), \rand(0, 255));
+            \imagearc($this->_img,\rand(-10, $this->_width+10), \rand(-10, $this->_height+10), \rand(30, 300), \rand(30, 300), 55,44, $color);
         }
     }
 
     //输出图像
     private function PrintImg()
     {
-        if (imagetypes() & IMG_GIF && $this->_type === 'git')
+        if (\imagetypes() & IMG_GIF && $this->_type === 'git')
         {
             $this->getComponent(SYSTEM_APP_NAME, 'response')->contentType('gif');
-            imagegif($this->_img);
+            \imagegif($this->_img);
         }
-        elseif (function_exists("imagejpeg") && IMG_JPG && $this->_type === 'jpg')
+        elseif (\function_exists("imagejpeg") && IMG_JPG && $this->_type === 'jpg')
         {
             $this->getComponent(SYSTEM_APP_NAME, 'response')->contentType('jpg');
-            imagejpeg($this->_img);
+            \imagejpeg($this->_img);
         }
-        elseif (imagetypes() & IMG_PNG && $this->_type === 'png')
+        elseif (\imagetypes() & IMG_PNG && $this->_type === 'png')
         {
             $this->getComponent(SYSTEM_APP_NAME, 'response')->contentType('png');
-            imagepng($this->_img);
+            \imagepng($this->_img);
         }
     }
 
     //生成验证码字符串
     private function CreateCode()
     {
-        $this->_code = randStr($this->_num);
+        $this->_code = \randStr($this->_num);
     }
 
 
@@ -165,7 +165,7 @@ class Captcha extends Component
     {
         if (!empty($this->_img))
         {
-            imagedestroy($this->_img);
+            \imagedestroy($this->_img);
         }
     }
 }

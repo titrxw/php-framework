@@ -53,7 +53,7 @@ abstract class TokenBucket extends Base
         $retIdentifier = $this->_storeHandle->lock($this->_key);
         if (!$this->_storeHandle->has($this->_key)) {
             $cur = $this->_max - 1;
-            $this->_storeHandle->set($this->_key, ['cur' => $cur, 'last' => time()], $this->_range);
+            $this->_storeHandle->set($this->_key, ['cur' => $cur, 'last' => \time()], $this->_range);
             // $this->_storeHandle->getHandle()->lpush($this->_storeHandle->getCacheKey($this->_bucketListKey), $this->_key);
             if ($cur < 0) {
                 $this->_storeHandle->unLock($this->_key, $retIdentifier);
@@ -62,7 +62,7 @@ abstract class TokenBucket extends Base
         } else {
             $data = $this->_storeHandle->get($this->_key);
             if ($this->_timeStep > 0) {
-                $add = floor(((time() - $data['last']) / $this->_timeStep) * $this->_addStep);
+                $add = \floor(((\time() - $data['last']) / $this->_timeStep) * $this->_addStep);
                 $cur = $data['cur'] + $add;
             } else {
                 $cur = $data['cur'];

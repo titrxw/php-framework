@@ -43,7 +43,7 @@ class Curl extends Component
      */
     public function post($data, $value = '')
     {
-        if (is_array($data)) {
+        if (\is_array($data)) {
             foreach ($data as $key => $value) {
                 $this->_post[$key] = $value;
             }
@@ -66,10 +66,10 @@ class Curl extends Component
      */
     public function upload($field, $path, $type, $name)
     {
-        $name = basename($name);
-        if (class_exists('CURLFile')) {
+        $name = \basename($name);
+        if (\class_exists('CURLFile')) {
             $this->set('CURLOPT_SAFE_UPLOAD', true);
-            $file = curl_file_create($path, $type, $name);
+            $file = \curl_file_create($path, $type, $name);
         } else {
             $file = "@{$path};type={$type};filename={$name}";
         }
@@ -102,9 +102,9 @@ class Curl extends Component
         $this->set('CURLOPT_URL', $url);
         $result = $this->exec();
         if ($result['error'] === 0) {
-            $fp = @fopen($savePath, 'w');
-            fwrite($fp, $result['body']);
-            fclose($fp);
+            $fp = @\fopen($savePath, 'w');
+            \fwrite($fp, $result['body']);
+            \fclose($fp);
         }
         unset($result);
         return true;
@@ -118,7 +118,7 @@ class Curl extends Component
      */
     public function set($item, $value = '')
     {
-        if (is_array($item)) {
+        if (\is_array($item)) {
             foreach($item as $key => &$value){
                 $this->_option[$key] = $value;
             }
@@ -149,30 +149,30 @@ class Curl extends Component
     {
 
         // 初始化句柄
-        $ch = curl_init();
+        $ch = \curl_init();
 
         // 配置选项
-        $options = array_merge($this->_default, $this->_option);
+        $options = \array_merge($this->_default, $this->_option);
         foreach($options as $key => $val) {
-            if (is_string($key)) {
-                $key = constant(strtoupper($key));
+            if (\is_string($key)) {
+                $key = \constant(\strtoupper($key));
             }
-            curl_setopt($ch, $key, $val);
+            \curl_setopt($ch, $key, $val);
         }
         unset($options);
 
         // POST选项
         if ($this->_post) {
-            curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $this->post_fields_build($this->_post));
+            \curl_setopt($ch, CURLOPT_POST, true);
+            \curl_setopt($ch, CURLOPT_POSTFIELDS, $this->post_fields_build($this->_post));
         }
 
         // 运行句柄
-        $body = curl_exec($ch);
-        $info = curl_getinfo($ch);
+        $body = \curl_exec($ch);
+        $info = \curl_getinfo($ch);
 
         // 检查错误
-        $errno = curl_errno($ch);
+        $errno = \curl_errno($ch);
         if ($errno === 0 && $info['http_code'] >= 400) {
             $errno = $info['http_code'];
         }
@@ -206,12 +206,12 @@ class Curl extends Component
      * @return array
      */
     private function post_fields_build($input, $pre = null){
-        if (is_array($input)) {
+        if (\is_array($input)) {
             $output = array();
             foreach ($input as $key => $value) {
-                $index = is_null($pre) ? $key : "{$pre}[{$key}]";
-                if (is_array($value)) {
-                    $output = array_merge($output, $this->post_fields_build($value, $index));
+                $index = \is_null($pre) ? $key : "{$pre}[{$key}]";
+                if (\is_array($value)) {
+                    $output = \array_merge($output, $this->post_fields_build($value, $index));
                 } else {
                     $output[$index] = $value;
                 }

@@ -32,7 +32,7 @@ class Upload extends Component
 
     protected function init()
     {
-        $this->_baseDir = APP_ROOT . getModule() . '/' . $this->getValueFromConf('baseDir','runtime/upload');
+        $this->_baseDir = APP_ROOT . \getModule() . '/' . $this->getValueFromConf('baseDir','runtime/upload');
         $this->_accept = $this->getValueFromConf('accept', []);
         $this->_maxSize = $this->getValueFromConf('maxSize', 0);
         $this->_nameType = $this->getValueFromConf('nameType', 'time');
@@ -48,14 +48,14 @@ class Upload extends Component
 
     protected function getSavePath($name, $ext)
     {
-        if (!file_exists($this->_baseDir))
+        if (!\file_exists($this->_baseDir))
         {
-            $dirs = explode('/', $this->_baseDir);
+            $dirs = \explode('/', $this->_baseDir);
             $path = '';
             foreach ($dirs as $item) {
                 $path .= $item;
-                if (!file_exists($path)) {
-                    mkdir($path, 0755);
+                if (!\file_exists($path)) {
+                    \mkdir($path, 0755);
                 }
                 $path .= '/';
             }
@@ -63,30 +63,30 @@ class Upload extends Component
         switch ($this->_nameType)
         {
             case 'md5':
-                $name = mt_rand() . $name;
-                $name = md5($name . SYSTEM_WORK_ID . microtime());
-                $length = strlen($name);
-                $particle = ceil($length / $this->_deep);
+                $name = \mt_rand() . $name;
+                $name = \md5($name . SYSTEM_WORK_ID . \microtime());
+                $length = \strlen($name);
+                $particle = \ceil($length / $this->_deep);
                 $currentPath = '';
                 for ($i=0; $i<$this->_deep;$i++)
                 {
-                    $tmpDir = substr($name, $i*$particle, $particle);
+                    $tmpDir = \substr($name, $i*$particle, $particle);
                     $currentPath .= $tmpDir . '/';
-                    if (!file_exists($this->_baseDir . '/' . $currentPath))
+                    if (!\file_exists($this->_baseDir . '/' . $currentPath))
                     {
-                        mkdir($this->_baseDir . '/' . $currentPath, 0755);
+                        \mkdir($this->_baseDir . '/' . $currentPath, 0755);
                     }
                 }
                 return $this->_baseDir . '/' . $currentPath . '/' . $name . '.' . $ext;
                 break;
             case 'time':
             default:
-                $name = mt_rand() . $name;
-                $name = md5($name . SYSTEM_WORK_ID . microtime());
-                $subPath = date('Ymd');
-                if (!file_exists($this->_baseDir . '/' . $subPath))
+                $name = \mt_rand() . $name;
+                $name = \md5($name . SYSTEM_WORK_ID . \microtime());
+                $subPath = \date('Ymd');
+                if (!\file_exists($this->_baseDir . '/' . $subPath))
                 {
-                    mkdir($this->_baseDir . '/' . $subPath, 0755);
+                    \mkdir($this->_baseDir . '/' . $subPath, 0755);
                 }
                 return $this->_baseDir . '/' . $subPath . '/' . $name . '.' . $ext;
                 break;
@@ -95,22 +95,22 @@ class Upload extends Component
 
     public function getFileExt($file)
     {
-        $s = strrchr($file, '.');
+        $s = \strrchr($file, '.');
         if ($s === false)
         {
             return false;
         }
-        return strtolower(trim(substr($s, 1)));
+        return \strtolower(\trim(\substr($s, 1)));
     }
 
     protected function moveUploadFile($tmpfile, $newfile)
     {
 //            return move_uploaded_file($tmpfile, $newfile);    不支持
-        if (rename($tmpfile, $newfile) === false)
+        if (\rename($tmpfile, $newfile) === false)
         {
             return false;
         }
-        return chmod($newfile, 0666);
+        return \chmod($newfile, 0666);
     }
 
     public function save($name)
@@ -122,7 +122,7 @@ class Upload extends Component
         }
 
 //        检测文件大小
-        $fileSize = filesize($_FILES[$name]['tmp_name']);
+        $fileSize = \filesize($_FILES[$name]['tmp_name']);
         if ($this->_maxSize > 0 && $fileSize > $this->_maxSize)
         {
             return false;
@@ -136,7 +136,7 @@ class Upload extends Component
 
 //        检测文件类型
         $mime = $_FILES[$name]['type'];
-        if (!(isset($this->_mime[$mime]) && in_array($this->_mime[$mime], $this->_accept)))
+        if (!(isset($this->_mime[$mime]) && \in_array($this->_mime[$mime], $this->_accept)))
         {
 //            进行严格检测
             return false;
@@ -148,7 +148,7 @@ class Upload extends Component
         //写入文件
         if ($this->moveUploadFile($_FILES[$name]['tmp_name'], $fileSavePath))
         {
-            return str_replace(APP_ROOT, '', $fileSavePath);
+            return \str_replace(APP_ROOT, '', $fileSavePath);
         }
         else
         {

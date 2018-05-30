@@ -14,15 +14,15 @@ class Log extends Component
     public function save($data)
     {
         if ($this->getValueFromConf('isLog', true)) {
-            $time = date('Y-m-d H:i:s');
-            $dirPath = APP_ROOT . getModule() . '/' . $this->getValueFromConf('path','runtime/log/') . date('Ym') . '/';
-            $destination =  date('Ymd') . '.log';
-            !is_dir($dirPath) && mkdir($dirPath, 0755, true);
+            $time = \date('Y-m-d H:i:s');
+            $dirPath = APP_ROOT . \getModule() . '/' . $this->getValueFromConf('path','runtime/log/') . date('Ym') . '/';
+            $destination =  \date('Ymd') . '.log';
+            !\is_dir($dirPath) && \mkdir($dirPath, 0755, true);
 
             $i = 1;
             $destination = $dirPath . $destination;
-            while (is_file($destination) && floor($this->getValueFromConf('maxSize', 2097152)) <= filesize($destination)) {
-                $destination = $dirPath . date('Ymd') . '(' . $i . ')' . '.log';
+            while (\is_file($destination) && floor($this->getValueFromConf('maxSize', 2097152)) <= \filesize($destination)) {
+                $destination = $dirPath . \date('Ymd') . '(' . $i . ')' . '.log';
                 ++$i;
             }
 
@@ -42,6 +42,6 @@ class Log extends Component
 
     public function write($data, $path)
     {
-        return error_log($data, 3, $path);
+        return \error_log($data, 3, $path);
     }
 }

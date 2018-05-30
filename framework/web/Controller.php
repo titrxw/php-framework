@@ -17,13 +17,13 @@ abstract class Controller extends \framework\base\Controller
 
     protected function model($name)
     {
-        $name = ucfirst($name);
-        $componentModel = md5(getModule() .'/controller/'.$name);
-        Container::getInstance()->addComponent(getModule(), $componentModel,
-            getModule() .'\\model\\'. $name, Container::getInstance()->getComponentConf(getModule(), 'model'));
+        $name = \ucfirst($name);
+        $componentModel = \md5(\getModule() .'/controller/'.$name);
+        Container::getInstance()->addComponent(\getModule(), $componentModel,
+            \getModule() .'\\model\\'. $name, Container::getInstance()->getComponentConf(\getModule(), 'model'));
 //        在add之前设置当前model的conf
 //        待开发
-        return $this->getComponent(getModule(), $componentModel);
+        return $this->getComponent(\getModule(), $componentModel);
     }
 
 //    需要重写
@@ -53,7 +53,7 @@ abstract class Controller extends \framework\base\Controller
 
     protected function sendFile($path, $type = 'jpg')
     {
-        if (!file_exists($path))
+        if (!\file_exists($path))
         {
             $this->triggerThrowable(new \Error('sendfile: ' . $path . ' not exists', 500));
         }

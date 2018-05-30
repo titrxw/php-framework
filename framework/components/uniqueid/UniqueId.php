@@ -60,7 +60,7 @@ class UniqueId extends Component
     //取当前时间毫秒  
     protected function timeGen()
     {
-        $timestramp = (float)sprintf("%.0f", microtime(true) * 1000);
+        $timestramp = (float)\sprintf("%.0f", \microtime(true) * 1000);
         return  $timestramp;
     }
 

@@ -47,20 +47,20 @@ class Response extends Component
 
     public function send($result,$else='')
     {
-        http_response_code($this->_code);
+        \http_response_code($this->_code);
         foreach ($this->_headers as $key=>$item)
         {
-            header($key . ':' . $item);
+            \header($key . ':' . $item);
         }
 
-        if (is_array($result)) {
-            $result = json_encode($result);
+        if (\is_array($result)) {
+            $result = \json_encode($result);
         }
         if (DEBUG)
         {
-            $elseContent = ob_get_clean();
-            if (is_array($elseContent)) {
-                $elseContent = json_encode($elseContent);
+            $elseContent = \ob_get_clean();
+            if (\is_array($elseContent)) {
+                $elseContent = \json_encode($elseContent);
             }
             $result = $elseContent . $result;
             unset($elseContent);

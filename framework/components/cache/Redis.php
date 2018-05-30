@@ -15,7 +15,7 @@ class Redis extends Cache implements CacheInterface
 {
     protected function init()
     {
-        if (!extension_loaded('redis')) {
+        if (!\extension_loaded('redis')) {
             $this->triggerThrowable(new \Exception('not support: redis', 500));
         }
         unset($this->_conf);
@@ -80,7 +80,7 @@ class Redis extends Cache implements CacheInterface
             return $default;
         }
 
-        $jsonData = json_decode($value, true);
+        $jsonData = \json_decode($value, true);
         return (null === $jsonData) ? $value : $jsonData;
     }
 
@@ -94,11 +94,11 @@ class Redis extends Cache implements CacheInterface
      */
     public function set($name, $value, $expire = null)
     {
-        if (is_null($expire)) {
+        if (\is_null($expire)) {
             $expire = $this->_appConf['expire'];
         }
-        $value = (is_object($value) || is_array($value)) ? json_encode($value) : $value;
-        if (is_int($expire) && $expire) {
+        $value = (\is_object($value) || \is_array($value)) ? \json_encode($value) : $value;
+        if (\is_int($expire) && $expire) {
             $result = $this->_handle->setex($this->getCacheKey($name), $expire, $value);
         } else {
             $result = $this->_handle->set($this->getCacheKey($name), $value);
@@ -167,7 +167,7 @@ class Redis extends Cache implements CacheInterface
         $redisKey = 'lock_' . $redisKey;
         $redisKey = $this->getCacheKey($redisKey);
         $retIdentifier = false;
-        $identifier = md5(base64_encode(openssl_random_pseudo_bytes(32)) . microtime(true));
+        $identifier = \md5(\base64_encode(\openssl_random_pseudo_bytes(32)) . \microtime(true));
         /**
          * 说明  下面代码中的设置redis有效时间的作用暂时不明白
          */
@@ -194,8 +194,8 @@ class Redis extends Cache implements CacheInterface
             //当然不添加也可以，添加后可增大一个进程获的锁的几率，不是再同时取锁，而是错开的取，几率大一点
             //假设都是每隔50毫秒取一次  那么下次就是第100毫秒再取，   但是如果加上随机树后第一个再50毫秒取，下一个再80毫秒取，如果第一个取到锁后再30秒内执行完成，然后让出锁，
             //那么当80毫秒的时候获取锁的时候又可以获取锁，几率比一起获取大
-            $rand = mt_rand(0,$expire * 1000);
-            usleep($rand);
+            $rand = \mt_rand(0,$expire * 1000);
+            \usleep($rand);
         }
         return $retIdentifier;
     }

@@ -67,10 +67,10 @@ class Password extends Component
      */
     private function MakeHashSalt()
     {
-        if(function_exists("openssl_random_pseudo_bytes"))
-            $salt = base64_encode(openssl_random_pseudo_bytes($this->PBKDF2_SALT_BYTE_SIZE ));
+        if(\function_exists("openssl_random_pseudo_bytes"))
+            $salt = \base64_encode(\openssl_random_pseudo_bytes($this->PBKDF2_SALT_BYTE_SIZE ));
         else
-            $salt=base64_encode($this->MakeTmpSalt());
+            $salt=\base64_encode($this->MakeTmpSalt());
         $this->HashSalt=$salt;
     }
     
@@ -79,7 +79,7 @@ class Password extends Component
      */
     private function MakeTmpSalt()
     {
-        return randStr($this->PBKDF2_SALT_BYTE_SIZE);
+        return \randStr($this->PBKDF2_SALT_BYTE_SIZE);
     }
     
     /**
@@ -109,7 +109,7 @@ class Password extends Component
         /**
          * 组合密码
          */
-        $this->HashStr= base64_encode($this->pbkdf2(
+        $this->HashStr= \base64_encode($this->pbkdf2(
                 $this->PBKDF2_HASH_ALGORITHM,
                 $this->_value,
                 $this->HashSalt,
@@ -132,7 +132,7 @@ class Password extends Component
          */
         if(!$this->HashStr||!$this->HashSalt||!$this->_value)
             return false;
-        $pbkdf2 = base64_decode($this->HashStr);
+        $pbkdf2 = \base64_decode($this->HashStr);
         return $this->SlowEquals(
             $pbkdf2,
             $this->pbkdf2(
@@ -154,14 +154,14 @@ class Password extends Component
      */
     private function SlowEquals($a, $b)
     {
-        $diff = strlen($a) ^ strlen($b);
-        for($i = 0; $i < strlen($a) && $i < strlen($b); $i++)
+        $diff = \strlen($a) ^ \strlen($b);
+        for($i = 0; $i < \strlen($a) && $i < \strlen($b); $i++)
         {
             /**
              * 按位或运算   也就是如果两个字符串相等的话 ord($a[$i]) ^ ord($b[$i]); 的结果都为 0         而且$diff原来也为0      如果最终的$diff为0的话说明都相同 
              * @var unknown
              */
-            $diff |= ord($a[$i]) ^ ord($b[$i]);
+            $diff |= \ord($a[$i]) ^ \ord($b[$i]);
         }
         return $diff === 0;
     }
@@ -177,39 +177,39 @@ class Password extends Component
      */
     private function Pbkdf2($algorithm, $password, $salt, $count, $key_length, $raw_output = false)
     {
-        $algorithm = strtolower($algorithm);
-        if(!in_array($algorithm, hash_algos(), true))
-            trigger_error('PBKDF2 ERROR: Invalid hash algorithm.', E_USER_ERROR);
+        $algorithm = \strtolower($algorithm);
+        if(!\in_array($algorithm, \hash_algos(), true))
+            \trigger_error('PBKDF2 ERROR: Invalid hash algorithm.', E_USER_ERROR);
         if($count <= 0 || $key_length <= 0)
-            trigger_error('PBKDF2 ERROR: Invalid parameters.', E_USER_ERROR);
+            \trigger_error('PBKDF2 ERROR: Invalid parameters.', E_USER_ERROR);
     
-        if (function_exists("hash_pbkdf2")) {
+        if (\function_exists("hash_pbkdf2")) {
             // The output length is in NIBBLES (4-bits) if $raw_output is false!
             if (!$raw_output) {
                 $key_length = $key_length * 2;
             }
-            return hash_pbkdf2($algorithm, $password, $salt, $count, $key_length, $raw_output);
+            return \hash_pbkdf2($algorithm, $password, $salt, $count, $key_length, $raw_output);
         }
     
-        $hash_length = strlen(hash($algorithm, "", true));
-        $block_count = ceil($key_length / $hash_length);
+        $hash_length = \strlen(\hash($algorithm, "", true));
+        $block_count = \ceil($key_length / $hash_length);
     
         $output = "";
         for($i = 1; $i <= $block_count; $i++) {
             // $i encoded as 4 bytes, big endian.
-            $last = $salt . pack("N", $i);
+            $last = $salt . \pack("N", $i);
             // first iteration
-            $last = $xorsum = hash_hmac($algorithm, $last, $password, true);
+            $last = $xorsum = \hash_hmac($algorithm, $last, $password, true);
             // perform the other $count - 1 iterations
             for ($j = 1; $j < $count; $j++) {
-                $xorsum ^= ($last = hash_hmac($algorithm, $last, $password, true));
+                $xorsum ^= ($last = \hash_hmac($algorithm, $last, $password, true));
             }
             $output .= $xorsum;
         }
     
         if($raw_output)
-            return substr($output, 0, $key_length);
+            return \substr($output, 0, $key_length);
         else
-            return bin2hex(substr($output, 0, $key_length));
+            return \bin2hex(\substr($output, 0, $key_length));
     }
 }

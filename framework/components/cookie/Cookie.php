@@ -24,8 +24,8 @@ class Cookie extends Component
 
     public function set($key, $value = '', $expire = 0 , $path = '/', $domain  = '', $secure = false , $httponly = false)
     {
-        $params = func_get_args();
-        array_shift($params);
+        $params = \func_get_args();
+        \array_shift($params);
         $this->_cookies[$key] = $params;
         unset($params);
     }
@@ -34,7 +34,7 @@ class Cookie extends Component
     {
         foreach ($this->_cookies as $key => $item)
         {
-            setcookie($key, ...$item);
+            \setcookie($key, ...$item);
         }
         $this->rollback();
     }

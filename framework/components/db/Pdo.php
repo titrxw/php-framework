@@ -41,7 +41,7 @@ class Pdo extends Component implements DbInterface
             return $this->_instances[$this->_currentDb];
         }
 
-        if(!empty($this->_appConf['db'][$this->_currentDb]) && is_array($this->_appConf['db'][$this->_currentDb]))
+        if(!empty($this->_appConf['db'][$this->_currentDb]) && \is_array($this->_appConf['db'][$this->_currentDb]))
         {
             try
             {
@@ -109,7 +109,7 @@ class Pdo extends Component implements DbInterface
         {
             $this->_execute=$this->getPdoHandle()->prepare($sql);
             $this->finish();
-            if(count($value)>0)
+            if(\count($value)>0)
             {
                 foreach ($value as $key=>$item)
                 {

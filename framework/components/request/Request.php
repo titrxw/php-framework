@@ -16,13 +16,13 @@ class Request extends Component
 
     protected function stripSlashes(&$data)
     {
-        if(is_array($data))
+        if(\is_array($data))
         {
-            if(count($data) == 0)
+            if(\count($data) == 0)
                 return $data;
-            $keys=array_map('stripslashes',array_keys($data));
-            $data=array_combine($keys,array_values($data));
-            return array_map(array($this,'stripSlashes'),$data);
+            $keys=\array_map('stripslashes',\array_keys($data));
+            $data=\array_combine($keys,\array_values($data));
+            return \array_map(array($this,'stripSlashes'),$data);
         }
         else
             return stripslashes($data);
@@ -33,7 +33,7 @@ class Request extends Component
         $hasCheck =  $this->_hasCheck[$type][$params] ?? ($this->_hasCheck[$type.'ALL'] ?? false);
         if(empty($this->_hasCheck[$type.'ALL']) && !$hasCheck)
         {
-            if(function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc())
+            if(\function_exists('get_magic_quotes_gpc') && \get_magic_quotes_gpc())
             {
                 $_GET = $this->stripSlashes($params ? $data[$params] : $data);
             }
@@ -84,7 +84,7 @@ class Request extends Component
     public function getRawBody()
     {
         if($this->_rowBody === null)
-            $this->_rowBody=file_get_contents('php://input');
+            $this->_rowBody=\file_get_contents('php://input');
         return $this->_rowBody;
     }
 
@@ -113,9 +113,9 @@ class Request extends Component
 
         foreach ($_SERVER as $name => $value)
         {
-            if (substr($name, 0, 5) == 'HTTP_')
+            if (\substr($name, 0, 5) == 'HTTP_')
             {
-                $this->_headers[str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))))] = $value;
+                $this->_headers[\str_replace(' ', '-', \ucwords(\strtolower(\str_replace('_', ' ', \substr($name, 5)))))] = $value;
             }
         }
         return $this->_headers;
@@ -135,12 +135,12 @@ class Request extends Component
         {
             if (isset($_SERVER['HTTP_X_FORWARDED_FOR']))
             {
-                $arr = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+                $arr = \explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
 
                 /* 取X-Forwarded-For中第一个非unknown的有效IP字符串 */
                 foreach ($arr AS $ip)
                 {
-                    $ip = trim($ip);
+                    $ip = \trim($ip);
 
                     if ($ip != 'unknown')
                     {
@@ -168,21 +168,21 @@ class Request extends Component
         }
         else
         {
-            if (getenv('HTTP_X_FORWARDED_FOR'))
+            if (\getenv('HTTP_X_FORWARDED_FOR'))
             {
-                $realip = getenv('HTTP_X_FORWARDED_FOR');
+                $realip = \getenv('HTTP_X_FORWARDED_FOR');
             }
-            elseif (getenv('HTTP_CLIENT_IP'))
+            elseif (\getenv('HTTP_CLIENT_IP'))
             {
-                $realip = getenv('HTTP_CLIENT_IP');
+                $realip = \getenv('HTTP_CLIENT_IP');
             }
             else
             {
-                $realip = getenv('REMOTE_ADDR');
+                $realip = \getenv('REMOTE_ADDR');
             }
         }
 
-        preg_match("/[\d\.]{7,15}/", $realip, $onlineip);
+        \preg_match("/[\d\.]{7,15}/", $realip, $onlineip);
         $realip = !empty($onlineip[0]) ? $onlineip[0] : '0.0.0.0';
 
         return $realip;

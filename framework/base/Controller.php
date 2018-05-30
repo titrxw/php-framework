@@ -50,8 +50,8 @@ abstract class Controller extends Component
      */
     public function __get($name)
     {
-        if (Container::getInstance()->hasComponent(getModule(), $name)) {
-            $this->$name = $this->getComponent(getModule(), $name);
+        if (Container::getInstance()->hasComponent(\getModule(), $name)) {
+            $this->$name = $this->getComponent(\getModule(), $name);
             return $this->$name;
         }
         if (Container::getInstance()->hasComponent(SYSTEM_APP_NAME, $name)) {

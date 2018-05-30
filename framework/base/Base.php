@@ -31,8 +31,8 @@ abstract class Base
     final protected function getValueFromConf($key, $default = '')
     {
         if (!isset($this->{$key})) {
-            $tmpKey = explode('.',$key);
-            if (count($tmpKey) > 1)
+            $tmpKey = \explode('.',$key);
+            if (\count($tmpKey) > 1)
             {
                 $_confValue = empty($this->_conf[$tmpKey[0]]) ? null : $this->_conf[$tmpKey[0]];
                 $_appConfValue = empty($this->_appConf[$tmpKey[0]]) ? null : $this->_appConf[$tmpKey[0]];
