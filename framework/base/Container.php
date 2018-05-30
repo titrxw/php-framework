@@ -155,7 +155,7 @@ class Container extends Base
             {
                 if (COMPOSER && $this->_composer->checkComposer($haver,$key)) {
                     $_params = $this->getComponentConf($haver, $key);
-                    $this->_instances[$haver][$key] = $this->_composer->getComposer($haver, $key, array_merge($_params['default'], $_params['app'], $params));
+                    $this->_instances[$haver][$key] = $this->_composer->getComposer($haver, $key, \array_merge($_params['default'], $_params['app'], $params));
                     $this->unInstall($haver, $key);
                 }
                 else
