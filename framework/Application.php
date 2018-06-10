@@ -47,9 +47,12 @@ class Application extends \framework\base\Application
         try
         {
             $container = Container::getInstance();
+            
             $urlInfo = $container->getComponent(SYSTEM_APP_NAME, 'url')->run();
             $_SERVER['CURRENT_SYSTEM'] = $urlInfo['system'];
-
+            if (DEBUG) {
+                ob_start();
+            }
 
             if ($urlInfo !== false) {
                 // 初始化配置项
@@ -66,6 +69,16 @@ class Application extends \framework\base\Application
 
                 $result = $container->getComponent(SYSTEM_APP_NAME, 'dispatcher')->run($urlInfo);
                 $container->getComponent(SYSTEM_APP_NAME, 'cookie')->send();
+                if (DEBUG) {
+                    $elseContent = \ob_get_clean();
+                    if ($elseContent) {
+                        if (is_array($elseContent)) {
+                            $elseContent = json_encode($elseContent);
+                        }
+                        $container->getComponent(SYSTEM_APP_NAME, 'response')->send($elseContent);
+                        unset($elseContent);
+                    }
+                }
                 $container->getComponent(SYSTEM_APP_NAME, 'response')->send($result);
                 unset($result);
             }
