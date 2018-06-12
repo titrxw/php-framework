@@ -86,12 +86,12 @@ class Application extends \framework\base\Application
         catch (\Throwable $e)
         {
             $code = $e->getCode() > 0 ? $e->getCode() : 500;
-            $response = $container->getComponent(SYSTEM_APP_NAME, 'response');
-            $response->setCode($code);
+            $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode($code);
+            $result = $exception->getMessage().$exception->getTraceAsString();
             if (DEBUG) {
-                $result = $e->getMessage() . "\n trace: " . $e->getTraceAsString();
+                $result .= $e->getMessage() . "\n trace: " . $e->getTraceAsString();
             }
-            $response->send($result);
+            $container->getComponent(SYSTEM_APP_NAME, 'response')->send($result);
             $instance->handleThrowable($e);
             unset($default, $conf, $instance);
 
