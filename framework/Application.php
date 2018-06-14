@@ -87,7 +87,7 @@ class Application extends \framework\base\Application
         {
             $code = $e->getCode() > 0 ? $e->getCode() : 500;
             $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode($code);
-            $result = $exception->getMessage().$exception->getTraceAsString();
+            $result = $e->getMessage().$e->getTraceAsString();
             if (DEBUG) {
                 $result .= $e->getMessage() . "\n trace: " . $e->getTraceAsString();
             }

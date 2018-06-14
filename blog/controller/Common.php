@@ -37,6 +37,7 @@ class Common extends Web
 
     public function testApi()
     {
+        var_dump(getFiles(APP_ROOT . '/blog'));
         $this->cookie->set('rwar', 'dsfsdf');
         var_dump(uniqueId());
 //        $this->addTask('msgTask', 'sendMsg', array('mobile' => '1212121212'));
