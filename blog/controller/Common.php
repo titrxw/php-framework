@@ -37,7 +37,6 @@ class Common extends Web
 
     public function testApi()
     {
-        var_dump(getFiles(APP_ROOT . '/blog'));
         $this->cookie->set('rwar', 'dsfsdf');
         var_dump(uniqueId());
 //        $this->addTask('msgTask', 'sendMsg', array('mobile' => '1212121212'));
@@ -81,13 +80,13 @@ class Common extends Web
         return [200, '发送成功'];
     }
 
-     public function imgApi()
-     {
-         return $this->captcha->send();
-     }
+    public function imgApi()
+    {
+        return $this->captcha->send();
+    }
 
-//     public function downloadAction()
-//     {
-//         return $this->sendFile(APP_ROOT. '/public/assets/' . APP_NAME. '/images/1457781452.jpg', 'jpg');
-//     }
+    public function downloadApi()
+    {
+        return $this->sendFile(APP_ROOT. '/public/assets/' . \getModule(). '/images/1457781452.jpg', 'csv');
+    }
 }
