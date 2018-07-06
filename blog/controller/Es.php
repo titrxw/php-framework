@@ -19,15 +19,34 @@ class Es extends Web
       $this->client = ClientBuilder::create()->build();
     }
 
+    public function bulkApi()
+    {
+      for($i = 0; $i < 100; $i++) {
+        $params['body'][] = [
+            'index' => [
+                '_index' => 'blog',
+                '_type' => 'user',
+            ]
+        ];
+    
+        $params['body'][] = [
+          'name' => '希拉里和韩国' . $i,
+          'id' => 12 + $i
+          ];
+      }
+      var_dump($params);
+      $responses = $this->client->bulk($params);
+      var_dump( $response);
+    }
+
     public function addApi()
     {
         $params = [
           'index' => 'blog',
           'type' => 'user',
-          'id' => '1',
-          'body' => [ 
-            'name' => '希拉里和韩国',
-            'id' => 12
+          'body' => [
+              'name' => '希拉里和韩国',
+              'id' => 12
           ]
       ];
       
