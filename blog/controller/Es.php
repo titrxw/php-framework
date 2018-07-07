@@ -15,12 +15,34 @@ class Es extends Web
 
     protected function afterInit () 
     {
-      echo 1;
       $this->client = ClientBuilder::create()->build();
     }
 
     public function bulkApi()
     {
+
+      /**
+       * bulk 方式对数据格式有一定的要求
+       * [
+       *      [
+       *           '_index' => 'blog',
+       *           '_type' => 'user',
+       *      ],
+       *      [
+       *          'name' => '希拉里和韩国' . $i,
+       *           'id' => 12 + $i
+       *      ],
+       *      [
+       *           '_index' => 'blog',
+       *           '_type' => 'user',
+       *      ],
+       *      [
+       *          'name' => '希拉里和韩国' . $i,
+      *           'id' => 12 + $i
+       *      ]
+       * ]
+       */
+
       for($i = 0; $i < 100; $i++) {
         $params['body'][] = [
             'index' => [
@@ -146,6 +168,7 @@ class Es extends Web
       print_r($response);
     }
 
+
     public function searchApi()
     {
       $params = [
@@ -153,7 +176,7 @@ class Es extends Web
           'type' => 'user',
           'body' => [
               'query' => [
-                  'match' => [
+                  'match' => [ 
                       'name' => '希拉里和韩国'
                   ]
               ]
