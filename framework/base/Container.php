@@ -48,10 +48,6 @@ class Container extends Base
         $this->_composer->setAppComposers($system, $conf['composer']);
     }
 
-
-
-
-
 //    设置组件的配置  做到系统组件和app组件的隔离
     public function setComponentConf($haver, $component, $conf)
     {
@@ -132,7 +128,8 @@ class Container extends Base
             $classPath = $this->getClassPathByKey($haver, $key);
             if ($classPath)
             {
-                $instance = new $classPath($this->getComponentConf($haver, $key));
+                $_params = $this->getComponentConf($haver, $key);
+                $instance = new $classPath(\array_merge($_params, $params));
 
                 if ($instance instanceof Component) {
                     $instance->setUniqueId($key);
@@ -149,7 +146,7 @@ class Container extends Base
             {
                 if (COMPOSER && $this->_composer->checkComposer($haver,$key)) {
                     $_params = $this->getComponentConf($haver, $key);
-                    $this->_instances[$haver][$key] = $this->_composer->getComposer($haver, $key, \array_merge($_params['default'], $_params['app'], $params));
+                    $this->_instances[$haver][$key] = $this->_composer->getComposer($haver, $key, \array_merge($_params, $params));
                     $this->unInstall($haver, $key);
                 }
                 else

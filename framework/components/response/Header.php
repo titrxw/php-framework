@@ -4,7 +4,6 @@ use framework\base\Component;
 
 class Header extends Component
 {
-    protected $_hasSend = false;
     protected $_headers;
     protected $_request;
     protected $_code = 200;
@@ -83,14 +82,12 @@ class Header extends Component
 
   public function send($response = '')
   {
-    if (!$this->_hasSend) {
-      \http_response_code($this->_code);
-      foreach ($this->_headers as $key=>$item)
-      {
-          \header($key . ':' . $item);
-      }
-      $this->_hasSend = true;
+    \http_response_code($this->_code);
+    foreach ($this->_headers as $key=>$item)
+    {
+        \header($key . ':' . $item);
     }
+    $this->_headers = [];
   }
 
   public function rollback()
