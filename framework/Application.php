@@ -28,21 +28,9 @@ class Application extends \framework\base\Application
         unset($components);
     }
 
-    protected function beforeInit()
-    {
-        $this->_conf['components'] = $this->_conf['components']??[];
-        $this->_appConf['components'] = [];
-        $this->_conf['composer'] = $this->_conf['composer']??[];
-        $this->_appConf['composer'] = [];
-    }
-
     public static function run($command = '')
     {
-        $conf = [
-            'default' =>  \require_file('framework/conf/base.php'),
-            'app' => []
-        ];
-        $instance = new static($conf);
+        $instance = new static(\require_file('framework/conf/base.php'));
         $result = '';
         try
         {
@@ -93,7 +81,7 @@ class Application extends \framework\base\Application
             }
             $container->getComponent(SYSTEM_APP_NAME, 'response')->send($result);
             $instance->handleThrowable($e);
-            unset($default, $conf, $instance);
+            unset($default, $instance);
 
         }
     }
