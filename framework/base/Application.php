@@ -39,7 +39,8 @@ class Application extends Base
         if(!\defined('DEBUG'))
             \define('DEBUG',true);
             
-        \define('SYSTEM_WORK_ID', getmypid());
+        \define('SYSTEM_WORK_ID', \getmypid());
+        \define('SYSTEM_CD_KEY',\GetMacAddr(PHP_OS));
         \define('SYSTEM_APP_NAME', 'APP');
 
         if (\file_exists(APP_ROOT. 'vendor/autoload.php')) {
