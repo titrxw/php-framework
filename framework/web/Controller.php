@@ -12,11 +12,6 @@ abstract class Controller extends \framework\base\Controller
 {
     static $_rules;
 
-    protected function rule()
-    {
-        return [];
-    }
-
     protected function model($name)
     {
         $name = \ucfirst($name);
