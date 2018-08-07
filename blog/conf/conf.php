@@ -10,6 +10,9 @@ return array(
 //        'Logger' => function (array $params) {
 //            return new \Monolog\Logger($params[0]);      //这里测试composer的加载
 //        },
+        'meedo' => function (array $params) {
+            return new \Medoo\Medoo($params);      //这里测试composer的加载
+        },
         'crawler' => function ($params) {
             return new Symfony\Component\DomCrawler\Crawler();
         }
@@ -33,6 +36,24 @@ return array(
         //'crontab' => 'framework\\crontab\\Crontab'
     ), //该项因为设计上的问题暂时不添加
     'components' => array(
+        'meedo' => array(
+            'database_type' => 'mysql',
+            'database_name' => 'lease',
+            'server' => '127.0.0.1',
+            'username' => 'root',
+            'password' => '123456',
+            // [optional]
+            'charset' => 'utf8',
+            'port' => 3306,
+            // [optional] Table prefix
+            'prefix' => 'lease_',
+            'option' => [
+                \PDO::ATTR_PERSISTENT => true
+            ],
+        
+            // [optional] Enable logging (Logging is disabled by default for better performance)
+            'logging' => true,
+        ),
         'redis' => array(
             'host'         => '127.0.0.1', // redis主机
             'port'         => 6379, // redis端口
@@ -95,21 +116,6 @@ return array(
             'width' => 200,
             'num' => 5,
             'type' => 'png'   //png jpg gif
-        ),
-        'meedo' => array(
-            'database_type' => 'mysql',
-            'database_name' => 'blog',
-            'server' => '127.0.0.1',
-            'username' => 'root',
-            'password' => '123456',
-            // [optional]
-            'charset' => 'utf8',
-            'port' => 3306,
-            // [optional] Table prefix
-            'prefix' => 'blog_',
-        
-            // [optional] Enable logging (Logging is disabled by default for better performance)
-            'logging' => true,
         ),
         'tokenBucket' => [
             'buckets' => [

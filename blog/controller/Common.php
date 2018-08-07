@@ -15,10 +15,6 @@ class Common extends Web
     protected function rule()
     {
         return array(
-            'loginApi' => array(
-               'mobile|post|账号格式错误'=>'regex|/^1[34578]\d{9}$/',
-               'password|post|密码格式错误' => 'require'
-            ),
             'registerApi' => array(
                 'mobile|post|账号格式错误'=>'regex|/^1[34578]\d{9}$/',
                 'password|post|密码格式错误' => 'require',
@@ -38,7 +34,8 @@ class Common extends Web
     public function testApi()
     {
         $this->cookie->set('rwar', 'dsfsdf');
-        var_dump(uniqueId());
+        return $this->_userM->test();
+        // var_dump(uniqueId());
 //        $this->addTask('msgTask', 'sendMsg', array('mobile' => '1212121212'));
     }
 

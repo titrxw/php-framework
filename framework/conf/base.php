@@ -7,9 +7,6 @@
  */
 return array(
     'composer' => array(
-        'meedo' => function (array $params) {
-            return new \Medoo\Medoo($params);      //这里测试composer的加载
-        },
         'sendfile' => function (array $params) {
             return new \diversen\sendfile();
         }
