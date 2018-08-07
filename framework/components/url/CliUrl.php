@@ -21,6 +21,7 @@ class CliUrl extends Url
             $system = $this->getValueFromConf('defaultSystem');
         }
         $urlInfo =  array(
+            'method' => $_SERVER['REQUEST_METHOD'],
             'system' => $system,
             'controller' => empty($argv[0]) ? $this->getValueFromConf('defaultController', 'index') : $argv[0],
             'action' => empty($argv[1]) ? $this->getValueFromConf('defaultAction', 'index') : $argv[1]

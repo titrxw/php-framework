@@ -10,6 +10,8 @@ use framework\base\Container;
 
 abstract class Controller extends \framework\base\Controller
 {
+    static $_rules;
+
     protected function rule()
     {
         return [];
@@ -29,15 +31,23 @@ abstract class Controller extends \framework\base\Controller
 //    需要重写
     protected function validate()
     {
-        $rule = $this->rule();
-        if (empty($rule[$this->_action]))
+        if (isset(static::$_rules[$this->getAction()])) {
+            $rules = static::$_rules[$this->getAction()];
+        } else {
+            $rules = [];
+            $rule = $this->doc->parse($this, $this->getAction())->getTags('rule');
+            foreach($rule as $item) {
+                $item = \explode(' ', $item);
+                $rules[$item[0]] = \end($item);
+            }
+        }
+        
+        if (empty($rules))
         {
-            unset($rule);
             return true;
         }
         $data = array('get' => $this->request->get(),'post' => $this->request->post());
-        $result = $this->validate->run($data, $rule[$this->_action]);
-        unset($rule, $data);
+        $result = $this->validate->run($data, $rules);
         return $result;
     }
 

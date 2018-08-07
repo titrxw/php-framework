@@ -12,7 +12,8 @@ return array(
         }
     ),
     'addComponentsMap' => array(
-        'msgTask' => 'blog\\conf\\Task'
+        'msgTask' => 'blog\\conf\\Task',
+        'doc' => 'framework\\base\\Documentor'
     ),
     'components' => array(
         'log' => array(

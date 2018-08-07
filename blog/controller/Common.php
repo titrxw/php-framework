@@ -11,30 +11,24 @@ use blog\lib\Web;
 class Common extends Web
 {
     private $_userM;
-
-    protected function rule()
-    {
-        return array(
-            'registerApi' => array(
-                'mobile|post|账号格式错误'=>'regex|/^1[34578]\d{9}$/',
-                'password|post|密码格式错误' => 'require',
-                'sure_password|post|确认密码格式错误' => 'require'
-            ),
-            'sendMsgApi' => array(
-                'mobile|get|手机号格式错误'=>'regex|/^1[34578]\d{9}$/'
-            )
-        );
-    }
-
+    
     protected function afterInit()
     {
         $this->_userM = $this->model('User');
     }
 
+    /**
+     * @method get
+     * 
+     * @params string  $name 不能为空
+     * @rule mobile|post|账号格式错误 regex|/^1[34578]\d{9}$/  
+     * @rule password|post|密码格式错误 require
+     * @rule sure_password|post|确认密码格式错误 require
+     */
     public function testApi()
     {
         $this->cookie->set('rwar', 'dsfsdf');
-        return $this->_userM->test();
+        // return $this->_userM->test();
         // var_dump(uniqueId());
 //        $this->addTask('msgTask', 'sendMsg', array('mobile' => '1212121212'));
     }
@@ -70,6 +64,11 @@ class Common extends Web
         return [501, '注册失败'];
     }
 
+    /**
+     * @method get
+     * 
+     * @rule mobile|get|手机号格式错误 regex|/^1[34578]\d{9}$/
+     */
     public function sendMsgApi()
     {
         $this->tokenBucket->validate('mobile', ['mobile' => $this->request->get('mobile')]);

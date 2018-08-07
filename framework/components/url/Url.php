@@ -36,6 +36,7 @@ class Url extends Component
 
 
             $urlInfo =  array(
+                'method' => $_SERVER['REQUEST_METHOD'],
                 'system' => $system,
                 'controller' => empty($_GET[$this->getValueFromConf('controllerKey', 'm')]) ? $this->getValueFromConf('defaultController', 'index') : $_GET[$this->getValueFromConf('controllerKey', 'm')],
                 'action' => empty($_GET[$this->getValueFromConf('actionKey', 'act')]) ? $this->getValueFromConf('defaultAction', 'index') : $_GET[$this->getValueFromConf('actionKey', 'act')]
@@ -68,6 +69,7 @@ class Url extends Component
 
 
             $urlInfo =  array(
+                'method' => $_SERVER['REQUEST_METHOD'],
                 'system' => $system,
                 'controller' => empty($tmpQuery[0 + $keyStart]) ? $this->getValueFromConf('defaultController', 'index') : $tmpQuery[0 + $keyStart],
                 'action' => empty($tmpQuery[1 + $keyStart]) ? $this->getValueFromConf('defaultAction', 'index') : $tmpQuery[1 + $keyStart]
