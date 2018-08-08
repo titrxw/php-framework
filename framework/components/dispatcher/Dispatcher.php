@@ -33,7 +33,7 @@ class Dispatcher extends Component
         }
         $methods = Container::getInstance()->getComponent(SYSTEM_APP_NAME, 'doc')->parse($controllerInstance, $actionName)->getTags('method');
         if($methods && \strtoupper($methods[0]) != $args['method']) {
-            $this->triggerThrowable(new \Exception('action ' . $actionName . ' not found'));
+            $this->triggerThrowable(new \Exception('action ' . $actionName . ' not found', 404));
         }
         $controllerInstance->setController($controllerName);
         $controllerInstance->setAction($actionName);

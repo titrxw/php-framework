@@ -75,14 +75,14 @@ class Application extends \framework\base\Application
         {
             $code = $e->getCode() > 0 ? $e->getCode() : 500;
             $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode($code);
-            $result = $e->getMessage().$e->getTraceAsString();
+            $result = '';
             if (DEBUG) {
+                $result = $e->getMessage().$e->getTraceAsString();
                 $result .= $e->getMessage() . "\n trace: " . $e->getTraceAsString();
             }
             $container->getComponent(SYSTEM_APP_NAME, 'response')->send($result);
             $instance->handleThrowable($e);
             unset($default, $instance);
-
         }
     }
 }
