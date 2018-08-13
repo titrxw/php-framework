@@ -31,14 +31,18 @@ class Dispatcher extends Component
             unset($controllerInstance, $args);
             $this->triggerThrowable(new \Exception('action ' . $actionName . ' not found'));
         }
-        $methods = Container::getInstance()->getComponent(SYSTEM_APP_NAME, 'doc')->parse($controllerInstance, $actionName)->getTags('method');
-        if($methods) {
-            $upMethod = \strtoupper($args['method']);
-            $lowMethod = \strtolower($args['method']);
-            if (!\in_array($lowMethod,$methods) && !\in_array($upMethod,$methods)) {
-                $this->triggerThrowable(new \Exception('action ' . $actionName . ' not found', 404));
+
+        if ($this->getValueFromConf('route', false)){
+            $methods = Container::getInstance()->getComponent(SYSTEM_APP_NAME, 'doc')->parse($controllerInstance, $actionName)->getTags('method');
+            if($methods) {
+                $upMethod = \strtoupper($args['method']);
+                $lowMethod = \strtolower($args['method']);
+                if (!\in_array($lowMethod,$methods) && !\in_array($upMethod,$methods)) {
+                    $this->triggerThrowable(new \Exception('action ' . $actionName . ' not found', 404));
+                }
             }
         }
+        
         $controllerInstance->setController($controllerName);
         $controllerInstance->setAction($actionName);
         $this->_controller = $controllerName;
