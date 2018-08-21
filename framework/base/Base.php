@@ -13,7 +13,6 @@ abstract class Base
     {
         $this->_conf = $conf;
         $this->init();
-        unset($conf);
     }
 
     final public function getConf()
