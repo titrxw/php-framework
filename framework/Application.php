@@ -34,8 +34,10 @@ class Application extends \framework\base\Application
         $result = '';
         try
         {
+            $GLOBALS['ERROR'] = false;
+            $GLOBALS['EXCEPTION'] = false;
+
             $container = Container::getInstance();
-            
             $urlInfo = $container->getComponent(SYSTEM_APP_NAME, 'url')->run();
             $_SERVER['CURRENT_SYSTEM'] = $urlInfo['system'];
             if (DEBUG) {
@@ -63,26 +65,33 @@ class Application extends \framework\base\Application
                         if (is_array($elseContent)) {
                             $elseContent = json_encode($elseContent);
                         }
-                        $container->getComponent(SYSTEM_APP_NAME, 'response')->send($elseContent);
+                        $result .= $elseContent;
                         unset($elseContent);
                     }
                 }
-                $container->getComponent(SYSTEM_APP_NAME, 'response')->send($result);
-                unset($result);
             }
         }
         catch (\Throwable $e)
         {
             $code = $e->getCode() > 0 ? $e->getCode() : 500;
             $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode($code);
-            $result = '';
             if (DEBUG) {
-                $result = $e->getMessage().$e->getTraceAsString();
+                $result = $result ?? '';
                 $result .= $e->getMessage() . "\n trace: " . $e->getTraceAsString();
+                $result .= \ob_get_clean();
+                $GLOBALS['EXCEPTION'] = false;
             }
-            $container->getComponent(SYSTEM_APP_NAME, 'response')->send($result);
             $instance->handleThrowable($e);
-            unset($default, $instance);
         }
+
+        if (DEBUG) {
+            if ($GLOBALS['EXCEPTION']) {
+                $result .= $GLOBALS['EXCEPTION'];
+            }
+            if ($GLOBALS['ERROR']) {
+                $result .= $GLOBALS['ERROR'];
+            }
+        }
+        $container->getComponent(SYSTEM_APP_NAME, 'response')->send($result);
     }
 }
