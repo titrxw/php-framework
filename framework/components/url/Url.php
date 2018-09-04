@@ -1,30 +1,28 @@
 <?php
 namespace framework\components\url;
 use framework\base\Component;
-
 class Url extends Component
 {
-
     protected $_defaultType;
     protected $_currentModule;
     protected $_curRoute = [];
-
     public function run()
     {
         $this->_currentModule = $this->formatUrl();
         return $this->_currentModule;
     }
-
     public function getCurrentModule()
     {
         return $this->_currentModule;
     }
-
     protected function formatUrl()
     {
         $type = $this->getType();
         if ($type === '?')
         {
+            if ($_SERVER['REQUEST_URI'] == '/' . FAVICON){
+                return false;
+            }
             $system = $_GET[$this->getValueFromConf('systemKey', 's')] ?? '';
             if (!empty($system)) {
                 if (!\in_array($system, $this->getValueFromConf('systems',[]))) {
@@ -33,8 +31,6 @@ class Url extends Component
             } else {
                 $system = $this->getValueFromConf('defaultSystem');
             }
-
-
             $urlInfo =  array(
                 'method' => $_SERVER['REQUEST_METHOD'],
                 'system' => $system,
@@ -51,13 +47,10 @@ class Url extends Component
                 $query = $this->getPathInfo();
                 $query = ltrim($query,'/');
             }
-
             $tmpQuery = \explode($this->getValueFromConf('separator', '/'), $query);
-            if (!empty($tmpQuery[0]) && $tmpQuery[0] === 'favicon.ico') {
+            if (!empty($tmpQuery[0]) && $tmpQuery[0] === FAVICON) {
                 return false;
             }
-
-
             $keyStart = 0;
             if (\in_array($tmpQuery[0], $this->getValueFromConf('systems',[]))) {
                 $system = $tmpQuery[0];
@@ -66,8 +59,6 @@ class Url extends Component
             } else {
                 $system = $this->getValueFromConf('defaultSystem');
             }
-
-
             $urlInfo =  array(
                 'method' => $_SERVER['REQUEST_METHOD'],
                 'system' => $system,
@@ -79,42 +70,31 @@ class Url extends Component
             {
                 $_GET[$tmpQuery[$i]] = !isset($tmpQuery[$i+1]) ?  '' : $tmpQuery[$i+1];
             }
-
-
             unset($tmpQuery);
         }
-
-
         $this->_curRoute = $urlInfo;
         unset($urlInfo);
-
         return $this->_curRoute;
     }
-
     public function getPathInfo()
     {
         return $_SERVER['PATH_INFO'] ?? '';
     }
-
     public function getCurRoute()
     {
         return $this->_curRoute;
     }
-
     public function getType()
     {
         if(!$this->_defaultType)
         {
             $this->_defaultType = $this->getValueFromConf('type', '?');
-
             if(!\in_array($this->_defaultType,array('/','?'))) {
                 $this->_defaultType = '?';
             }
         }
         return $this->_defaultType;
     }
-
-
     public function createUrl($url)
     {
         $tmpUrl = $_SERVER['HTTP_HOST'] . $_SERVER['URL'] . '?';
@@ -137,7 +117,6 @@ class Url extends Component
         {
             $tmpUrl .= $url;
         }
-
         unset($urlModule, $url);
         return $tmpUrl;
     }

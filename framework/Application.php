@@ -39,12 +39,12 @@ class Application extends \framework\base\Application
 
             $container = Container::getInstance();
             $urlInfo = $container->getComponent(SYSTEM_APP_NAME, 'url')->run();
-            $_SERVER['CURRENT_SYSTEM'] = $urlInfo['system'];
             if (DEBUG) {
                 ob_start();
             }
 
             if ($urlInfo !== false) {
+                $_SERVER['CURRENT_SYSTEM'] = $urlInfo['system'];
                 // 初始化配置项
                 if (!$container->appHasComponents($urlInfo['system'])) {
 //                这里现在还缺少文件系统
@@ -75,21 +75,17 @@ class Application extends \framework\base\Application
         {
             $code = $e->getCode() > 0 ? $e->getCode() : 500;
             $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode($code);
-            if (DEBUG) {
-                $result = $result ?? '';
-                $result .= $e->getMessage() . "\n trace: " . $e->getTraceAsString();
-                $result .= \ob_get_clean();
-                $GLOBALS['EXCEPTION'] = false;
-            }
             $instance->handleThrowable($e);
+            if (DEBUG) {
+                \ob_get_clean();
+            }
         }
 
         if (DEBUG) {
             if ($GLOBALS['EXCEPTION']) {
-                $result .= $GLOBALS['EXCEPTION'];
-            }
-            if ($GLOBALS['ERROR']) {
-                $result .= $GLOBALS['ERROR'];
+                $result = $GLOBALS['EXCEPTION'];
+            } else if ($GLOBALS['ERROR']) {
+                $result = $GLOBALS['ERROR'];
             }
         }
         $container->getComponent(SYSTEM_APP_NAME, 'response')->send($result);

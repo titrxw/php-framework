@@ -39,6 +39,7 @@ class Application extends Base
         if(!\defined('DEBUG'))
             \define('DEBUG',true);
             
+        \define('FAVICON','favicon.ico');
         \define('SYSTEM_WORK_ID', \getmypid());
         \define('SYSTEM_CD_KEY',\GetMacAddr(PHP_OS));
         \define('SYSTEM_APP_NAME', 'APP');
