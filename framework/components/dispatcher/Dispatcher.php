@@ -6,14 +6,12 @@ use framework\base\Container;
 class Dispatcher extends Component
 {
     protected $_system;
-    protected $_controller;
-    protected $_action;
 
     public function run($args = [])
     {
         $this->_system = \getModule();
+        $args['controller'] = \ucfirst($args['controller']);
         $controllerName = $this->getValueFromConf('controller.prefix') . $args['controller'] . $this->getValueFromConf('controller.suffix');
-        $controllerName = \ucfirst($controllerName);
         if (!\file_exists(APP_ROOT.$this->_system.'/controller/'.$controllerName.'.php'))
         {
             $this->triggerThrowable(new \Exception(APP_ROOT.$this->_system.'/controller/'.$controllerName.'.php not exists', 404));
@@ -32,7 +30,8 @@ class Dispatcher extends Component
             $this->triggerThrowable(new \Exception('action ' . $actionName . ' not found'));
         }
 
-        if ($this->getValueFromConf('route', false)){
+        // 请求限制
+        if ($this->getValueFromConf('route', false)) {
             $methods = Container::getInstance()->getComponent(SYSTEM_APP_NAME, 'doc')->parse($controllerInstance, $actionName)->getTags('method');
             if($methods) {
                 $upMethod = \strtoupper($args['method']);
@@ -45,31 +44,15 @@ class Dispatcher extends Component
         
         $controllerInstance->setController($controllerName);
         $controllerInstance->setAction($actionName);
-        $this->_controller = $controllerName;
-        $this->_action = $actionName;
-
 
         $result = $controllerInstance->before();
-        if ($result !== true)
+        if ($result === true)
         {
-            unset($controllerInstance, $args);
-            return $result;
+            $result = $controllerInstance->$actionName();
         }
-
-        $result = $controllerInstance->$actionName();
 
         $result = $controllerInstance->after($result);
         unset($controllerInstance, $args);
         return $result;
-    }
-
-    public function getController ()
-    {
-        return $this->_controller;
-    }
-
-    public function getAction ()
-    {
-        return $this->_action;
     }
 }
