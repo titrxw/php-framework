@@ -80,14 +80,22 @@ class Application extends \framework\base\Application
             $code = $e->getCode() > 0 ? $e->getCode() : 500;
             $instance->handleThrowable($e);
             if (DEBUG) {
-                \ob_get_clean();
+                $elseContent = \ob_get_clean();
+                if ($elseContent) {
+                    if (is_array($elseContent)) {
+                        $elseContent = json_encode($elseContent);
+                    }
+                    $result .= $elseContent;
+                    unset($elseContent);
+                }
             }
         }
 
         if ($GLOBALS['EXCEPTION']) {
             DEBUG && $result .= $GLOBALS['EXCEPTION'];
             $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode($code);
-        } else if ($GLOBALS['ERROR']) {
+        }
+        if ($GLOBALS['ERROR']) {
             DEBUG && $result .= $GLOBALS['ERROR'];
             $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode($code);
         }
