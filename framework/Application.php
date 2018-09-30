@@ -32,6 +32,7 @@ class Application extends \framework\base\Application
     {
         $instance = new static(\require_file('framework/conf/base.php'));
         $result = '';
+        $code = 500;
         try
         {
             $GLOBALS['ERROR'] = false;
@@ -58,6 +59,9 @@ class Application extends \framework\base\Application
                 }
 
                 $result = $container->getComponent(SYSTEM_APP_NAME, 'dispatcher')->run($urlInfo);
+                if (\is_array($result)) {
+                    $result = json_encode($result);
+                }
                 $container->getComponent(SYSTEM_APP_NAME, 'cookie')->send();
                 if (DEBUG) {
                     $elseContent = \ob_get_clean();
@@ -74,7 +78,6 @@ class Application extends \framework\base\Application
         catch (\Throwable $e)
         {
             $code = $e->getCode() > 0 ? $e->getCode() : 500;
-            $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode($code);
             $instance->handleThrowable($e);
             if (DEBUG) {
                 \ob_get_clean();
@@ -83,10 +86,10 @@ class Application extends \framework\base\Application
 
         if ($GLOBALS['EXCEPTION']) {
             DEBUG && $result .= $GLOBALS['EXCEPTION'];
-            $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode(500);
+            $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode($code);
         } else if ($GLOBALS['ERROR']) {
             DEBUG && $result .= $GLOBALS['ERROR'];
-            $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode(500);
+            $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode($code);
         }
 
         $container->getComponent(SYSTEM_APP_NAME, 'response')->send($result);
