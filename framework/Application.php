@@ -81,13 +81,14 @@ class Application extends \framework\base\Application
             }
         }
 
-        if (DEBUG) {
-            if ($GLOBALS['EXCEPTION']) {
-                $result = $GLOBALS['EXCEPTION'];
-            } else if ($GLOBALS['ERROR']) {
-                $result = $GLOBALS['ERROR'];
-            }
+        if ($GLOBALS['EXCEPTION']) {
+            DEBUG && $result .= $GLOBALS['EXCEPTION'];
+            $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode(500);
+        } else if ($GLOBALS['ERROR']) {
+            DEBUG && $result .= $GLOBALS['ERROR'];
+            $container->getComponent(SYSTEM_APP_NAME, 'header')->setCode(500);
         }
+
         $container->getComponent(SYSTEM_APP_NAME, 'response')->send($result);
     }
 }
