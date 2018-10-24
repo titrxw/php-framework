@@ -33,8 +33,12 @@ class Rsa extends Component
      * 获取秘钥
      * @param unknown $path
      */
-    protected function getKeyFromFile($path)
+    protected function getKey($path)
     {
+        if (\strlen($path) > 200) {
+            return $path;
+        }
+        $path = 'file://'.APP_ROOT.$path;
         if(file_exists($path))
             return file_get_contents($path);
         else
@@ -53,13 +57,7 @@ class Rsa extends Component
         $keyPath = $this->getValueFromConf('private_key', '');
         if(!empty($keyPath))
         {
-            $str=$this->getKeyFromFile($keyPath);
-            if (!empty($str))
-            {
-                $this->_privatekey=openssl_get_privatekey($str);
-            }
-            else
-                throw new \Exception('RAS  private init fail because private key file‘s content is empty ', 500);
+            $this->_privatekey=openssl_get_privatekey($this->getKey($keyPath));
         }
         else
             throw new \Exception('RAS private key file not exists ', 500);
@@ -73,13 +71,7 @@ class Rsa extends Component
         $keyPath = $this->getValueFromConf('public_key', '');
         if(!empty($keyPath))
         {
-            $str=$this->getKeyFromFile($keyPath);
-            if (!empty($str))
-            {
-                $this->_privatekey=openssl_get_privatekey($str);
-            }
-            else
-                throw new \Exception('RAS  private init fail because public key file‘s content is empty ', 500);
+            $this->_publickey=openssl_get_publickey($this->getKey($keyPath));
         }
         else
             throw new \Exception('RAS public key file not exists ', 500);
@@ -126,7 +118,7 @@ class Rsa extends Component
      * @param unknown $data
      * @return string|NULL
      */
-    public function gign($data,$sign_alt=OPENSSL_ALGO_SHA256)
+    public function sign($data,$sign_alt=OPENSSL_ALGO_SHA256)
     {
         if(!empty($data))
         {
