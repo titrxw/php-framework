@@ -43,7 +43,7 @@ abstract class Web extends Api
         $result  = $this->validate();
         if ($result !== true)
         {
-            return ['ret' => 500,'msg' => $result];
+            return [500,$result];
         }
         return true;
     }
