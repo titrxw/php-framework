@@ -5,9 +5,15 @@ class Model extends Component
 {
     protected $_dbHandle;
 
+    protected function  afterInit()
+    {
+
+    }
+
     protected function init()
     {
         $this->unInstall(true);
+        $this->afterInit();
     }
 
     public function db()
