@@ -71,6 +71,9 @@ class Container extends Base
         if (!empty($this->_components[$haver][$component])) {
             return true;
         }
+        if (COMPOSER && $this->_composer->checkComposer($haver,$component)) {
+            return true;
+        }
         return false;
     }
 
