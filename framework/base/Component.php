@@ -16,6 +16,7 @@ abstract class Component extends Base
     {
         $params = \func_get_args();
         \array_shift($params);
+        \array_shift($params);
         return Container::getInstance()->getComponent($haver, $componentName, $params);
     }
 
