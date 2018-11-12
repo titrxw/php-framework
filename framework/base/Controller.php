@@ -42,8 +42,8 @@ abstract class Controller extends Component
             return $this->_requestController;
         }
         $this->_requestController = $this->_controller;
-        $this->_requestController = ltrim($this->_requestController, $this->getValueFromConf['controller.prefix']);
-        $this->_requestController = rtrim($this->_requestController, $this->getValueFromConf['controller.suffix']);
+        $this->_requestController = ltrim($this->_requestController, $this->getValueFromConf('controller.prefix'));
+        $this->_requestController = rtrim($this->_requestController, $this->getValueFromConf('controller.suffix'));
         return $this->_requestController;
     }
 
@@ -63,8 +63,8 @@ abstract class Controller extends Component
             return $this->_requestAction;
         }
         $this->_requestAction = $this->_action;
-        $this->_requestAction = ltrim($this->_requestAction, $this->getValueFromConf['action.prefix']);
-        $this->_requestAction = rtrim($this->_requestAction, $this->getValueFromConf['action.suffix']);
+        $this->_requestAction = ltrim($this->_requestAction, $this->getValueFromConf('action.prefix'));
+        $this->_requestAction = rtrim($this->_requestAction, $this->getValueFromConf('action.suffix'));
         return $this->_requestAction;
     }
 
