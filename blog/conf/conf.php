@@ -70,6 +70,16 @@ return array(
            'path'=> '',
            'name' => 'EASYSESSION',
            'prefix' => 'easy-'
+       ),
+       'view' => array(
+           'templatePath' => 'view',
+           'cachePath' => 'runtime/viewCache',
+           'compilePath' => 'runtime/compile',
+           'viewExt' => '.html',
+           'isCache' => false,
+           'cacheExpire' => 3600,
+           'leftDelimiter' => '{',
+           'rightDelimiter' => '}'
        )
     )
 );

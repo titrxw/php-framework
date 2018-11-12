@@ -40,16 +40,6 @@ return array(
         'response' => array(
             'defaultType' => 'text',
             'charset' => 'utf-8'
-        ),
-        'view' => array(
-            'templatePath' => 'view',
-            'cachePath' => 'runtime/viewCache',
-            'compilePath' => 'runtime/compile',
-            'viewExt' => '.html',
-            'isCache' => false,
-            'cacheExpire' => 3600,
-            'leftDelimiter' => '{',
-            'rightDelimiter' => '}'
         )
     )
 );
