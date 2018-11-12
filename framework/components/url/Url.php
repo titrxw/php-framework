@@ -4,16 +4,14 @@ use framework\base\Component;
 class Url extends Component
 {
     protected $_defaultType;
-    protected $_currentModule;
-    protected $_curRoute = [];
+    protected $_curRoute = null;
     public function run()
     {
-        $this->_currentModule = $this->formatUrl();
-        return $this->_currentModule;
+        $this->formatUrl();
     }
-    public function getCurrentModule()
+    public function getCurrentRoute()
     {
-        return $this->_currentModule;
+        return $this->_curRoute;
     }
     protected function formatUrl()
     {
