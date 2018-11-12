@@ -35,7 +35,7 @@ class NUpload extends Upload
             if ($path) {
                 $paths[] = $path;
             }
-            \unlink($file['path']);
+            unlink($file['path']);
         }
 
         return $paths;
@@ -57,7 +57,7 @@ class NUpload extends Upload
             if ($path) {
                 $paths[] = $path;
             }
-            \unlink($file['path']);
+            unlink($file['path']);
         }
 
         return $paths[0] ?? '';
@@ -78,9 +78,13 @@ class NUpload extends Upload
 
 //        检测文件类型
         $mime = $file['content_type'];
-        if (!(isset($this->_mime[$mime]) && \in_array($this->_mime[$mime], $this->_accept)))
+        if (!(isset($this->_mime[$mime]) && in_array($this->_mime[$mime], $this->_accept)))
         {
-//            进行严格检测
+            return false;
+        }
+
+        //            进行严格检测
+        if (!$this->securityVeritify($file['path'])) {
             return false;
         }
 
@@ -89,7 +93,7 @@ class NUpload extends Upload
         //写入文件
         if ($this->moveUploadFile($file['path'], $fileSavePath))
         {
-            $fileSavePath = \str_replace(APP_ROOT, '', $fileSavePath);
+            $fileSavePath = str_replace(APP_ROOT, '', $fileSavePath);
             return $fileSavePath;
         }
         else
@@ -101,21 +105,21 @@ class NUpload extends Upload
     private function getFiles($files, $multi = true, $is_first = true)
     {
         if ($is_first) {
-            $prefxl = \strlen($this->_prefx);
+            $prefxl = strlen($this->_prefx);
         }
 
         foreach ($files as $key => $item)
         {
             if ($is_first) {
-                if (\substr($key, 0, $prefxl) == $this->_prefx) {
-                    if (\is_array($item)) {
+                if (substr($key, 0, $prefxl) == $this->_prefx) {
+                    if (is_array($item)) {
                         $this->getFiles($item, $multi,false);
                     }
                     if (!$multi) {
                         break;
                     }
                 }
-            } else if (\is_array($item)) {
+            } else if (is_array($item)) {
                 $this->getFiles($item, $multi,false);
             } else {
                 if (count($files) == 5)
