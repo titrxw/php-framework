@@ -19,6 +19,17 @@ return array(
         'session' => 'framework\\components\\session\\Session'
     ),
     'components' => array(
+        'controller' => [
+            'prefix' => '',
+            'suffix' => ''
+        ],
+        'action' => [
+            'prefix' => '',
+            'suffix' => 'Api'
+        ],
+        'model' => array(
+            'db' => 'meedo'
+        ),
         'meedo' => array(
             'database_type' => 'mysql',
             'database_name' => 'blog',

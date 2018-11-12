@@ -7,7 +7,7 @@ class Url extends Component
     protected $_curRoute = null;
     public function run()
     {
-        $this->formatUrl();
+        return $this->formatUrl();
     }
     public function getCurrentRoute()
     {

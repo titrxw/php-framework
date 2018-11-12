@@ -53,6 +53,9 @@ abstract class Controller extends \framework\base\Controller
 
     protected function display($path = '')
     {
+        if (!$path) {
+            $path = $this->getRequestController() . '/' . $this->getRequestAction();
+        }
         return $this->view->display($path);
     }
 

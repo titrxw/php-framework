@@ -6,6 +6,8 @@ abstract class Controller extends Component
     protected $_dbHandle;
     protected $_controller;
     protected $_action;
+    protected $_requestController;
+    protected $_requestAction;
     protected $_view;
 
 
@@ -34,6 +36,17 @@ abstract class Controller extends Component
         return $this->_controller;
     }
 
+    public function getRequestController()
+    {
+        if ($this->_requestController) {
+            return $this->_requestController;
+        }
+        $this->_requestController = $this->_controller;
+        $this->_requestController = ltrim($this->_requestController, $this->getValueFromConf['controller.prefix']);
+        $this->_requestController = rtrim($this->_requestController, $this->getValueFromConf['controller.suffix']);
+        return $this->_requestController;
+    }
+
     public function setAction($action)
     {
         $this->_action = $action;
@@ -42,6 +55,17 @@ abstract class Controller extends Component
     public function getAction()
     {
         return $this->_action;
+    }
+
+    public function getRequestAction()
+    {
+        if ($this->_requestAction) {
+            return $this->_requestAction;
+        }
+        $this->_requestAction = $this->_action;
+        $this->_requestAction = ltrim($this->_requestAction, $this->getValueFromConf['action.prefix']);
+        $this->_requestAction = rtrim($this->_requestAction, $this->getValueFromConf['action.suffix']);
+        return $this->_requestAction;
     }
 
     public function db()
