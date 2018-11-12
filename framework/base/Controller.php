@@ -26,6 +26,11 @@ abstract class Controller extends Component
         return $data;
     }
 
+    public function setRequestController($currentController)
+    {
+        $this->_requestController = $currentController;
+    }
+
     public function setController($currentController)
     {
         $this->_controller = $currentController;
@@ -38,13 +43,12 @@ abstract class Controller extends Component
 
     public function getRequestController()
     {
-        if ($this->_requestController) {
-            return $this->_requestController;
-        }
-        $this->_requestController = $this->_controller;
-        $this->_requestController = ltrim($this->_requestController, $this->getValueFromConf('controller.prefix'));
-        $this->_requestController = rtrim($this->_requestController, $this->getValueFromConf('controller.suffix'));
         return $this->_requestController;
+    }
+
+    public function setRequestAction($action)
+    {
+        $this->_requestAction = $action;
     }
 
     public function setAction($action)
@@ -59,12 +63,6 @@ abstract class Controller extends Component
 
     public function getRequestAction()
     {
-        if ($this->_requestAction) {
-            return $this->_requestAction;
-        }
-        $this->_requestAction = $this->_action;
-        $this->_requestAction = ltrim($this->_requestAction, $this->getValueFromConf('action.prefix'));
-        $this->_requestAction = rtrim($this->_requestAction, $this->getValueFromConf('action.suffix'));
         return $this->_requestAction;
     }
 

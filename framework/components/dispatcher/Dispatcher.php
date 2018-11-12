@@ -12,20 +12,19 @@ class Dispatcher extends Component
         $this->_system = \getModule();
         $args['controller'] = \ucfirst($args['controller']);
 
-        $controllerConf = Container::getInstance()->getComponentConf(\getModule(), 'controller');
+        $conf = Container::getInstance()->getComponentConf(\getModule(), 'controller');
 
-        $controllerName = ($controllerConf['prefix'] ?? '') . $args['controller'] . ($controllerConf['suffix'] ?? '');
+        $controllerName = ($conf['controller']['prefix'] ?? '') . $args['controller'] . ($conf['controller']['suffix'] ?? '');
         if (!\file_exists(APP_ROOT.$this->_system.'/controller/'.$controllerName.'.php'))
         {
             $this->triggerThrowable(new \Exception(APP_ROOT.$this->_system.'/controller/'.$controllerName.'.php not exists', 404));
         }
         $controllerHashName = \md5($this->_system.'/controller/'.$controllerName);
 
-        $actionConf = Container::getInstance()->getComponentConf(\getModule(), 'action');
-        $actionName = ($actionConf['prefix'] ?? '') . $args['action'] . ($actionConf['suffix'] ?? '');
+        $actionName = ($conf['action']['prefix'] ?? '') . $args['action'] . ($conf['action']['suffix'] ?? '');
 
         Container::getInstance()->addComponent($this->_system, $controllerHashName,
-            $this->_system.'\\controller\\'. $controllerName,['controller' => $controllerConf, 'action' => $actionConf]);
+            $this->_system.'\\controller\\'. $controllerName,$conf);
 
         $controllerInstance = $this->getComponent(\getModule(), $controllerHashName);
         if (!\method_exists($controllerInstance, $actionName))
@@ -48,6 +47,8 @@ class Dispatcher extends Component
         
         $controllerInstance->setController($controllerName);
         $controllerInstance->setAction($actionName);
+        $controllerInstance->setRequestController($args['controller']);
+        $controllerInstance->setRequestAction($args['action']);
 
         $result = $controllerInstance->before();
         if ($result === true)

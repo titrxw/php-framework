@@ -20,12 +20,14 @@ return array(
     ),
     'components' => array(
         'controller' => [
-            'prefix' => '',
-            'suffix' => ''
-        ],
-        'action' => [
-            'prefix' => '',
-            'suffix' => 'Api'
+            'controller' => [
+                'prefix' => '',
+                'suffix' => ''
+            ],
+            'action' => [
+                'prefix' => '',
+                'suffix' => 'Api'
+            ]
         ],
         'model' => array(
             'db' => 'meedo'
