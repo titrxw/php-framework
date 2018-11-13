@@ -32,6 +32,7 @@ class Application extends Base
     {
         \define('ISSWOOLE', false);
         \define('FRAMEWORK_NAME', 'framework');
+        \define('IS_CLI', PHP_SAPI == 'cli' ? true : false);
 
 
         \date_default_timezone_set('PRC');
