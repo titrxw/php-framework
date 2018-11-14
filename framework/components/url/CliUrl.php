@@ -17,15 +17,16 @@ class CliUrl extends Url
         if (!empty($argv[0]) && \in_array($argv[0], $this->getValueFromConf('systems',[]))) {
             $system = $argv[0];
             \array_shift($argv);
-        } else {
+        } else if (!empty($this->getValueFromConf('alias', [])[$argv[0]])){
+            $system = $this->getValueFromConf('alias', [])[$argv[0]];
+            \array_shift($argv);
+        }  else {
             $system = $this->getValueFromConf('defaultSystem');
         }
-        $urlInfo =  array(
-            'method' => $_SERVER['REQUEST_METHOD'],
-            'system' => $system,
-            'controller' => empty($argv[0]) ? $this->getValueFromConf('defaultController', 'index') : $argv[0],
-            'action' => empty($argv[1]) ? $this->getValueFromConf('defaultAction', 'index') : $argv[1]
-        );
+        $system = \explode('.', $system);
+        $version = $system[1] ?? '';
+        $system = $system[0];
+        
 
         foreach ($argv as $item) {
             if (\strpos($item, '=') > 0) {
@@ -34,10 +35,17 @@ class CliUrl extends Url
             }
         }
 
+        
+        $urlInfo =  array(
+            'version' => $version,
+            'method' => $_SERVER['REQUEST_METHOD'],
+            'system' => $system,
+            'controller' => empty($argv[0]) ? $this->getValueFromConf('defaultController', 'index') : $argv[0],
+            'action' => empty($argv[1]) ? $this->getValueFromConf('defaultAction', 'index') : $argv[1]
+        );
 
         $this->_curRoute = $urlInfo;
-        unset($urlInfo);
-        unset($argv);
+        unset($urlInfo, $argv);
         return $this->_curRoute;
     }
 
