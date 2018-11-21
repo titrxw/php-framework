@@ -130,6 +130,7 @@ if (!function_exists('hash32')) {
 if (!function_exists('hash33')) {
     function hash33 ($str)
     {
+        // 5381的原因是计算的hash分布好（均匀），参考hash表
         $hash = 5381;
         $s    = md5($str); //相比其它版本，进行了md5加密
         $seed = 5;
@@ -140,7 +141,7 @@ if (!function_exists('hash33')) {
             //$hash = ($hash * 33 + ord($s{$i})) & 0x7FFFFFFF;
             $hash = ($hash << $seed) + $hash + ord($s{$i});
         }
-        
+        //  生成的hash的最大值为0x7FFFFFFF
         return $hash & 0x7FFFFFFF;  
     }
 }
