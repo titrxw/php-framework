@@ -32,7 +32,7 @@ class Upload extends Component
 
     protected function init()
     {
-        $this->_baseDir = APP_ROOT . getModule() . '/' . $this->getValueFromConf('baseDir','runtime/upload');
+        $this->_baseDir = APP_ROOT . getModule() . DS . $this->getValueFromConf('baseDir','runtime/upload');
         $this->_accept = $this->getValueFromConf('accept', []);
         $this->_maxSize = $this->getValueFromConf('maxSize', 0);
         $this->_nameType = $this->getValueFromConf('nameType', 'time');
@@ -50,14 +50,14 @@ class Upload extends Component
     {
         if (!file_exists($this->_baseDir))
         {
-            $dirs = explode('/', $this->_baseDir);
+            $dirs = explode(DS, $this->_baseDir);
             $path = '';
             foreach ($dirs as $item) {
                 $path .= $item;
                 if (!file_exists($path)) {
                     mkdir($path, 0755);
                 }
-                $path .= '/';
+                $path .= DS;
             }
         }
         switch ($this->_nameType)
@@ -71,24 +71,24 @@ class Upload extends Component
                 for ($i=0; $i<$this->_deep;$i++)
                 {
                     $tmpDir = substr($name, $i*$particle, $particle);
-                    $currentPath .= $tmpDir . '/';
-                    if (!file_exists($this->_baseDir . '/' . $currentPath))
+                    $currentPath .= $tmpDir . DS;
+                    if (!file_exists($this->_baseDir . DS . $currentPath))
                     {
-                        mkdir($this->_baseDir . '/' . $currentPath, 0755);
+                        mkdir($this->_baseDir . DS . $currentPath, 0755);
                     }
                 }
-                return $this->_baseDir . '/' . $currentPath . '/' . $name . '.' . $ext;
+                return $this->_baseDir . DS . $currentPath . DS . $name . '.' . $ext;
                 break;
             case 'time':
             default:
                 $name = mt_rand() . $name;
                 $name = md5($name . SYSTEM_WORK_ID . microtime());
                 $subPath = date('Ymd');
-                if (!file_exists($this->_baseDir . '/' . $subPath))
+                if (!file_exists($this->_baseDir . DS . $subPath))
                 {
-                    mkdir($this->_baseDir . '/' . $subPath, 0755);
+                    mkdir($this->_baseDir . DS . $subPath, 0755);
                 }
-                return $this->_baseDir . '/' . $subPath . '/' . $name . '.' . $ext;
+                return $this->_baseDir . DS . $subPath . DS . $name . '.' . $ext;
                 break;
         }
     }

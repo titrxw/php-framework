@@ -19,9 +19,9 @@ class View extends Component
 
     protected function init()
     {
-        $this->_viewPath = APP_ROOT.APP_NAME.'/'.$this->getValueFromConf('templatePath','view');
-        $this->_cachePath = APP_ROOT.APP_NAME.'/'.$this->getValueFromConf('cachePath','runtime/viewCache');
-        $this->_compilePath = APP_ROOT.APP_NAME.'/'.$this->getValueFromConf('compilePath','runtime/compile');
+        $this->_viewPath = APP_ROOT.APP_NAME.DS.$this->getValueFromConf('templatePath','view');
+        $this->_cachePath = APP_ROOT.APP_NAME.DS.$this->getValueFromConf('cachePath','runtime/viewCache');
+        $this->_compilePath = APP_ROOT.APP_NAME.DS.$this->getValueFromConf('compilePath','runtime/compile');
         $this->_viewExt = $this->getValueFromConf('viewExt','.html');
         $this->_isCache = $this->getValueFromConf('isCache',true);
         if ($this->_isCache)
@@ -442,7 +442,7 @@ class View extends Component
      */
     protected function getViewFile($fileName) {
 
-        return $this->_viewPath . '/' . $fileName . $this->_viewExt;
+        return $this->_viewPath . DS . $fileName . $this->_viewExt;
     }
 
     /**
@@ -456,7 +456,7 @@ class View extends Component
      */
     protected function getCompileFile($fileName) {
 
-        return $this->_compilePath . '/' . $fileName . '.action.compilecache.php';
+        return $this->_compilePath . DS . $fileName . '.action.compilecache.php';
     }
 
     /**
@@ -517,6 +517,6 @@ class View extends Component
      */
     protected function parseCacheFile($cacheId) {
 
-        return $this->_cachePath .'/'. md5($cacheId) . '.action.html';
+        return $this->_cachePath .DS. md5($cacheId) . '.action.html';
     }
 }

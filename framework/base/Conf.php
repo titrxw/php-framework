@@ -19,7 +19,7 @@ class Conf extends Component
 
         if (!isset($this->_config[\getModule()][$name[0]])) {
 //            加载配置文件
-            $path = APP_ROOT . \getModule() . '/conf/' . $name[0] . '.php';
+            $path = APP_ROOT . \getModule() . DS . 'conf' . DS . $name[0] . '.php';
             if (!\file_exists($path)) {
                 $this->triggerThrowable('conf file ' . $name[0] . ' not exists', 500);
             }

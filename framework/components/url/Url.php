@@ -36,7 +36,7 @@ class Url extends Component
         $type = $this->getType();
         if ($type === '?')
         {
-            if ($_SERVER['REQUEST_URI'] == '/' . FAVICON){
+            if ($_SERVER['REQUEST_URI'] == DS . FAVICON){
                 return false;
             }
             $system = $_GET[$this->getValueFromConf('systemKey', 's')] ?? '';
@@ -65,9 +65,9 @@ class Url extends Component
                 $query = empty($_GET[$routerKey]) ? '' : $_GET[$routerKey];
             } else {
                 $query = $this->getPathInfo();
-                $query = ltrim($query,'/');
+                $query = ltrim($query,DS);
             }
-            $tmpQuery = \explode($this->getValueFromConf('separator', '/'), $query);
+            $tmpQuery = \explode($this->getValueFromConf('separator', DS), $query);
             if (!empty($tmpQuery[0]) && $tmpQuery[0] === FAVICON) {
                 return false;
             }
@@ -126,7 +126,7 @@ class Url extends Component
         if(!$this->_defaultType)
         {
             $this->_defaultType = $this->getValueFromConf('type', '?');
-            if(!\in_array($this->_defaultType,array('/','?'))) {
+            if(!\in_array($this->_defaultType,array(DS,'?'))) {
                 $this->_defaultType = '?';
             }
         }

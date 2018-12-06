@@ -87,10 +87,10 @@ class File extends Cache implements CacheInterface
 
         if ($this->_cacheSubdir) {
             // 使用子目录
-            $name = substr($name, 0, 2) . '/' . substr($name, 2);
+            $name = substr($name, 0, 2) . DS . substr($name, 2);
         }
 
-        $filename = APP_ROOT . ($this->_conf['prefix'] ?? '') . '/' . $this->_path . '/' . $name . '.php';
+        $filename = APP_ROOT . ($this->_conf['prefix'] ?? '') . DS . $this->_path . DS . $name . '.php';
         $dir      = dirname($filename);
 
         if ($auto && !is_dir($dir)) {
@@ -246,7 +246,7 @@ class File extends Cache implements CacheInterface
      */
     public function clear()
     {
-        $files = (array) glob($this->_path . ($this->_conf['prefix'] ? $this->_conf['prefix'] . '/' : '') . '*');
+        $files = (array) glob($this->_path . ($this->_conf['prefix'] ? $this->_conf['prefix'] . DS : '') . '*');
 
         foreach ($files as $path) {
             if (is_dir($path)) {

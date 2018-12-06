@@ -25,12 +25,10 @@ class Container extends Base
         return self::$instance;
     }
 
-
     public function setComposer(Composer $composer)
     {
         $this->_composer = $composer;
     }
-
 
 //    该方法不应该放这里
     public function appHasComponents($system)

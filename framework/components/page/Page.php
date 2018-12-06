@@ -74,7 +74,7 @@ class Page extends Component
         }
         else
         {
-            $this->_separator = '/';
+            $this->_separator = DS;
         }
         if(!$this->_separator||$this->_separator=='&')
         {

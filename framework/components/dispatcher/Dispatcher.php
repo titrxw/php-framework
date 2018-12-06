@@ -15,12 +15,12 @@ class Dispatcher extends Component
         $conf = Container::getInstance()->getComponentConf(\getModule(), 'controller');
 
         $controllerName = ($conf['controller']['prefix'] ?? '') . $args['controller'] . ($conf['controller']['suffix'] ?? '');
-        $controllerPath = APP_ROOT.$this->_system.'/controller/'. $args['version'] . '/' .$controllerName.'.php';
+        $controllerPath = APP_ROOT.$this->_system. DS . 'controller'. DS . $args['version'] . DS .$controllerName.'.php';
         if (!\file_exists($controllerPath))
         {
             $this->triggerThrowable(new \Exception($controllerPath.' not exists', 404));
         }
-        $controllerHashName = \md5($this->_system.'/controller/'. $args['version'] . '/' .$controllerName);
+        $controllerHashName = \md5($this->_system. DS .'controller'. DS . $args['version'] . DS .$controllerName);
 
         $actionName = ($conf['action']['prefix'] ?? '') . $args['action'] . ($conf['action']['suffix'] ?? '');
 
