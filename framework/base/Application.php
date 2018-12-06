@@ -33,7 +33,7 @@ class Application extends Base
         \define('ISSWOOLE', false);
         \define('FRAMEWORK_NAME', 'framework');
         \define('IS_CLI', PHP_SAPI == 'cli' ? true : false);
-        \define('DS', DIRECTORY_SEPARATOR);
+        \define('DS', '/');
 
 
         \date_default_timezone_set('PRC');

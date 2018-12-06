@@ -102,7 +102,6 @@ class Url extends Component
                 'controller' => empty($tmpQuery[0 + $keyStart]) ? $this->getValueFromConf('defaultController', 'index') : $tmpQuery[0 + $keyStart],
                 'action' => empty($tmpQuery[1 + $keyStart]) ? $this->getValueFromConf('defaultAction', 'index') : $tmpQuery[1 + $keyStart]
             );
-            
             unset($tmpQuery);
         }
         $this->_curRoute = $urlInfo;
