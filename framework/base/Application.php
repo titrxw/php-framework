@@ -35,7 +35,7 @@ class Application extends Base
         \define('IS_CLI', PHP_SAPI == 'cli' ? true : false);
         \define('DS', '/');
 
-
+        \ignore_user_abort(false);
         \date_default_timezone_set('PRC');
 
         if(!\defined('DEBUG'))
