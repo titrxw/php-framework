@@ -14,16 +14,30 @@ class Aes7 extends Component
     protected $_iv;
     protected $_mode;
     protected $_codeType;
+    protected $_keyLen;
 
     protected function init()
     {
         if (!extension_loaded('openssl')) {
             throw new \Exception('not support: openssl', 500);
         }
+        
         $this->setKey($this->getValueFromConf('key', ''));
         $this->setIv($this->getValueFromConf('iv', ''));
         $this->setCodeType($this->getValueFromConf('code', 'base64'));
         $this->setMode($this->getValueFromConf('mode', 'aes-256-cbc'));
+        if (!in_array($this->_mode, openssl_get_cipher_methods())) {
+            throw new \Exception('aes not support mode as ' . $this->_mode, 500);
+        }
+        if (strpos($this->_mode, '256') !== false) {
+            $this->_keyLen = 256;
+        } else if (strpos($this->_mode, '128') !== false) {
+            $this->_keyLen = 128;
+        } else if (strpos($this->_mode, '192') !== false) {
+            $this->_keyLen = 192;
+        } else {
+            $this->_keyLen = 256;
+        }
     }
 
     public function setCodeType($type)
@@ -45,7 +59,7 @@ class Aes7 extends Component
 
     public function makeKey($len = 256)
     {
-        if ($len !== 128 && $len !== 256) {
+        if ($len !== 256  || $len !== 192 || $len !== 128) {
            return false;
         }
         return openssl_random_pseudo_bytes($len/8);
@@ -55,7 +69,7 @@ class Aes7 extends Component
     {
         if (empty($this->_key))
         {
-            $this->_key = $this->makeKey(256);
+            $this->_key = $this->makeKey($this->_keyLen);
         }
         return $this->_key;
     }
