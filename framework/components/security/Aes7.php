@@ -13,13 +13,26 @@ class Aes7 extends Component
     protected $_key;
     protected $_iv;
     protected $_mode;
+    protected $_codeType;
 
     protected function init()
     {
         if (!extension_loaded('openssl')) {
             throw new \Exception('not support: openssl', 500);
         }
-        $this->_mode = $this->getValueFromConf('mode', 'aes-256-cbc');
+        $this->setKey($this->getValueFromConf('key', ''));
+        $this->setIv($this->getValueFromConf('iv', ''));
+        $this->setCodeType($this->getValueFromConf('code', 'base64'));
+        $this->setMode($this->getValueFromConf('mode', 'aes-256-cbc'));
+    }
+
+    public function setCodeType($type)
+    {
+        if ($type === 'base64' || $type === 'hex')
+        {
+            $this->_codeType = $type;
+        }
+        return $this;
     }
 
     public function setKey($key)
@@ -35,7 +48,7 @@ class Aes7 extends Component
         if ($len !== 128 && $len !== 256) {
            return false;
         }
-        return base64_encode(openssl_random_pseudo_bytes($len/8));
+        return openssl_random_pseudo_bytes($len/8);
     }
 
     public function getKey()
@@ -57,7 +70,7 @@ class Aes7 extends Component
 
     public function makeIv()
     {
-        return base64_encode(openssl_random_pseudo_bytes(16));
+        return openssl_random_pseudo_bytes(16);
     }
 
     public function getIv()
@@ -81,12 +94,36 @@ class Aes7 extends Component
         return $this->_mode;
     }
 
+    /**
+     * 16进制转2进制
+     * @param unknown $hexdata
+     */
+    protected function hex2bin($hexdata)
+    {
+        $bin="";
+        for($i=0; $i<strlen($hexdata)-1; $i+=2)
+        {
+            /**
+             * chr转换ascll到字符
+             */
+            $bin.=chr(hexdec($hexdata[$i].$hexdata[$i+1]));
+        }
+        unset($hexdata);
+        return $bin;
+    }
+
     public function encrypt($data)
     {
         if (empty($data)){
             return false;
         }
-        return base64_encode(openssl_encrypt($data, $this->getMode(), base64_decode($this->getKey()), OPENSSL_RAW_DATA, base64_decode($this->getIv())));
+        $data = openssl_encrypt($data, $this->getMode(), $this->getKey(), OPENSSL_RAW_DATA, $this->getIv());
+        if($this->_codeType === 'hex')
+            $data = bin2hex($data);
+        else
+            $data=base64_encode($data);
+
+        return $data;
     }
 
     public function decrypt($data)
@@ -94,6 +131,10 @@ class Aes7 extends Component
         if (empty($data)){
             return false;
         }
-        return openssl_decrypt(base64_decode($data), $this->getMode(), base64_decode($this->getKey()), OPENSSL_RAW_DATA, base64_decode($this->getIv()));
+        if($this->_codeType === 'hex')
+            $data = $this->hex2bin($data);
+        else
+            $data=base64_decode($data);
+        return openssl_decrypt($data, $this->getMode(), $this->getKey(), OPENSSL_RAW_DATA, $this->getIv());
     }
 }

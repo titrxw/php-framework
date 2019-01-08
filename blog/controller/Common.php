@@ -16,26 +16,24 @@ class Common extends Web
     {
         $this->_userM = $this->model('User');
     }
-
-    /**
-     * @method get
-     * 
-     * @params string  $name 不能为空
-     * @rule mobile|post|账号格式错误 regex|/^1[34578]\d{9}$/  
-     * @rule password|post|密码格式错误 require
-     * @rule sure_password|post|确认密码格式错误 require
-     */
+	
     public function testApi()
     {
+        $data = $this->token->set(json_encode([
+            1,2,3,4,5
+        ]));
+        var_dump($data);
+        var_dump($this->token->get('1e33760988ca1237c05e2473984209ac'));
+        // new \Medoo\Medoo();
+        $client = new  \GuzzleHttp\Client();
         $this->cookie->set('rwar', 'dsfsdf');
-        // return $this->_userM->test();
+        return $this->_userM->test();
         // var_dump(uniqueId());
 //        $this->addTask('msgTask', 'sendMsg', array('mobile' => '1212121212'));
     }
 
     public function loginApi ()
     {
-        var_dump(1);
         $mobile = $this->request->post('mobile');
         $password = $this->request->post('password');
 

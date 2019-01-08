@@ -8,6 +8,7 @@
 return array(
     'composer' => array(
         'meedo' => function (array $params) {
+			var_dump($params);
             return new \Medoo\Medoo($params);      //这里测试composer的加载
         }
     ),
@@ -16,9 +17,15 @@ return array(
         'password' => 'framework\\components\\security\\Password',
         'uniqueid' => 'framework\\components\\uniqueid\\UniqueId',
         'redis' => 'framework\\components\\cache\\Redis',
-        'session' => 'framework\\components\\session\\Session'
+        'aes' => 'framework\\components\\security\\Aes7',
+        'token' => 'framework\\components\\security\\Token'
     ),
     'components' => array(
+        'aes' => [
+            'key' => 'gtifhaisdgthrehagtifhaisdgthreha',
+            'iv' => 'gtifhaisdgthreha',
+            'code' => 'hex'
+        ],
         'controller' => [
             'controller' => [
                 'prefix' => '',
@@ -34,15 +41,15 @@ return array(
         ),
         'meedo' => array(
             'database_type' => 'mysql',
-            'database_name' => 'blog',
-            'server' => '127.0.0.1',
+            'database_name' => 'contract_test',
+            'server' => 'do.zh5j.cn',
             'username' => 'root',
-            'password' => '123456',
+            'password' => 'ystctest',
             // [optional]
             'charset' => 'utf8',
             'port' => 3306,
             // [optional] Table prefix
-            'prefix' => 'blog_',
+            'prefix' => 'lease',
         
             // [optional] Enable logging (Logging is disabled by default for better performance)
             'logging' => true,
