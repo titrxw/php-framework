@@ -33,8 +33,8 @@ class Url extends Component
 
     protected function formatUrl()
     {
-        $type = $this->getType();
-        if ($type === '?')
+        var_dump($_SERVER);
+        if ($this->getType() === '?')
         {
             if ($_SERVER['REQUEST_URI'] == DS . FAVICON){
                 return false;
@@ -112,7 +112,10 @@ class Url extends Component
 
     public function getPathInfo()
     {
-        return !empty($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : $_SERVER['REQUEST_URI'] ;
+        if ($this->getType() === '?') {
+            return $_SERVER['REQUEST_URI'];
+        }
+        return !empty($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : $_SERVER['REQUEST_URI'];
     }
 
     public function getCurRoute()
@@ -134,7 +137,7 @@ class Url extends Component
 
     public function createUrl($url)
     {
-        $tmpUrl = $_SERVER['HTTP_HOST'] . $_SERVER['URL'] . '?';
+        $tmpUrl = $_SERVER['HTTP_HOST'] . $_SERVER['URL'] . $this->getType();
         if ($this->getType() === '?')
         {
             if(\is_array($url))
@@ -152,9 +155,20 @@ class Url extends Component
         }
         else
         {
-            $tmpUrl .= $url;
+            if(\is_array($url))
+            {
+                foreach ($url as $key=>$item)
+                {
+                    $tmpUrl .= $key . $this->getType() . $item . $this->getType();
+                }
+                $tmpUrl = \trim($tmpUrl, $this->getType());
+            }
+            else
+            {
+                $tmpUrl .= $url;
+            }
         }
-        unset($urlModule, $url);
+        
         return $tmpUrl;
     }
 }
