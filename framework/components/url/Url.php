@@ -33,7 +33,6 @@ class Url extends Component
 
     protected function formatUrl()
     {
-        var_dump($_SERVER);
         if ($this->getType() === '?')
         {
             if ($_SERVER['REQUEST_URI'] == DS . FAVICON){
@@ -168,7 +167,7 @@ class Url extends Component
                 $tmpUrl .= $url;
             }
         }
-        
+
         return $tmpUrl;
     }
 }
