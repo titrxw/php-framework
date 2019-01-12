@@ -48,16 +48,7 @@ class Application extends \framework\base\Application
             if ($urlInfo !== false) {
                 $_SERVER['CURRENT_SYSTEM'] = $urlInfo['system'];
                 // 初始化配置项
-                if (!$container->appHasComponents($urlInfo['system'])) {
-//                这里现在还缺少文件系统
-                    $appConf = \require_file($urlInfo['system'] . '/conf/conf.php');
-                    $container->addComponents($urlInfo['system'], $appConf['addComponentsMap'] ?? []);
-                    $container->setAppComponents($urlInfo['system'] ,array(
-                        'components' => $appConf['components'] ?? [],
-                        'composer' => $appConf['composer'] ?? []
-                    ));
-                    unset($appConf);
-                }
+                $container->loadModule($urlInfo['system']);
 
                 $result = $container->getComponent(SYSTEM_APP_NAME, 'dispatcher')->run($urlInfo);
                 if (\is_array($result)) {

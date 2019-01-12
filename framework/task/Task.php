@@ -17,7 +17,7 @@ class Task extends Component
         {
             return false;
         }
-        $obj = Container::getInstance()->getComponent(SYSTEM_APP_NAME, $taskClass);
+        $obj = Container::getInstance()->getComponent(\getModule(), $taskClass);
         return $obj->$taskName($params);
     }
 }
