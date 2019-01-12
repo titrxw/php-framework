@@ -76,4 +76,9 @@ abstract class Controller extends \framework\base\Controller
         $this->getComponent(SYSTEM_APP_NAME,'sendfile', [])->send($path);
         return true;
     }
+
+    protected function addTask($className, $funcName, $params)
+    {
+        $this->taskManager->addTask($className, $funcName, $params, $taskId);
+    }
 }

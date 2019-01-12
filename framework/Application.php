@@ -17,7 +17,8 @@ class Application extends \framework\base\Application
 
         $components = [
             'conf' => 'framework\\base\\Conf',
-            'cookie' => 'framework\\components\\cookie\\Cookie'
+            'cookie' => 'framework\\components\\cookie\\Cookie',
+            'taskManager' => 'framework\\task\\Task'
         ];
         if (PHP_SAPI == 'cli') {
             $components['url'] = 'framework\\components\\url\\CliUrl';
