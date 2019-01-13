@@ -70,6 +70,7 @@ class Application extends \framework\base\Application
         catch (\Throwable $e)
         {
             $code = $e->getCode() > 0 ? $e->getCode() : 500;
+            DEBUG && $code = 200;
             $instance->handleThrowable($e);
             if (DEBUG) {
                 $elseContent = \ob_get_clean();
