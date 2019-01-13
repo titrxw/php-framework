@@ -127,6 +127,9 @@ class Validate extends Component
 
     protected function checkEmpty($value)
     {
+        if ($this->checkInteger($value)) {
+            return true;
+        }
         if ($value)
         {
             return true;
