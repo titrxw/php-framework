@@ -1,0 +1,82 @@
+[2018-11-13 17:46:47] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(53): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-11-13 17:46:47] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2018-11-13 17:46:48] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/blog/controller/Index.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 20 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2018-11-13 17:47:43] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2018-11-13 17:49:11] [ log ] 
+ server: 0.0.0.0
+ client: 192.168.2.102
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2018-11-13 17:49:11] [ log ] 
+ server: 0.0.0.0
+ client: 192.168.2.102
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/blog/controller/Index.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 20 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+

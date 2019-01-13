@@ -1,0 +1,819 @@
+[2019-01-13 10:42:52] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/permiss/controller//Common.login.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 21 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 10:42:52] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-13 10:46:27] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+  msg : Call to a member function set() on null 
+ file : I:\www\php-framework\permiss\controller\Common.php 
+ line : 39 
+ code : 0 
+ trace : #0 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): permiss\controller\Common->registerApi()
+#1 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#2 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#3 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#4 {main}
+
+[2019-01-13 10:47:36] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+  msg : Call to a member function set() on null 
+ file : I:\www\php-framework\permiss\controller\Common.php 
+ line : 56 
+ code : 0 
+ trace : #0 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): permiss\controller\Common->loginApi()
+#1 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#2 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#3 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#4 {main}
+
+[2019-01-13 10:48:52] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+  msg : Call to a member function set() on null 
+ file : I:\www\php-framework\permiss\controller\Common.php 
+ line : 56 
+ code : 0 
+ trace : #0 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): permiss\controller\Common->loginApi()
+#1 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#2 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#3 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#4 {main}
+
+[2019-01-13 10:49:21] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+  msg : not support: redis 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 177 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('permiss', 'redis', Array)
+#1 I:\www\php-framework\framework\base\Controller.php(91): framework\base\Component->getComponent('permiss', 'redis')
+#2 I:\www\php-framework\permiss\controller\Common.php(56): framework\base\Controller->__get('redis')
+#3 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): permiss\controller\Common->loginApi()
+#4 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#5 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#6 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#7 {main}
+
+[2019-01-13 10:50:02] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+  msg : Too few arguments to function framework\components\cache\File::set(), 1 passed in I:\www\php-framework\permiss\controller\Common.php on line 56 and at least 2 expected 
+ file : I:\www\php-framework\framework\components\cache\File.php 
+ line : 163 
+ code : 0 
+ trace : #0 I:\www\php-framework\permiss\controller\Common.php(56): framework\components\cache\File->set(Array)
+#1 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): permiss\controller\Common->loginApi()
+#2 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#3 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#4 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#5 {main}
+
+[2019-01-13 10:52:49] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined property: framework\components\cache\File::$readTimes at  file: I:\www\php-framework\framework\components\cache\File.php, on line: 123
+ stace:
+{"name":"766f4aae761fb58e223fbc85c55d8d13","default":false}
+
+[2019-01-13 10:52:49] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 2 json_decode() expects parameter 1 to be string, array given at  file: I:\www\php-framework\permiss\lib\User.php, on line: 26
+ stace:
+{"token":"766f4aae761fb58e223fbc85c55d8d13","user":{"unid":"u_-5472256","mobile":"15903466276","name":"admin"}}
+
+[2019-01-13 10:52:49] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 2 Invalid argument supplied for foreach() at  file: I:\www\php-framework\vendor\catfan\medoo\src\Medoo.php, on line: 522
+ stace:
+{"columns":null,"map":[],"stack":[]}
+
+[2019-01-13 10:52:49] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 2 Invalid argument supplied for foreach() at  file: I:\www\php-framework\vendor\catfan\medoo\src\Medoo.php, on line: 1099
+ stace:
+{"columns":null,"stack":[]}
+
+[2019-01-13 10:55:59] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined property: framework\components\cache\File::$readTimes at  file: I:\www\php-framework\framework\components\cache\File.php, on line: 123
+ stace:
+{"name":"c7769172351bca805b8bfc67610d886f","default":false}
+
+[2019-01-13 10:55:59] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 2 json_decode() expects parameter 1 to be string, array given at  file: I:\www\php-framework\permiss\lib\User.php, on line: 26
+ stace:
+{"token":"c7769172351bca805b8bfc67610d886f","user":{"unid":"u_-5472256","mobile":"15903466276","name":"admin","role":[]}}
+
+[2019-01-13 10:56:46] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined property: framework\components\cache\File::$readTimes at  file: I:\www\php-framework\framework\components\cache\File.php, on line: 123
+ stace:
+{"name":"c7769172351bca805b8bfc67610d886f","default":false}
+
+[2019-01-13 10:56:46] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined index: name at  file: I:\www\php-framework\permiss\lib\User.php, on line: 59
+ stace:
+[]
+
+[2019-01-13 10:56:46] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined index: role at  file: I:\www\php-framework\permiss\lib\User.php, on line: 62
+ stace:
+[]
+
+[2019-01-13 10:57:08] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined property: framework\components\cache\File::$readTimes at  file: I:\www\php-framework\framework\components\cache\File.php, on line: 123
+ stace:
+{"name":"c7769172351bca805b8bfc67610d886f","default":false}
+
+[2019-01-13 10:57:08] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined index: name at  file: I:\www\php-framework\permiss\lib\User.php, on line: 60
+ stace:
+[]
+
+[2019-01-13 10:57:08] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined index: role at  file: I:\www\php-framework\permiss\lib\User.php, on line: 63
+ stace:
+[]
+
+[2019-01-13 10:58:23] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined property: framework\components\cache\File::$readTimes at  file: I:\www\php-framework\framework\components\cache\File.php, on line: 123
+ stace:
+{"name":"c7769172351bca805b8bfc67610d886f","default":false}
+
+[2019-01-13 10:58:23] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined index: name at  file: I:\www\php-framework\permiss\lib\User.php, on line: 60
+ stace:
+[]
+
+[2019-01-13 10:58:23] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined index: role at  file: I:\www\php-framework\permiss\lib\User.php, on line: 63
+ stace:
+[]
+
+[2019-01-13 10:59:52] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined property: framework\components\cache\File::$readTimes at  file: I:\www\php-framework\framework\components\cache\File.php, on line: 123
+ stace:
+{"name":"86f9f5f19778a8c47e6cf64da41e7a3c","default":false}
+
+[2019-01-13 10:59:52] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 2 in_array() expects parameter 2 to be array, string given at  file: I:\www\php-framework\permiss\lib\User.php, on line: 47
+ stace:
+{"operate":"permiss\/System\/menuApi","userOperates":""}
+
+[2019-01-13 11:00:46] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined property: framework\components\cache\File::$readTimes at  file: I:\www\php-framework\framework\components\cache\File.php, on line: 123
+ stace:
+{"name":"86f9f5f19778a8c47e6cf64da41e7a3c","default":false}
+
+[2019-01-13 11:00:46] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 2 in_array() expects parameter 2 to be array, string given at  file: I:\www\php-framework\permiss\lib\User.php, on line: 47
+ stace:
+{"operate":"permiss\/System\/menuApi","userOperates":""}
+
+[2019-01-13 11:01:16] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined property: framework\components\cache\File::$readTimes at  file: I:\www\php-framework\framework\components\cache\File.php, on line: 123
+ stace:
+{"name":"86f9f5f19778a8c47e6cf64da41e7a3c","default":false}
+
+[2019-01-13 11:01:16] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 2 in_array() expects parameter 2 to be array, string given at  file: I:\www\php-framework\permiss\lib\User.php, on line: 47
+ stace:
+{"operate":"permiss\/System\/menuApi","userOperates":""}
+
+[2019-01-13 11:01:34] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined property: framework\components\cache\File::$readTimes at  file: I:\www\php-framework\framework\components\cache\File.php, on line: 123
+ stace:
+{"name":"86f9f5f19778a8c47e6cf64da41e7a3c","default":false}
+
+[2019-01-13 11:01:34] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 2 in_array() expects parameter 2 to be array, string given at  file: I:\www\php-framework\permiss\lib\User.php, on line: 47
+ stace:
+{"operate":"permiss\/System\/menuApi","userOperates":""}
+
+[2019-01-13 11:02:17] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined property: framework\components\cache\File::$readTimes at  file: I:\www\php-framework\framework\components\cache\File.php, on line: 123
+ stace:
+{"name":"86f9f5f19778a8c47e6cf64da41e7a3c","default":false}
+
+[2019-01-13 11:02:38] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined property: framework\components\cache\File::$readTimes at  file: I:\www\php-framework\framework\components\cache\File.php, on line: 123
+ stace:
+{"name":"86f9f5f19778a8c47e6cf64da41e7a3c","default":false}
+
+[2019-01-13 13:44:14] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(permiss\controller\Common), 'loginApi')
+#5 I:\www\php-framework\permiss\lib\Web.php(17): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(55): permiss\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2019-01-13 13:44:14] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-13 13:58:28] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-13 14:01:08] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action loginApi not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:01:12] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action loginApi not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:01:12] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action loginApi not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:01:13] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action loginApi not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:01:50] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:01:51] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:01:51] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:01:52] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:03:13] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:03:13] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:03:14] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:03:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(9): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:04:39] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(9): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:06:22] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(9): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:06:22] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(9): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:06:23] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(9): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:06:29] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(9): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:06:32] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(9): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:06:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(9): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:06:42] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(9): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:06:51] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(9): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:07:51] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(9): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:08:01] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(9): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:08:09] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(9): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:08:19] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : action login not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:12:07] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 177 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('permiss', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('permiss', 'meedo')
+#2 I:\www\php-framework\permiss\model\User.php(42): framework\base\Model->db()
+#3 I:\www\php-framework\permiss\controller\Common.php(54): permiss\model\User->login('15903466276', '123456')
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): permiss\controller\Common->loginApi()
+#5 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-13 14:12:12] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 177 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('permiss', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('permiss', 'meedo')
+#2 I:\www\php-framework\permiss\model\User.php(42): framework\base\Model->db()
+#3 I:\www\php-framework\permiss\controller\Common.php(54): permiss\model\User->login('15903466276', '123456')
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): permiss\controller\Common->loginApi()
+#5 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-13 14:15:33] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-13 14:20:19] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ 8 Undefined offset: 0 at  file: I:\www\php-framework\permiss\lib\Tree.php, on line: 29
+ stace:
+{"data":[],"childKey":"children"}
+
+[2019-01-13 14:40:46] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+  msg : action get not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 14:42:03] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-13 14:43:18] [ log ] 
+ server: 0.0.0.0
+ client: 127.0.0.1
+---------------------------------------------------------------
+ 
+  msg : action get not found 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 44 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+

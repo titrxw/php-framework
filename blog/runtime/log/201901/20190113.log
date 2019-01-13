@@ -1,0 +1,170 @@
+[2019-01-13 11:44:48] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/blog/controller//Permiss.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 21 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 11:44:48] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-13 11:44:48] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/blog/controller//Permiss.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 21 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 11:44:48] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-13 11:44:48] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/blog/controller//Permiss.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 21 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 11:44:48] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-13 11:44:48] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/blog/controller//Permiss.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 21 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 11:44:48] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-13 11:44:54] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/blog/controller//Permiss.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 21 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 11:44:56] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/blog/controller//Permiss.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 21 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 11:45:00] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/blog/controller//Permiss.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 21 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 11:45:02] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/blog/controller//Permiss.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 21 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-13 11:45:03] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/blog/controller//Permiss.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 21 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(53): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+

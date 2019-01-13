@@ -1,0 +1,470 @@
+[2019-01-01 16:39:49] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/blog/controller//Php-framework.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 21 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-01 16:39:49] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-01 16:40:28] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : I:\www\php-framework/blog/controller//Php-framework.php not exists 
+ file : I:\www\php-framework\framework\components\dispatcher\Dispatcher.php 
+ line : 21 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#1 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#2 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#3 {main}
+
+[2019-01-01 16:40:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(6): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(55): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2019-01-01 16:43:37] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(22): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 16:44:47] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(22): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 16:44:47] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(22): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 16:44:48] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(22): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 16:47:44] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(22): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 16:47:52] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(22): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 16:47:52] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(22): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 16:47:53] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(22): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 16:49:12] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(22): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 17:04:49] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(22): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 17:04:49] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-01 17:04:52] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(22): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 17:04:52] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(22): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 17:04:53] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(22): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 17:05:42] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(25): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 17:05:43] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(25): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 17:05:43] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(25): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 17:05:44] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(25): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 17:05:44] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(25): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 17:05:45] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(25): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 17:05:45] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(25): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+
+[2019-01-01 17:05:46] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : composer meedo not found file I:\www\php-framework/Medoo/Medoo.php not exists 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('blog', 'meedo', Array)
+#1 I:\www\php-framework\framework\base\Model.php(22): framework\base\Component->getComponent('blog', 'meedo')
+#2 I:\www\php-framework\blog\model\User.php(75): framework\base\Model->db()
+#3 I:\www\php-framework\blog\controller\Common.php(25): blog\model\User->test()
+#4 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#5 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#6 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#7 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#8 {main}
+

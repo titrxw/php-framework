@@ -15,6 +15,9 @@ return array(
         'doc' => 'framework\\base\\Documentor'
     ),
     'components' => array(
+        'dispatcher'=> [
+            'route_filter' => true
+        ],
         'log' => array(
             'path' => 'runtime/log/',
             'isLog' => true,
@@ -31,7 +34,7 @@ return array(
             'actionKey' => 'act',
             'defaultController' => 'index',
             'defaultAction' => 'index',
-            'systems' => array('blog', 'application1', 'blog')
+            'systems' => array('blog', 'application1', 'permiss')
         ),
         'resquest' => array(
             'separator' => '/',

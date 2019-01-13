@@ -1,0 +1,285 @@
+[2019-01-09 17:06:50] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\cookie\Cookie.php, on line: 37
+ stace:
+{"else":"","item":["dsfsdf"],"key":"rwar"}
+
+[2019-01-09 17:06:50] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"esay-framework","key":"X-Powered-By"}
+
+[2019-01-09 17:06:50] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"esay-framework","key":"server"}
+
+[2019-01-09 17:06:50] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"application\/json,text\/x-json,application\/jsonrequest,text\/json; charset=utf-8","key":"Content-Type"}
+
+[2019-01-09 17:06:50] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"no-store, no-cache, must-revalidate","key":"Cache-Control"}
+
+[2019-01-09 17:06:50] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"no-cache","key":"Pragma"}
+
+[2019-01-09 17:06:50] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"*","key":"Access-Control-Allow-Origin"}
+
+[2019-01-09 17:06:50] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-09 17:07:01] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\cookie\Cookie.php, on line: 37
+ stace:
+{"else":"","item":["dsfsdf"],"key":"rwar"}
+
+[2019-01-09 17:07:01] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"esay-framework","key":"X-Powered-By"}
+
+[2019-01-09 17:07:01] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"esay-framework","key":"server"}
+
+[2019-01-09 17:07:01] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"application\/json,text\/x-json,application\/jsonrequest,text\/json; charset=utf-8","key":"Content-Type"}
+
+[2019-01-09 17:07:01] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"no-store, no-cache, must-revalidate","key":"Cache-Control"}
+
+[2019-01-09 17:07:01] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"no-cache","key":"Pragma"}
+
+[2019-01-09 17:07:01] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"*","key":"Access-Control-Allow-Origin"}
+
+[2019-01-09 17:07:37] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\cookie\Cookie.php, on line: 37
+ stace:
+{"else":"","item":["dsfsdf"],"key":"rwar"}
+
+[2019-01-09 17:07:37] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"esay-framework","key":"X-Powered-By"}
+
+[2019-01-09 17:07:37] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"esay-framework","key":"server"}
+
+[2019-01-09 17:07:37] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"application\/json,text\/x-json,application\/jsonrequest,text\/json; charset=utf-8","key":"Content-Type"}
+
+[2019-01-09 17:07:37] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"no-store, no-cache, must-revalidate","key":"Cache-Control"}
+
+[2019-01-09 17:07:37] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"no-cache","key":"Pragma"}
+
+[2019-01-09 17:07:37] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"*","key":"Access-Control-Allow-Origin"}
+
+[2019-01-09 17:13:30] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-09 17:15:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\cookie\Cookie.php, on line: 37
+ stace:
+{"else":"","item":["dsfsdf"],"key":"rwar"}
+
+[2019-01-09 17:15:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"esay-framework","key":"X-Powered-By"}
+
+[2019-01-09 17:15:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"esay-framework","key":"server"}
+
+[2019-01-09 17:15:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"application\/json,text\/x-json,application\/jsonrequest,text\/json; charset=utf-8","key":"Content-Type"}
+
+[2019-01-09 17:15:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"no-store, no-cache, must-revalidate","key":"Cache-Control"}
+
+[2019-01-09 17:15:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"no-cache","key":"Pragma"}
+
+[2019-01-09 17:15:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 Cannot modify header information - headers already sent by (output started at I:\www\php-framework\framework\components\url\Url.php:36) at  file: I:\www\php-framework\framework\components\response\Header.php, on line: 88
+ stace:
+{"response":"","item":"*","key":"Access-Control-Allow-Origin"}
+
+[2019-01-09 17:28:48] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+

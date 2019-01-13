@@ -1,0 +1,187 @@
+[2019-01-08 10:14:27] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : not support: php_mcrypt 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('APP', 'token', Array)
+#1 I:\www\php-framework\framework\base\Controller.php(95): framework\base\Component->getComponent('APP', 'token')
+#2 I:\www\php-framework\blog\controller\Common.php(22): framework\base\Controller->__get('token')
+#3 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#4 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#5 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#6 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#7 {main}
+
+[2019-01-08 10:14:27] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-08 10:14:48] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : not support: php_mcrypt 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('APP', 'token', Array)
+#1 I:\www\php-framework\framework\base\Controller.php(95): framework\base\Component->getComponent('APP', 'token')
+#2 I:\www\php-framework\blog\controller\Common.php(22): framework\base\Controller->__get('token')
+#3 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#4 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#5 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#6 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#7 {main}
+
+[2019-01-08 10:14:49] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : not support: php_mcrypt 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 163 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(17): framework\base\Container->getComponent('APP', 'token', Array)
+#1 I:\www\php-framework\framework\base\Controller.php(95): framework\base\Component->getComponent('APP', 'token')
+#2 I:\www\php-framework\blog\controller\Common.php(22): framework\base\Controller->__get('token')
+#3 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#4 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#5 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#6 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#7 {main}
+
+[2019-01-08 10:15:32] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_encrypt() expects parameter 1 to be string, array given at  file: I:\www\php-framework\framework\components\security\Aes7.php, on line: 89
+ stace:
+{"data":[1,2,3,4,5]}
+
+[2019-01-08 10:22:08] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-08 10:34:02] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-08 10:36:54] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : Call to undefined method framework\components\security\Token::encrypt() 
+ file : I:\www\php-framework\blog\controller\Common.php 
+ line : 22 
+ code : 0 
+ trace : #0 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(73): blog\controller\Common->testApi()
+#1 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#2 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#3 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#4 {main}
+
+[2019-01-08 10:43:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_encrypt(): Unknown cipher algorithm at  file: I:\www\php-framework\framework\components\security\Aes7.php, on line: 131
+ stace:
+{"data":"[1,2,3,4,5]"}
+
+[2019-01-08 10:43:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_decrypt(): Unknown cipher algorithm at  file: I:\www\php-framework\framework\components\security\Aes7.php, on line: 149
+ stace:
+
+
+[2019-01-08 10:43:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2019-01-08 10:43:34] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_encrypt(): Unknown cipher algorithm at  file: I:\www\php-framework\framework\components\security\Aes7.php, on line: 131
+ stace:
+{"data":"[1,2,3,4,5]"}
+
+[2019-01-08 10:43:34] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_decrypt(): Unknown cipher algorithm at  file: I:\www\php-framework\framework\components\security\Aes7.php, on line: 149
+ stace:
+
+
+[2019-01-08 10:43:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_encrypt(): Unknown cipher algorithm at  file: I:\www\php-framework\framework\components\security\Aes7.php, on line: 131
+ stace:
+{"data":"[1,2,3,4,5]"}
+
+[2019-01-08 10:43:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_decrypt(): Unknown cipher algorithm at  file: I:\www\php-framework\framework\components\security\Aes7.php, on line: 149
+ stace:
+
+
+[2019-01-08 10:54:16] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+

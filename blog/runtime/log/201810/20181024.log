@@ -1,0 +1,1207 @@
+[2018-10-24 15:46:17] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 15:46:18] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 15:46:18] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 15:46:18] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 15:46:19] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 15:46:19] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 15:46:19] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 15:46:20] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 15:46:20] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 15:46:20] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 15:46:21] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 15:46:21] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 15:46:21] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 15:46:22] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 16:42:08] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 16:42:08] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 16:42:08] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : file I:\www\php-framework/phpDocumentor/Reflection/DocBlockFactory.php not exists 
+ file : I:\www\php-framework\framework\base\function.php 
+ line : 87 
+ code : 404 
+ trace : #0 I:\www\php-framework\framework\autoloader.php(5): require_file('phpDocumentor/R...')
+#1 [internal function]: autoload('phpDocumentor/R...')
+#2 I:\www\php-framework\framework\base\Documentor.php(16): spl_autoload_call('phpDocumentor\\R...')
+#3 I:\www\php-framework\framework\base\Documentor.php(29): framework\base\Documentor->getDocHandle()
+#4 I:\www\php-framework\framework\web\Controller.php(33): framework\base\Documentor->parse(Object(blog\controller\Common), 'testApi')
+#5 I:\www\php-framework\blog\lib\Web.php(43): framework\web\Controller->validate()
+#6 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(48): blog\lib\Web->before()
+#7 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#8 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#9 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#10 {main}
+
+[2018-10-24 16:42:58] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 8 Undefined offset: 0 at  file: I:\www\php-framework\blog\lib\Web.php, on line: 57
+ stace:
+{"data":{"ret":200,"msg":"\u8d26\u53f7\u683c\u5f0f\u9519\u8bef"}}
+
+[2018-10-24 16:42:58] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 8 Undefined offset: 0 at  file: I:\www\php-framework\blog\lib\Web.php, on line: 58
+ stace:
+{"data":{"ret":200,"msg":"\u8d26\u53f7\u683c\u5f0f\u9519\u8bef","data":""}}
+
+[2018-10-24 16:42:58] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 8 Undefined offset: 1 at  file: I:\www\php-framework\blog\lib\Web.php, on line: 58
+ stace:
+{"data":{"ret":200,"msg":"\u8d26\u53f7\u683c\u5f0f\u9519\u8bef","data":""}}
+
+[2018-10-24 16:42:58] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2018-10-24 16:43:25] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 8 Undefined offset: 0 at  file: I:\www\php-framework\blog\lib\Web.php, on line: 57
+ stace:
+{"data":{"ret":200,"msg":"\u8d26\u53f7\u683c\u5f0f\u9519\u8bef"}}
+
+[2018-10-24 16:44:19] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 8 Undefined offset: 0 at  file: I:\www\php-framework\blog\lib\Web.php, on line: 57
+ stace:
+{"data":{"ret":200,"msg":"\u8d26\u53f7\u683c\u5f0f\u9519\u8bef"}}
+
+[2018-10-24 16:44:20] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 8 Undefined offset: 0 at  file: I:\www\php-framework\blog\lib\Web.php, on line: 57
+ stace:
+{"data":{"ret":200,"msg":"\u8d26\u53f7\u683c\u5f0f\u9519\u8bef"}}
+
+[2018-10-24 16:44:20] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 8 Undefined offset: 0 at  file: I:\www\php-framework\blog\lib\Web.php, on line: 57
+ stace:
+{"data":{"ret":200,"msg":"\u8d26\u53f7\u683c\u5f0f\u9519\u8bef"}}
+
+[2018-10-24 16:44:37] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 8 Undefined offset: 0 at  file: I:\www\php-framework\blog\lib\Web.php, on line: 57
+ stace:
+{"data":{"ret":200,"msg":"\u8d26\u53f7\u683c\u5f0f\u9519\u8bef"}}
+
+[2018-10-24 16:44:53] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : RAS private key file not exists  
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 162 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(19): framework\base\Container->getComponent('blog', 'rsa', Array)
+#1 I:\www\php-framework\framework\base\Controller.php(63): framework\base\Component->getComponent('blog', 'rsa')
+#2 I:\www\php-framework\blog\controller\Common.php(22): framework\base\Controller->__get('rsa')
+#3 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(51): blog\controller\Common->testApi()
+#4 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#5 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#6 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#7 {main}
+
+[2018-10-24 16:45:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : RAS private key file not exists  
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 162 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(19): framework\base\Container->getComponent('blog', 'rsa', Array)
+#1 I:\www\php-framework\framework\base\Controller.php(63): framework\base\Component->getComponent('blog', 'rsa')
+#2 I:\www\php-framework\blog\controller\Common.php(22): framework\base\Controller->__get('rsa')
+#3 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(51): blog\controller\Common->testApi()
+#4 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#5 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#6 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#7 {main}
+
+[2018-10-24 16:46:09] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 137
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:46:38] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 137
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:46:39] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 137
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:46:39] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 137
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:46:39] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 137
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:46:40] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 137
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:46:40] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 137
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:46:40] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 137
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:46:40] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 137
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:47:34] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:47:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:47:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:47:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:47:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:55:54] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:55:55] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:55:55] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:55:55] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:57:03] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:57:03] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:57:03] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:57:04] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:57:04] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:57:04] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:57:04] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:57:15] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:57:15] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:57:15] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:57:16] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:57:16] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 16:57:16] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:01:23] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:01:23] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ PHP Startup: Unable to load dynamic library 'I:\www\php7\ext\php_mysql.dll' - �Ҳ���ָ����ģ�顣
+ (Unknown:0)
+Stack trace:
+#0 unknown(0): framework\components\shutdown\ShutDown->handleShutDown()
+
+
+[2018-10-24 17:01:24] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:01:24] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:01:24] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:01:25] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:01:25] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:04:34] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:04:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:04:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:04:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:04:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:04:35] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:04:36] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:04:36] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:04:36] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 135
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:06:04] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 100
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:09:45] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 100
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:09:46] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 100
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:09:46] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 100
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:09:46] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 100
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:09:46] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 100
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:09:46] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 100
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:10:06] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 100
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:10:07] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 100
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:10:07] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 100
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:10:07] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 100
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:11:20] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 100
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:11:21] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 100
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:11:30] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 110
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:11:31] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 110
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:11:31] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 110
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:11:31] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 110
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:11:31] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 110
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:11:32] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 110
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:11:32] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 110
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:11:32] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 110
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:11:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 110
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:11:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 110
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:11:33] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_public_encrypt(): key parameter is not a valid public key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 110
+ stace:
+{"data":"4324234","padding":1,"result":null}
+
+[2018-10-24 17:16:11] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 123
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:16:59] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 140
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:17:08] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 142
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:17:09] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 142
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:17:09] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 142
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:17:09] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 142
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:18:51] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 141
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:18:57] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+ 2 openssl_sign(): supplied key param cannot be coerced into a private key at  file: I:\www\php-framework\framework\components\security\Rsa.php, on line: 143
+ stace:
+{"data":"4324234","sign_alt":7,"ret":false}
+
+[2018-10-24 17:44:01] [ log ] 
+ server: 0.0.0.0
+ client: ::1
+---------------------------------------------------------------
+ 
+  msg : Call to undefined function framework\components\security\openssl_pget_privatekey() 
+ file : I:\www\php-framework\framework\base\Container.php 
+ line : 162 
+ code : 500 
+ trace : #0 I:\www\php-framework\framework\base\Component.php(19): framework\base\Container->getComponent('blog', 'rsa', Array)
+#1 I:\www\php-framework\framework\base\Controller.php(63): framework\base\Component->getComponent('blog', 'rsa')
+#2 I:\www\php-framework\blog\controller\Common.php(22): framework\base\Controller->__get('rsa')
+#3 I:\www\php-framework\framework\components\dispatcher\Dispatcher.php(51): blog\controller\Common->testApi()
+#4 I:\www\php-framework\framework\Application.php(61): framework\components\dispatcher\Dispatcher->run(Array)
+#5 I:\www\php-framework\framework\framework.php(14): framework\Application::run('start')
+#6 I:\www\php-framework\index.php(8): require('I:\\www\\php-fram...')
+#7 {main}
+

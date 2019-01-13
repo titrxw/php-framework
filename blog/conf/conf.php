@@ -53,6 +53,10 @@ return array(
         
             // [optional] Enable logging (Logging is disabled by default for better performance)
             'logging' => true,
+            'option' => [
+                PDO::ATTR_STRINGIFY_FETCHES => false,
+                PDO::ATTR_EMULATE_PREPARES => false
+            ]
         ),
         'redis' => array(
             'host'         => '127.0.0.1', // redis主机
