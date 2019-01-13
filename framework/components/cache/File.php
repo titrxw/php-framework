@@ -1,14 +1,4 @@
 <?php
-// +----------------------------------------------------------------------
-// | ThinkPHP [ WE CAN DO IT JUST THINK ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2006~2018 http://thinkphp.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
-// +----------------------------------------------------------------------
-
 namespace framework\components\cache;
 
 class File extends Cache implements CacheInterface
@@ -90,7 +80,7 @@ class File extends Cache implements CacheInterface
             $name = substr($name, 0, 2) . DS . substr($name, 2);
         }
 
-        $filename = APP_ROOT . ($this->_conf['prefix'] ?? '') . DS . $this->_path . DS . $name . '.php';
+        $filename = APP_ROOT . DS . \getModule() . DS . $this->_path . DS . $name . '.php';
         $dir      = dirname($filename);
 
         if ($auto && !is_dir($dir)) {
@@ -244,7 +234,7 @@ class File extends Cache implements CacheInterface
      */
     public function clear()
     {
-        $files = (array) glob($this->_path . ($this->_conf['prefix'] ? $this->_conf['prefix'] . DS : '') . '*');
+        $files = (array) glob(APP_ROOT . DS . \getModule() . DS . $this->_path . DS . '*');
 
         foreach ($files as $path) {
             if (is_dir($path)) {
