@@ -7,6 +7,7 @@
  */
 namespace framework\task;
 
+use framework\base\Container;
 use framework\base\Component;
 
 class Task extends Component

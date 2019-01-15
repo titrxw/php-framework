@@ -51,9 +51,4 @@ class Model extends Component
         }
         return null;
     }
-
-    protected function addTask($className, $funcName, $params)
-    {
-        $this->taskManager->addTask($className, $funcName, $params, $taskId);
-    }
 }

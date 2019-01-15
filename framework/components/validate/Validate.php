@@ -113,6 +113,9 @@ class Validate extends Component
                 case 'require':
                     $result = $this->checkEmpty($value);
                     break;
+                case "array":
+                    $result = $value && \is_array($value);
+                    break;
                 case "integer":
                     $result = $this->checkInteger($value);
                     break;
