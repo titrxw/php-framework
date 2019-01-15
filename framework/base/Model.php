@@ -15,7 +15,6 @@ class Model extends Component
         $this->unInstall(true);
         $this->afterInit();
     }
-
     
     protected function model($name)
     {
@@ -24,7 +23,6 @@ class Model extends Component
         Container::getInstance()->addComponent(\getModule(), $componentModel,
             \getModule() .'\\model\\'. $name, Container::getInstance()->getComponentConf(\getModule(), 'model'));
 //        在add之前设置当前model的conf
-//        待开发
         return $this->getComponent(\getModule(), $componentModel);
     }
 
@@ -54,5 +52,8 @@ class Model extends Component
         return null;
     }
 
-
+    protected function addTask($className, $funcName, $params)
+    {
+        $this->taskManager->addTask($className, $funcName, $params, $taskId);
+    }
 }

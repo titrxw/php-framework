@@ -18,6 +18,15 @@ class Task extends Component
             return false;
         }
         $obj = Container::getInstance()->getComponent(\getModule(), $taskClass);
-        return $obj->$taskName($params);
+        if ($obj && $obj instanceof BaseTask)
+        {
+            $obj->run($taskName, $params);
+            unset($obj);
+        }
+        else
+        {
+            $this->triggerThrowable(new \Error('task at do: id: ' . $taskId . ' class: ' . $taskObj['class'] . 'not found or not instance BaseTask'.
+                ' or action: ' .$taskObj['func'] . ' not found', 500));
+        }
     }
 }
