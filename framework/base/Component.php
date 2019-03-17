@@ -24,10 +24,11 @@ abstract class Component extends Base
 
     final public function unInstallNow($isComplete = false)
     {
+        $module = \getModule();
         if ($isComplete) {
-            Container::getInstance()->destroyComponent(\getModule(), $this->_uniqueId);
+            Container::getInstance()->destroyComponent($module, $this->_uniqueId);
         } else {
-            Container::getInstance()->destroyComponentsInstance(\getModule(), $this->_uniqueId);
+            Container::getInstance()->destroyComponentsInstance($module, $this->_uniqueId);
         }
     }
 

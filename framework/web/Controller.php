@@ -15,12 +15,13 @@ abstract class Controller extends \framework\base\Controller
     protected function model($name)
     {
         $name = \ucfirst($name);
-        $componentModel = \md5(\getModule() .'/model/'.$name);
-        Container::getInstance()->addComponent(\getModule(), $componentModel,
-            \getModule() .'\\model\\'. $name, Container::getInstance()->getComponentConf(\getModule(), 'model'));
+        $module = \getModule();
+        $componentModel = \md5($module .'/model/'.$name);
+        Container::getInstance()->addComponent($module, $componentModel,
+        $module .'\\model\\'. $name, Container::getInstance()->getComponentConf($module, 'model'));
 //        在add之前设置当前model的conf
 //        待开发
-        return $this->getComponent(\getModule(), $componentModel);
+        return $this->getComponent($module, $componentModel);
     }
 
 //    需要重写

@@ -16,18 +16,19 @@ class Conf extends Component
     public function get($name)
     {
         $name = \explode('.', $name);
-
-        if (!isset($this->_config[\getModule()][$name[0]])) {
+        
+        $module = \getModule();
+        if (!isset($this->_config[$module][$name[0]])) {
 //            加载配置文件
-            $path = APP_ROOT . \getModule() . DS . 'conf' . DS . $name[0] . '.php';
+            $path = APP_ROOT . $module . DS . 'conf' . DS . $name[0] . '.php';
             if (!\file_exists($path)) {
                 $this->triggerThrowable('conf file ' . $name[0] . ' not exists', 500);
             }
 
-            $this->_config[\getModule()][$name[0]] = include $path;
+            $this->_config[$module][$name[0]] = include $path;
         }
 
-        $ret = $this->_config[\getModule()];
+        $ret = $this->_config[$module];
         foreach ($name as $item) {
             $ret = $ret[$item] ?? '';
         }
