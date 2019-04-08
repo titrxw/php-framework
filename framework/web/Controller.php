@@ -67,14 +67,14 @@ abstract class Controller extends \framework\base\Controller
         return $data;
     }
 
-    protected function sendFile($path, $type = 'jpg')
+    protected function sendFile($path, $type = 'jpg', $isDelete = true)
     {
         if (!\file_exists($path))
         {
             $this->triggerThrowable(new \Error('sendfile: ' . $path . ' not exists', 500));
         }
         $this->header->contentType($type);
-        $this->getComponent(SYSTEM_APP_NAME,'sendfile', [])->send($path);
+        $this->response->sendFile($path,$isDelete);
         return true;
     }
 
